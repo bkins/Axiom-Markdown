@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "src/Axiom.App/Axiom.App.csproj"
+    },
+    {
+      "path": "src/Axiom.Core/Axiom.Core.csproj"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/Axiom.Infrastructure.csproj"
+    },
+    {
+      "path": "tests/Axiom.Markdown.Tests/Axiom.Markdown.Tests.csproj"
+    }
+  ],
+  "localSourcePathsOmitted": true
+}

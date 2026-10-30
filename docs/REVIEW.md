@@ -1,16 +1,16 @@
 # Axiom Markdown 0.1.0 review
 
-Status: Candidate preparation underway. Exact commit/version, package paths/hashes and final verification results will be recorded in the delivery record before handoff. Ben's and Security's approval remain pending under ENH-270; implementation owners are ENH-266 and ENH-269 on the existing multi-project board.
+Status: **0.1.0+a38096d2e00e** is ready for review; exact source, evidence and asset hashes are in [the delivery record](DELIVERY.md). Ben's and Security's approval remain pending under ENH-270; implementation owners are ENH-266 and ENH-269 on the existing multi-project board.
 
 ## Automation can test
 
-- [ ] Exact-commit Release build and automated tests; no excluded-feature source/dependency contamination.
-- [ ] Packaged native WebView2: retained Markdown/HTML/Mermaid, visible sanitation details, blocked remote images, no document scripts/event handlers and unchanged source bytes.
-- [ ] Recovery persistence, explicit Save, save-in-flight typing, external conflicts and selected Git operations.
-- [ ] Import warning/source protection and HTML/DOCX/TXT/EPUB/ODT export; native PDF smoke check.
-- [ ] Each feature rejects direct service calls when disabled; policy precedence and malformed settings fail closed.
-- [ ] Portable/installer payload hashes, isolated product/state/feed, dependency inventory/SBOM and NuGet advisory report.
-- [ ] Independently observed native keyboard editing and Ctrl+S saved-file verification.
+- [x] Exact-commit Release build and automated tests; no excluded-feature source/dependency contamination.
+- [x] Packaged native WebView2: retained Markdown/HTML/Mermaid, visible sanitation details, blocked remote images, no document scripts/event handlers and unchanged source bytes.
+- [x] Recovery persistence, explicit Save, save-in-flight typing, external conflicts and selected Git operations.
+- [x] Import warning/source protection and HTML/DOCX/TXT/EPUB/ODT export; native PDF smoke check.
+- [x] Each feature rejects direct service calls when disabled; policy precedence and malformed settings fail closed.
+- [x] Portable/installer payload hashes, isolated product/state/feed, dependency inventory/SBOM and NuGet advisory report.
+- [x] Independently observed native keyboard editing and Ctrl+S saved-file verification.
 
 ## Human needs to test
 
@@ -22,3 +22,4 @@ Status: Candidate preparation underway. Exact commit/version, package paths/hash
 - [ ] Before team distribution, complete the organization's installer/signing/update-feed review and real installed-update checks. Record exact approved commit/package hashes and any restrictions.
 
 Do not mark these checks accepted from silence, packaging, source publication or automated evidence. Full Axiom's prior candidates, stable opener, held CP work and deferred PDF/OCR remain separate.
+
