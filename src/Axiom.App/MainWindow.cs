@@ -32,7 +32,7 @@ public sealed partial class MainWindow : Window
     private readonly ObservableCollection<TabItem> _items = [];
     private readonly ContentControl _editorHost = new();
     private readonly Grid _documentGrid = new() { ColumnDefinitions = new ColumnDefinitions("*,5,*") };
-    private readonly ListBox _folderFiles = new();
+    private readonly TreeView _folderFiles = new();
     private readonly TextBox _folderFilter = new() { PlaceholderText = "Filter Markdown files…" };
     private readonly TextBlock _folderLabel = new()
                                               {

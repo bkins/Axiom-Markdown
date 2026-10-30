@@ -60,6 +60,11 @@ internal static class ReviewProbe
 
             checks["BundledMermaidRendered"] = await Script("String(!!document.querySelector('.mermaid-diagram svg'))") == "true";
             window.ActiveForReview.Editor.AppendText("\nUnsaved buffer protected.\n");
+            foreach (var check in await window.VerifyShellForReviewAsync(root))
+            {
+                checks.Add(check.Key, check.Value);
+            }
+
             await window.ProtectForReviewAsync();
             checks["EditingDoesNotSilentlySave"] = await File.ReadAllTextAsync(sample) == source && window.ActiveForReview.Session.IsDirty;
             var state = new EditorStateStore(new AppDataPaths(Path.Combine(root, "state")));

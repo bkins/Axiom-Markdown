@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
-    <Version>0.1.1</Version>
-    <InformationalVersion Condition="'$(InformationalVersion)' == ''">0.1.1+dev</InformationalVersion>
+    <Version>0.2.0</Version>
+    <InformationalVersion Condition="'$(InformationalVersion)' == ''">0.2.0+dev</InformationalVersion>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <Company>Ben Hopkins</Company>
     <Authors>Ben Hopkins</Authors>

@@ -1,6 +1,6 @@
-# Axiom Markdown 0.1.1 review
+# Axiom Markdown 0.2.0 review
 
-Status: **0.1.1+001f084f9875** is ready for review after ENH-272 standards alignment; exact source, evidence and asset hashes are in [the delivery record](DELIVERY.md). Ben's and Security's approval remain pending under ENH-270; implementation owners are ENH-266 and ENH-269 on the existing multi-project board.
+Status: **0.2.0** is being packaged for original-Axiom presentation review under ENH-273. Exact post-package evidence will be recorded in [the delivery record](DELIVERY.md). ENH-270 retains Ben's and Security's acceptance; earlier 0.1.0/0.1.1 candidates are preserved separately.
 
 ## Automation can test
 
@@ -12,10 +12,11 @@ Status: **0.1.1+001f084f9875** is ready for review after ENH-272 standards align
 - [x] Portable/installer payload hashes, isolated product/state/feed, dependency inventory/SBOM and NuGet advisory report.
 - [x] Independently observed native keyboard editing and Ctrl+S saved-file verification.
 
-- [x] Source audit passes across 183 maintained C# files; responsibility/design review recorded separately in As-Built. Source trailing whitespace check passes.
+- [x] Source audit passes across 190 maintained C# files; responsibility/design review recorded separately in As-Built. Source trailing whitespace check passes.
 
 ## Human needs to test
 
+- [ ] Compare the compact command/title bar, tabs, navigator and outline with original Axiom. Try quiet/rounded menus, both title-bar modes, light/dark/system themes, pane resizing, heading selection and reading mode; report visual differences that matter.
 - [ ] Launch the exact portable candidate with its isolated launcher; review font/theme, layout, tabs, view modes, keyboard access, screen reader and relevant DPI settings.
 - [ ] Open representative work Markdown. Confirm preview sanitation notices/details, remote-content warning and blocked/default choice, deliberate external-link navigation, local images and Mermaid. Source must remain unchanged until you edit/save.
 - [ ] Import representative HTML/DOCX, inspect warnings and conversion quality, save images and reopen; try the export formats you need, especially PDF pagination and raw-HTML simplification.

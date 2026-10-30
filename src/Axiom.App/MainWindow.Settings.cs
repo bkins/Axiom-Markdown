@@ -33,6 +33,8 @@ public sealed partial class MainWindow
         Foreground              = new SolidColorBrush(Color.Parse(dark ? "#E5E7EB" : "#1F2937"));
         _folderFiles.Background = new SolidColorBrush(Color.Parse(dark ? "#1F2937" : "#F3F4F6"));
         _folderFiles.Foreground = Foreground;
+        ApplyShellLayout();
+        ApplyShellColors(dark);
         foreach (var tab in Documents)
         {
             tab.Editor.WordWrap = _preferences.WordWrap;
@@ -54,6 +56,30 @@ public sealed partial class MainWindow
         editor.Background         = new SolidColorBrush(Color.Parse(dark ? "#111827" : "#FFFFFF"));
         editor.Foreground         = new SolidColorBrush(Color.Parse(dark ? "#E5E7EB" : "#1F2937"));
         editor.SyntaxHighlighting = MarkdownHighlighting.Create(dark);
+    }
+
+    private void ApplyShellColors(bool dark)
+    {
+        var page = Background;
+        var surface = new SolidColorBrush(Color.Parse(dark ? "#1F2937" : "#F3F4F6"));
+        var border = new SolidColorBrush(Color.Parse(dark ? "#374151" : "#CBD5E1"));
+        _commandBar.Background   = surface;
+        _commandBar.BorderBrush  = border;
+        _statusBar.Background    = page;
+        _statusBar.BorderBrush   = border;
+        _sidebar.BorderBrush     = border;
+        _folderFiles.Background  = page;
+        _outlineHost.Background  = surface;
+        _outlineHost.BorderBrush = border;
+        _outline.Background      = surface;
+        _toolRail.Background     = surface;
+        _toolRail.BorderBrush    = border;
+        _noticeBar.Background    = new SolidColorBrush(Color.Parse(dark ? "#451A03" : "#FEF3C7"));
+        _notice.Foreground       = new SolidColorBrush(Color.Parse(dark ? "#FDE68A" : "#78350F"));
+        foreach (var splitter in _splitters)
+        {
+            splitter.Background = border;
+        }
     }
 
     private async Task FeatureSettingsAsync()

@@ -28,8 +28,9 @@ public sealed partial class MainWindow
 
         try
         {
-            tab.Token                = Guid.NewGuid().ToString("N");
-            tab.Structure            = new MarkdownStructureService().Parse(tab.Session.Text);
+            tab.Token     = Guid.NewGuid().ToString("N");
+            tab.Structure = new MarkdownStructureService().Parse(tab.Session.Text);
+            RefreshOutline();
             tab.Report               = _renderer.RenderWithReport(tab.Session.Text
                                                                 , tab.Session.Path
                                                                 , _appearance
@@ -46,11 +47,13 @@ public sealed partial class MainWindow
 
             _loadRemote.IsVisible   = blocked > 0 && FeatureAccess.Evaluate(OptionalFeature.RemoteContent).Allowed;
             _revokeRemote.IsVisible = tab.RemoteImages.Count > 0;
+            _noticeBar.IsVisible    = !string.IsNullOrWhiteSpace(_notice.Text) || _loadRemote.IsVisible || _revokeRemote.IsVisible;
             _html.Load(_preview, tab.Report.Html);
         }
         catch (Exception error)
         {
-            _notice.Text = "Preview could not be rendered: " + error.Message + ". Source remains available.";
+            _notice.Text         = "Preview could not be rendered: " + error.Message + ". Source remains available.";
+            _noticeBar.IsVisible = true;
         }
     }
 
@@ -88,6 +91,7 @@ public sealed partial class MainWindow
                 };
                 _notice.Text             = "Preview sanitized. Markdown source is unchanged. " + message;
                 _noticeDetails.IsVisible = true;
+                _noticeBar.IsVisible     = true;
             }
 
             if (result.RootElement.GetProperty("completed").GetInt32() >= result.RootElement.GetProperty("total").GetInt32())

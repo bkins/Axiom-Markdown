@@ -47,3 +47,15 @@ Installed copies check the separate Axiom-Markdown GitHub feed at startup and ev
 Local data lives under `%LOCALAPPDATA%\AxiomMarkdown`, or the separate review state path printed by its launcher. It includes plaintext recovery drafts, document paths, preferences, diagnostic errors and browser cache; Windows account permissions protect it. No CP service, AI key, backend or model is needed.
 
 Version 0.1.1 reorganizes the maintained source to follow Ben's coding standards. Its document, policy, sanitation-warning and remote-content behavior is intended to remain the same as 0.1.0.
+
+## Familiar Axiom interface (0.2.0)
+
+The top command bar follows original Axiom: New, Open, Save, Reading mode and Settings icons, followed by File, Edit, Format, Tools, View and Help menus. Hover over an icon for its name/shortcut. Alt+F/E/M/T/V/H opens the corresponding menu; F10 opens File. The title region supports ordinary Windows dragging and caption controls.
+
+Settings (the sun/gear icon, or View → Editor and appearance settings) saves the theme, quiet/rounded menu buttons, editor font size/wrapping, compact/native title bar and navigator/outline visibility. Cancel leaves preferences unchanged. Light, Dark and System are available.
+
+Workspace Files uses a folder tree. Open a folder, expand its branches and double-click a Markdown file or press Enter on it. The filter icon shows/hides the filename filter; filtering matches relative filenames and shows their containing branches. Folder actions (the ellipsis) opens or refreshes the folder. View can hide the navigator.
+
+The right rail toggles Outline. Select a heading to move the editor caret to its source. Ctrl+Shift+R toggles reading mode and split editing without changing text. View also offers editor-only and split modes. Resize visible pane dividers as needed.
+
+Tabs retain dirty/conflict indicators and explicit close buttons. The bottom bar shows operation/recovery status, source word count/caret position and the exact version. Sanitization and blocked remote images appear in a separate warning bar with Details and the existing trust choices. These notices do not rewrite your document.

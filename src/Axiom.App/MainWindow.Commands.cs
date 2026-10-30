@@ -137,6 +137,35 @@ public sealed partial class MainWindow
            , ApplyUpdateAsync
            , OptionalFeature.Updates);
         var view = Group("_View");
+        Item(view, "Editor and appearance settings…", ShowEditorSettingsAsync);
+        Item(view, "Reading mode     Ctrl+Shift+R", ToggleReadingModeAsync);
+        Item(view, "Document outline", ToggleOutlineAsync);
+        Item(view
+           , "Show or hide file navigator"
+           , () =>
+        {
+            _preferences = _preferences with
+
+            {
+                ShowFileNavigator = !_preferences.ShowFileNavigator
+            };
+            ApplyPreferences();
+            return Task.CompletedTask;
+        });
+        Item(view
+           , "Split editor and preview"
+           , () =>
+        {
+            _viewMode.SelectedIndex = 0;
+            return Task.CompletedTask;
+        });
+        Item(view
+           , "Editor only"
+           , () =>
+        {
+            _viewMode.SelectedIndex = 1;
+            return Task.CompletedTask;
+        });
         Item(view
            , "Toggle word wrap"
            , () =>

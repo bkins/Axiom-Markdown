@@ -17,3 +17,7 @@ FeatureAccess is initialized at startup with a policy provider and has process-w
 ## Exact candidate evidence
 
 Source is committed before packaging. Informational versions include that source commit; payload and release hashes bind review evidence to the package. Later documentation commits do not change the binary identity. Retained candidates are not overwritten or silently accepted. Installed update/signing and representative human checks are independent of automated tests.
+
+## Original Axiom is the presentation reference
+
+ENH-273 adapts the original compact command bar, theme palette, menu treatments, tab chrome, navigator and outline/status layout to the smaller Markdown shell. Visual resources and focused UI responsibility files are reused/adapted without importing the full application's management shell. Appearance preferences have backward-compatible defaults and remain separate from Security policy; sanitization warnings retain a dedicated visible surface. See OriginalAxiomPresentation.md for the exact mapping and limits.

@@ -47,7 +47,28 @@ public sealed partial class MainWindow
 
     private void FilterFolder()
     {
-        _folderFiles.ItemsSource = _folderPaths.Where(path => string.IsNullOrEmpty(_folderFilter.Text) || path.Contains(_folderFilter.Text
-                                                                                                                      , StringComparison.OrdinalIgnoreCase)).ToArray();
+        if (_folder is not { } root)
+        {
+            return;
+        }
+
+        var paths = _folderPaths.Where(path => string.IsNullOrEmpty(_folderFilter.Text) || path.Contains(_folderFilter.Text
+                                                                                                       , StringComparison.OrdinalIgnoreCase));
+        var tree = WorkspaceTreeBuilder.Build(root, paths.Select(path => Path.Combine(root, path)));
+        if (!string.IsNullOrEmpty(_folderFilter.Text))
+        {
+            ExpandFilteredTree(tree);
+        }
+
+        _folderFiles.ItemsSource = tree;
+    }
+
+    private static void ExpandFilteredTree(IEnumerable<WorkspaceTreeNode> nodes)
+    {
+        foreach (var node in nodes)
+        {
+            node.IsExpanded = true;
+            ExpandFilteredTree(node.Children);
+        }
     }
 }

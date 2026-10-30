@@ -1,0 +1,9 @@
+{
+  "Version": "0.1.1+001f084f9875",
+  "NativeTypingObserved": true,
+  "TypingDidNotSave": true,
+  "ControlSSavedExpectedText": true,
+  "SavedText": "# Keyboard verification — standards aligned",
+  "Verification": "Independent filesystem reads before and after native keyboard save",
+  "Passed": true
+}

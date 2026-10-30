@@ -118,13 +118,13 @@ public sealed partial class MainWindow
                          {
                              Margin   = new Thickness(15)
                            , Spacing  = 10
-                           , Children = 
+                           , Children =
                              {
                                  find
                                , replace
                                , new WrapPanel
                                  {
-                                     Children = 
+                                     Children =
                                      {
                                          next
                                        , one
@@ -140,10 +140,34 @@ public sealed partial class MainWindow
     private async void OnKeyDown(object?      sender
                                , KeyEventArgs eventArgs)
     {
+        if (eventArgs.KeyModifiers == KeyModifiers.Alt || eventArgs.Key == Key.F10)
+        {
+            var menuIndex = eventArgs.Key switch
+            {
+                Key.F => 0,
+                Key.E => 1,
+                Key.M => 2,
+                Key.T => 3,
+                Key.V => 4,
+                Key.H => 5,
+                Key.F10 => 0,
+                _ => -1
+            };
+            if (menuIndex >= 0)
+            {
+                eventArgs.Handled = true;
+                var button = _menuButtons[menuIndex];
+                button.Focus();
+                button.Flyout?.ShowAt(button);
+                return;
+            }
+        }
+
         if (eventArgs.KeyModifiers.HasFlag(KeyModifiers.Control))
         {
             Func<Task>? action = eventArgs.Key switch
             {
+                Key.R                when eventArgs.KeyModifiers.HasFlag(KeyModifiers.Shift) => ToggleReadingModeAsync,
                 Key.N => () => NewAsync(),
                 Key.O => OpenPickerAsync,
                 Key.S => eventArgs.KeyModifiers.HasFlag(KeyModifiers.Shift) ? SaveAllAsync : () => SaveAsync(Current

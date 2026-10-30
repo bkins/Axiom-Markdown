@@ -1,0 +1,22 @@
+{
+  "Version": "0.1.1\u002B001f084f9875",
+  "Checks": {
+    "NativePreviewHeading": true,
+    "SourceUntouchedBySanitization": true,
+    "SanitizationNoticeVisible": true,
+    "SourceEditorAutoLinksDisabled": true,
+    "NoDocumentScriptOrHandler": true,
+    "RemoteImageBlocked": true,
+    "BundledMermaidRendered": true,
+    "EditingDoesNotSilentlySave": true,
+    "RecoveryDraftPersisted": true,
+    "SecondaryFileForwardedToSameBuild": true,
+    "ForwardingRetainsUnsavedFirstTab": true,
+    "ExplicitSaveMatchesBuffer": true,
+    "ImportReportsSanitization": true,
+    "HtmlExport": true,
+    "NativePdfExport": true
+  },
+  "Passed": true,
+  "HumanReview": "Visual comfort, real-document quality, accessibility/DPI and organizational security approval remain pending."
+}

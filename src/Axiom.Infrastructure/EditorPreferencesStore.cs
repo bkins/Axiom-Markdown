@@ -15,7 +15,7 @@ public sealed class EditorPreferencesStore(string stateRoot)
         }
 
         var value = JsonSerializer.Deserialize<MarkdownPreferences>(File.ReadAllText(PathName)) ?? throw new IOException("Editor preferences are invalid.");
-        if (!Enum.IsDefined(value.Appearance) || !double.IsFinite(value.FontSize) || value.FontSize is < 10 or > 32)
+        if (!Enum.IsDefined(value.Appearance) || !Enum.IsDefined(value.MenuStyle) || !double.IsFinite(value.FontSize) || value.FontSize is < 10 or > 32)
         {
             throw new IOException("Editor preferences are invalid.");
         }

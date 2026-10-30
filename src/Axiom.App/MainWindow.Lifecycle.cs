@@ -158,6 +158,7 @@ public sealed partial class MainWindow
                 await _documents.ProtectAsync(tab.Session);
             }
 
+            _recoveryStatus.Text = "Recovery active";
             if (!FeatureAccess.Evaluate(OptionalFeature.Updates).Allowed)
             {
                 _updateCancellation?.Cancel();
@@ -193,7 +194,8 @@ public sealed partial class MainWindow
         }
         catch (Exception error)
         {
-            _status.Text = "Recovery/policy check failed: " + error.Message;
+            _status.Text         = "Recovery/policy check failed: " + error.Message;
+            _recoveryStatus.Text = "Recovery/policy needs attention";
         }
         finally
         {
