@@ -1,32 +1,36 @@
 # Axiom Markdown review delivery — October 30, 2026
 
-Exact review candidate: **0.1.1+001f084f9875**, Windows x64, unsigned.
+Exact current review candidate: **0.2.0+17be08c5f01c**, unsigned Windows x64.
 
-Source commit: **001f084f98752840b4239ea09ad4662adcd1c696** ([exact source](https://github.com/bkins/Axiom-Markdown/tree/001f084f98752840b4239ea09ad4662adcd1c696)). Public repository: [bkins/Axiom-Markdown](https://github.com/bkins/Axiom-Markdown).
+Source commit: **17be08c5f01cb38910a8c4f3143d667c0d2a97b3** ([exact source](https://github.com/bkins/Axiom-Markdown/tree/17be08c5f01cb38910a8c4f3143d667c0d2a97b3)). Public repository: [bkins/Axiom-Markdown](https://github.com/bkins/Axiom-Markdown).
 
-ENH-272 covers standards alignment; ENH-270 retains Ben's and organizational security acceptance. The original [0.1.0 delivery](DELIVERY-0.1.0.md) remains retained and unaccepted. This candidate has its own folder and state name.
+ENH-273 adapts original Axiom's presentation to the retained Markdown scope. ENH-270 keeps Ben's visual/usability and organizational security acceptance separate. Earlier [0.1.0](DELIVERY-0.1.0.md) and [0.1.1](DELIVERY-0.1.1.md) candidates remain retained and unaccepted.
+
+## What changed
+
+The compact command/title bar, vector controls, quiet/rounded menus, tab treatment, theme palette, folder navigator, outline rail and status layout now follow original Axiom. Ordinary appearance choices persist. Ctrl+Shift+R toggles reading mode; Alt menu keys/F10 expose commands. Startup fits the initial window to the monitor working area after compact title decoration is initialized.
+
+[Presentation mapping and responsibility review](As-Built/OriginalAxiomPresentation.md) · [Design decisions](As-Built/DesignDecisions.md).
+
+The adaptation does not import full Axiom's CP/AI/semantic/classification/management code. Sanitization details and remote-image warnings retain their own visible surface. Optional features still use the existing UI/service policy gates.
 
 ## Verified
 
-- 112 tests pass in Debug and Release; final Release tests use this exact informational version.
-- All 15 native checks pass against this exact self-contained executable, including WebView2 rendering, visible sanitation details, unchanged source, blocked remote images, local Mermaid, recovery, file forwarding/dirty-buffer retention, import warning, HTML export and native PDF export.
-- Native keyboard typing and Ctrl+S passed on this executable; independent disk reads confirmed typing did not save and Ctrl+S saved the expected text. Computer-use skill provided the native input.
-- All 263 payload hashes match after execution. Packaging also verifies archived payload entries.
-- The source audit passes across 183 maintained C# files. The [responsibility review](As-Built/StandardsAlignment.md) and [design decisions](As-Built/DesignDecisions.md) explain architectural boundaries and remaining tradeoffs; automated style checks do not establish SOLID compliance.
-- The refreshed extraction manifest records 114 retained upstream paths, 332 absent upstream paths and 68 new paths. Type/file moves explain some path changes; these counts do not describe removed functionality. Attribution, dependency inventory and bundled-asset notices remain included.
+- 114 tests pass in Debug and Release; final Release tests use this exact informational version.
+- All 24 native checks pass against this exact self-contained executable: existing rendering/security/save/recovery/import/export checks plus menu treatments, themes, window fit, outline selection, reading mode, navigator/title options, folder filtering, settings persistence and source/dirty-buffer preservation.
+- Independently observed native typing and Ctrl+S saved exactly the expected text; separate disk reads confirmed typing alone did not save. Native Ctrl+Shift+R and F10 also behaved correctly. Input was retried after focus reobservation before recording the successful typing/save result.
+- All 264 payload hashes match after execution. Packaging verifies payload entries in the portable archive. No new production dependency versions were introduced; the inventory still contains 40 production NuGet packages.
+- The standards audit passes across 191 maintained C# files; responsibility review remains separate from mechanical checks.
+- The refreshed path-based extraction record lists 117 retained upstream paths, 329 absent upstream paths and 73 new paths; type/file moves and presentation adaptation explain path changes, rather than all absent paths representing removed functionality.
 
-[Native results](checks/native-result.json) · [Keyboard results](checks/native-keyboard-result.json) · [Standards audit](checks/standards-audit.json).
+[Native results](checks/native-result.json) · [Keyboard results](checks/native-keyboard-result.json) · [Standards audit](checks/standards-audit.json) · [Release checksums](checks/SHA256SUMS.txt).
 
-The earlier dependency advisory checkpoint is recorded in [NuGet](checks/nuget-advisories.json), [Mermaid](checks/mermaid-advisories.json) and [terminal](checks/terminal-advisories.json) reports. This refactor does not change production dependency versions.
+The unchanged dependency advisory checkpoint remains in [NuGet](checks/nuget-advisories.json), [Mermaid](checks/mermaid-advisories.json) and [terminal](checks/terminal-advisories.json) reports.
 
 ## Review package
 
-Local directory: **Axiom-Markdown-0.1.1-001f084f9875-win-x64**. Run **payload/Start-Axiom-Markdown.cmd** for isolated state. The releases directory contains the portable ZIP, installer and update package/metadata. Binaries and feed have not been published to GitHub Releases. Use the [review checklist](REVIEW.md), [User Guide](USER-GUIDE.md), [Security packet](SECURITY-REVIEW.md) and [administrator controls](ADMIN-POLICY.md).
+Local folder: **Axiom-Markdown-0.2.0-17be08c5f01c-win-x64**. Run **payload/Start-Axiom-Markdown.cmd** for isolated review state. Portable ZIP, installer and update package/metadata are in releases; binaries/feed have not been published to GitHub Releases.
 
-The frozen payload contains build-time documentation; the outer review packet and maintained checklist record completed post-package evidence. Later documentation commits do not change the binary source identity above.
+Use the [current review checklist](REVIEW.md), [User Guide](USER-GUIDE.md), [Security packet](SECURITY-REVIEW.md) and [administrator controls](ADMIN-POLICY.md). Frozen payload documentation is from the build commit; the outer review packet records completed post-package verification. Later documentation commits do not change the binary identity above.
 
-Representative-document usability/conversion quality, accessibility/DPI, organization security approval, signing/deployment and installed-update/feed acceptance remain pending. Terminal controls are application gates, not an OS sandbox. Full Axiom's reviews, stable opener, CP hold and PDF/OCR scope remain separate.
-
-## Release-asset SHA-256
-
-See [machine-readable checksums](checks/SHA256SUMS.txt).
+Ben's judgment of visual fidelity, representative-document workflows, accessibility/other DPI settings, organizational security approval and signing/deployment/installed-update acceptance remain pending. Full Axiom's reviews, stable opener, CP hold and PDF/OCR scope remain independent.
