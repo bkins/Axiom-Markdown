@@ -17,9 +17,10 @@ $payload = Join-Path $output 'payload'
 & dotnet publish (Join-Path $repoRoot 'src/Axiom.App/Axiom.App.csproj') -c Release -r win-x64 --self-contained true "-p:InformationalVersion=$identity" -o $payload --nologo
 if ($LASTEXITCODE -ne 0) { throw 'Publish failed.' }
 & (Join-Path $PSScriptRoot 'Generate-DependencyInventory.ps1') -OutputDirectory (Join-Path $payload 'docs')
-foreach ($document in @('USER-GUIDE.md','SECURITY-REVIEW.md','ADMIN-POLICY.md','PROVENANCE.md','THIRD-PARTY.md','REVIEW.md','extraction-manifest.json')) {
+foreach ($document in @('USER-GUIDE.md','SECURITY-REVIEW.md','ADMIN-POLICY.md','PROVENANCE.md','THIRD-PARTY.md','REVIEW.md','extraction-manifest.json','CODING-STANDARDS.md')) {
     Copy-Item -LiteralPath (Join-Path $repoRoot "docs/$document") -Destination (Join-Path $payload "docs/$document")
 }
+Copy-Item -LiteralPath (Join-Path $repoRoot 'docs/As-Built') -Destination (Join-Path $payload 'docs/As-Built') -Recurse
 @"
 @echo off
 setlocal

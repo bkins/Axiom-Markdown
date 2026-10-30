@@ -11,7 +11,7 @@
     {
       "path": "src/Axiom.App/App.axaml.cs",
       "upstreamSha256": "0885797729834755d55b71b55924ee0c7f07d44d560548cdda876faba1ccd3c6",
-      "currentSha256": "979fe9f51913b946ef0c5c5b33362cf0a033d57c1d0f9b519ba123e81b9bac96",
+      "currentSha256": "23ac0a70f02198aaa4179777d8aa18d4a8f83c76c10f5fe3fbdbe30c585218cb",
       "modified": true
     },
     {
@@ -83,7 +83,7 @@
     {
       "path": "src/Axiom.App/AutomaticUpdateService.cs",
       "upstreamSha256": "e8ec716bda98bed6579b4f13defc2e13a73d9ee9ac0eebf41d2349b4a944f5a2",
-      "currentSha256": "45f37bc4fb9fdf099a8c30ecce2d70b8dd8c342f3f0accc88a6072db55727b5f",
+      "currentSha256": "18bcadfcdf65bc01cb7b6de0728c97b79d13d6df0e954570d2339320299e999b",
       "modified": true
     },
     {
@@ -95,25 +95,19 @@
     {
       "path": "src/Axiom.App/ChoiceDialog.cs",
       "upstreamSha256": "6fa714adfb8bb710aba365561b49774a4b7198a6256096369d8144c534952739",
-      "currentSha256": "43d3749cdd98165795f961644952092cc7beb9b68f86240b335bbff625e8b1c5",
+      "currentSha256": "d9fbf762608b31c3de0e1a587f79a23afc85954d18514bf028776190f13af89f",
       "modified": true
     },
     {
       "path": "src/Axiom.App/DocumentHistoryWindow.cs",
       "upstreamSha256": "5ca94fc97b872a0c994623d67e950fb8274848404c9ecb51c7b9d4e2b92efcc9",
-      "currentSha256": "894909bc99169a737bb765b12e8d9bd44133f9e64bd7f5274c196dbef0da2514",
-      "modified": true
-    },
-    {
-      "path": "src/Axiom.App/DocumentImportWindows.cs",
-      "upstreamSha256": "a45fa4b23612722935c85955e65fb016fb8f827ed9dc81097346ef1458bd0dc5",
-      "currentSha256": "144eac3b1b134ba5c41eef69e0a8988d47605e204647e6c8c605756e7125d2d9",
+      "currentSha256": "77a67ae0d760a7cb819f9d7b9d00d887950ddcc7f0a55a92fc564ea7522404ed",
       "modified": true
     },
     {
       "path": "src/Axiom.App/GitTerminalView.cs",
       "upstreamSha256": "2667c4d58e1d4026640f9247667eda0ea58a5fae19a5954cf55412c63dba9f85",
-      "currentSha256": "b1497297fbfd6674a1a8bdefdbf9fa9dff1245be4f91746c8aa7abee8652de1f",
+      "currentSha256": "55363bd91d99d0bbcdaad1d60dfeeb464fff677044e80fa9f42d3320238aca6f",
       "modified": true
     },
     {
@@ -125,49 +119,73 @@
     {
       "path": "src/Axiom.App/LineDiffWindow.cs",
       "upstreamSha256": "1978c0ab6719252f2ce688d2678c95d1d8e2d88a7578b58093e3c6d59a4cc073",
-      "currentSha256": "906825fbddabf73e0907500af67efa5c9defbde83ea714b57a072591d48b0a9c",
+      "currentSha256": "eff60e6b7cdee5bbc42e06c5ae35a57bbcfbd835374e6590831b7e8f4e48c39c",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Commands.cs",
+      "upstreamSha256": "74b0f2ebbbf67f2d496df7d25e95a75abc437a3170530c5ca5937bb00db921bc",
+      "currentSha256": "0da13f00fc6eb024c75c7f814e48b1faf71ecadf30c34fe535f494ef5e661d50",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Git.cs",
+      "upstreamSha256": "302bba8f16193d60f9251bc98e8eb4d1a5547d1dcca2df39d05d9f57a3a9576a",
+      "currentSha256": "ca03bc9be5697d1cca05c243fc96babeb8a50dbc3aeeb0ca874419f5000983b4",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Settings.cs",
+      "upstreamSha256": "ad2f56e90ac5b736c491ae9418e99243bbb0a1844a11edcc5dedf58084bfaaaf",
+      "currentSha256": "18e19c86d02a6c4dfb951ca384c3b7b2573c6f083a28b024a2a2d39680f7ebe4",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Tabs.cs",
+      "upstreamSha256": "d9db78ee13ffab55083e74c667497a2bbb62bd8440d37795ef69bfd3c738b066",
+      "currentSha256": "96e02ddca0636c414fad0faf78ffa5881e1ca465aeadec590ac22a7107798c49",
       "modified": true
     },
     {
       "path": "src/Axiom.App/MermaidPreviewRenderer.cs",
       "upstreamSha256": "bd7b1e4d58f76a1e2c6e03ebf20abd597e1a9bc90a6c3de6a3b6d32d8bbc77e0",
-      "currentSha256": "87aa6e451b723527c0c79c5f80b0b0afc9165cb78be84318631622942ffd3fbb",
+      "currentSha256": "5e94be224315c028edbe675e79380f363f4c4338c5eaaefcdbd8a3f117215213",
       "modified": true
     },
     {
       "path": "src/Axiom.App/NativeHtmlContent.cs",
       "upstreamSha256": "792274685fe6e56aec61c795601f0e18534224462d4132550c10bf17b7db4d7a",
-      "currentSha256": "fa8bfb6fb87a60b39548ae919db76e3cdbf92d00398b46d2d79c6b8623978379",
+      "currentSha256": "e3f7bd625ffd6e3ebe8189c3c4b937605566b63bc47020a2bba86fc64db0746b",
       "modified": true
     },
     {
       "path": "src/Axiom.App/NativePdfExportRenderer.cs",
       "upstreamSha256": "343886eab9863755533232fd115b7e332d7eae46f3e1d8a538bb60834ac9c746",
-      "currentSha256": "c90296a7d71d976c2fb953092841f55b55cebef6a0d872aa6e6cbcdc1205379d",
+      "currentSha256": "ee1969480c0df197a31687bf284e6361052c3f9648836a665a9f988fd9ace451",
       "modified": true
     },
     {
       "path": "src/Axiom.App/Program.cs",
       "upstreamSha256": "281622c3087c8c4f0b5545fde86fa28e1df333821a4e7aad726aa25fa1e0755b",
-      "currentSha256": "3b335d4d97aebaf4ec19dc2841085beceef6a0efcc9638a3462ed6dab1696810",
+      "currentSha256": "e74a39bd483ea9d8d6b5c02715e447a57316c0f90d2b5f0afb38f152fac1f0ab",
       "modified": true
     },
     {
       "path": "src/Axiom.App/RepositoryTerminal.cs",
       "upstreamSha256": "c0a51a36c6872e867e82934933c60fbdf5170053f9ada279a7188280bd28cafe",
-      "currentSha256": "c565b276c0dff77f64a02f947a5820fa84a78f07278c6220dc5f00eea20e4ba1",
+      "currentSha256": "d74002f252e3bbf7c8769ca5af35decea16b16fb7b7690ba237529680d651bac",
       "modified": true
     },
     {
       "path": "src/Axiom.App/WindowsPdfPrinter.cs",
       "upstreamSha256": "b01d8a9a532c95fd5ad61119ea4bc130130ba7cb40fc2983617154e45b9b6cb6",
-      "currentSha256": "be571893d188e3108673c9a09c21f5510aef2b6908a971f12abacc976b3a4360",
+      "currentSha256": "b283e6121e6dda710be7aef06a6be6545a73a4d077cf1db82d973a5423456941",
       "modified": true
     },
     {
       "path": "src/Axiom.App/WorkspaceGitView.cs",
       "upstreamSha256": "004556ab1eae8c8737534281fb7572d5283e3111c2d1e69b0834d8ae815be7ec",
-      "currentSha256": "47aa274a9e2ac99730153b1f3cc0b45d00ef67d59aca539d1e197e3ae550593c",
+      "currentSha256": "fbc44de9b27617c5a395d59f1cf9950553a704be3154627b66a9f74daa864d15",
       "modified": true
     },
     {
@@ -177,21 +195,15 @@
       "modified": true
     },
     {
-      "path": "src/Axiom.Core/Appearance.cs",
-      "upstreamSha256": "587cc137a80f93ad59a35a5bb1ef8e98f9d3cefad02b19ae3010f2ec38d7d06c",
-      "currentSha256": "65f473f002445e23e01945ed31c86d3bd317510d140f440a5c248b57602c9e1b",
-      "modified": true
-    },
-    {
       "path": "src/Axiom.Core/ApplicationBuildIdentity.cs",
       "upstreamSha256": "530b4788671b46482ae3f178a0c7b5e84c5af47a4daea34d7dcd614825c98aa3",
-      "currentSha256": "2112ef73d269a4ad526cf29aeaf565e11c30de843d1ed7078d9b8184f3c63ecd",
+      "currentSha256": "da89534b253e133085c31462b0e184358c44195ab7a46ba7841f60f4adb13f9d",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/AutomaticUpdatePreferences.cs",
       "upstreamSha256": "0b6dd6179f2aa6e1e7224fa3e4001151da32e8dbb092fc79761f0520a6965d37",
-      "currentSha256": "8a5371fda42452708d97c8406c6d8f0b86e7f37becaa5a474fee6779f25e729a",
+      "currentSha256": "6762c46e70267dd61c117efaa8186e46f74dbd22aef01ce2ba39f9840b211e73",
       "modified": true
     },
     {
@@ -203,13 +215,13 @@
     {
       "path": "src/Axiom.Core/CSharpCodeRenderer.cs",
       "upstreamSha256": "72df78a39f80b625ca51518016e8ba13824a0a536e9226e9c07152b8f8b927a8",
-      "currentSha256": "df19352c890107b0317d6699cf8186e3f64ff5f634cc613be57fa349ef75418a",
+      "currentSha256": "516964f2373623e29b714f434daf99f59cfa709b89f3870f2b589f1220c58baa",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/CSharpSyntax.cs",
       "upstreamSha256": "76b50a2e18e8e23bb001cc8fa06077b3928674ab905cc504fd27c06a3b2aa8bb",
-      "currentSha256": "f0168acc09e6f4f322dfa37da12e4934eba7991300072a13c90ac9d851c050b0",
+      "currentSha256": "941734326718a0bfae29e73326cffa0deb5a25f6505035199af663454b98da3d",
       "modified": true
     },
     {
@@ -221,25 +233,19 @@
     {
       "path": "src/Axiom.Core/CalloutQuoteRenderer.cs",
       "upstreamSha256": "db5d40ef4530ce870bdc5ed10554b075bf59c039926efe2f57dbc9bac95691be",
-      "currentSha256": "75bf47af6c7e231760df5fb8c69c5867a09111a89f924d2e243d96635de628b0",
+      "currentSha256": "cb867baf4c0feec12bca26a91c8c6ca253dafcfa950371d9c94a5063988cac85",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/CalloutTitle.cs",
       "upstreamSha256": "e96fe4a5ceafc5b70c23857e118424aac2fd25e86675ed0aa37877fa203cd943",
-      "currentSha256": "16d725fe2fc8695d7d2e0eb83d746748a2ff32d1897d3666fd22645a7e735373",
-      "modified": true
-    },
-    {
-      "path": "src/Axiom.Core/Contracts.cs",
-      "upstreamSha256": "3e9b75727341a1b58b81e702df6b33da8939c549dad5b09626a39d91c94554da",
-      "currentSha256": "c9caff346d1b1e8f70130c2b88b2409f7bba0509002ca1a7239c97999d0d1885",
+      "currentSha256": "9520346a3662114d040f20270267d32e442fc8021b60722f6058f6f73fa0a5f6",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/DocumentHeading.cs",
       "upstreamSha256": "243938c7c265d402efd5c68fc0f387ca4bfed216ff4a043169573044bcd27464",
-      "currentSha256": "0c6bddba30321a594e85a6b0c46f9c731637983eeb09c93e1e3a5bf27b8512e8",
+      "currentSha256": "d8cefdaf6f0e01a950af6dd94c9801d6a3d055b08033f6c26bb66813a4ef1901",
       "modified": true
     },
     {
@@ -251,37 +257,37 @@
     {
       "path": "src/Axiom.Core/DocumentNodeReconciler.cs",
       "upstreamSha256": "286f0b8d37c1b31ff1b75c9bb8c1c77bd5e80921f81743a22aa4afa84553d499",
-      "currentSha256": "b36505200a053b3aa5d05cde8dc74f5d64a969af25b4ef2a59526fab0537b356",
+      "currentSha256": "b7b2b61972ecdf6546d8d3d99b83243e5b67cfce8a9435965d3d827d0d58887c",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/DocumentRevision.cs",
       "upstreamSha256": "3052a227f32dca0f549108cce6b5d734fef4b673c61f50267344b365e6143dcc",
-      "currentSha256": "f3ee640db663674bd198c4708e8832cd16205850b026795af1507e730cbb5fbf",
+      "currentSha256": "01069a247a3837ac8f84e0d66980eff1602f27e871b34d50d2f912b46bcf2531",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/DocumentService.cs",
       "upstreamSha256": "cc72ef1e590c0260981ad6153dc783d59be5e3aaa73673140631c072c5361861",
-      "currentSha256": "312e56dcfd406bbfd2287a00e6267767408c2613360b57b248381987483a654e",
+      "currentSha256": "906c4fcc64563261f795c5215d030007ebe7df47b3bf826cff648573ca52d665",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/DocumentSourceRange.cs",
       "upstreamSha256": "cc81d0d0abc877f13ebecdd1282c6941311a10ae6474fe3b6ab1eb87abf43f3e",
-      "currentSha256": "d9e5c99401d768b1a9840d19f02b749291d7605b0187908f8c98f151c74a4ddd",
+      "currentSha256": "5fc5f2d5db0d821d27a48c35c19d1e9e1eed49dae92891b71bea7ca2104c50dc",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/DocumentStructure.cs",
       "upstreamSha256": "79bb8c8abd2aa5e3e121cc552f623d6ba56bdabc1a0a9434d5466cedcd4f8db8",
-      "currentSha256": "f9863613b59f13a17ea9ed72145e3c690c818ae5650570ff27ce0d2abf255d33",
+      "currentSha256": "ed57bb16e8c26300708daadd23b3bce2a6d9e60c1f5cc3c7cc46a358b91142ab",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/DocumentStructureNode.cs",
       "upstreamSha256": "c8f73b0357c9c79cb6eae7e3158fd3844e1accb1321f81c9f377b7b7bf6d183b",
-      "currentSha256": "5ca7327075e13ad20de561aa4f1d161fbd666c080abacb69668c5298b5d85377",
+      "currentSha256": "dc0eacf5582adfcffe944e568e02bca44751b5657cb22cb130b012a9c4f0014b",
       "modified": true
     },
     {
@@ -291,15 +297,9 @@
       "modified": true
     },
     {
-      "path": "src/Axiom.Core/Documents.cs",
-      "upstreamSha256": "3bd2bc537077f132a98c29bcc234a44d11201fd9b7ceefc3ff79196ae5a1b5da",
-      "currentSha256": "778d4cae9bd080c112988d7befb2bfbdc53618e47414aaac9286a24556d62b6f",
-      "modified": true
-    },
-    {
       "path": "src/Axiom.Core/ExportBlock.cs",
       "upstreamSha256": "2cf65a4e9d2971fb0b083d4916e1457a8bd710a16a88fac87eb917c7be6a1a27",
-      "currentSha256": "fa90591b72fceea4838e40c9a6a3226416a94d41c9908d1d53c86fe0ac0e1221",
+      "currentSha256": "eafde333df6a2d6fc48d2735b95027560919a9bdaed0c9ee889b793f7fa291d2",
       "modified": true
     },
     {
@@ -311,13 +311,13 @@
     {
       "path": "src/Axiom.Core/ExportDocumentTraversal.cs",
       "upstreamSha256": "43098c4495d735f24d98ff966294ee0fec828768e095c6101c29cfa88e52cb56",
-      "currentSha256": "292aff3b953bfc1ff442427a93023d561b0f5747f5e8c7461008277f15f0eb3b",
+      "currentSha256": "81fdebfa27994bf8af78d43e7bb775528945d52afa05442d6757d20c521a9cda",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/ExportRun.cs",
       "upstreamSha256": "2f3708df7e9c40db73e4c0c17b5285f45cb0217e59530629a6be9e94a2b0660d",
-      "currentSha256": "74ae540f7304337123c41d4459b95a4bb7b6834822ad8e137c44709266d63017",
+      "currentSha256": "7e79181ba61ffd317d52de5261452abd2104ee43e408378c9481a62b25dcec50",
       "modified": true
     },
     {
@@ -329,7 +329,7 @@
     {
       "path": "src/Axiom.Core/GitChangedFile.cs",
       "upstreamSha256": "b0ad2e11f10fb256e65263b1e62d18621b6b2a74f69bfbe5e44c63c957e4e482",
-      "currentSha256": "5847759bfc6d84f80b7b9d445d4c9682a3895636a87ab3f6277bc6ecbe2ac891",
+      "currentSha256": "530b5ca95627c144102824006088462b760860939529d53e60e620af286e5ecd",
       "modified": true
     },
     {
@@ -341,25 +341,25 @@
     {
       "path": "src/Axiom.Core/GitRepositorySnapshot.cs",
       "upstreamSha256": "bcbfcb472068057cc492fb97faf669dc542c1fc2fe141939330ad023568ea9c3",
-      "currentSha256": "e7dc1b536abfe5e91ab152c0f3e2902de8c851e5cdc5ece17f08c3097870c566",
+      "currentSha256": "9cbd8859dcab5d86a254d07f9934729f29cc580a0284f738930f0552b5f63e53",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/GitSelectedCommitReview.cs",
       "upstreamSha256": "56832a56f982680e98c8f54ba14a67bd43d717f4462bb9631164e486747d6d9a",
-      "currentSha256": "4f4fa60a97000c0ede02e30a52f0b3a6f28491f6513d9f551326558faa5823d0",
+      "currentSha256": "49984ec5d811d8faf854931e7c4894ff3f825355ace7b6133df9f6f6346ced98",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/IBatchIdentityStore.cs",
       "upstreamSha256": "104e4f9c737e9296502a28cfc90c10ef767f22f1ce81edb88ed17d7d2adabdb6",
-      "currentSha256": "a1ad3099f7438895869104786a6e3c6cb29d5d2b795028d0321d315534d6de98",
+      "currentSha256": "390ea6afbb5857436cc263c45080bf07fcd5dd54b01d9ca7b815fec0cd70666b",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/LineDiffEntry.cs",
       "upstreamSha256": "a9656854ccfb43722ca3eff1e53922c6e2c3ed13453dd3d40b608c1317ac32b0",
-      "currentSha256": "b5733fdfd8beca21a69f134173e3d2e2118df0b56474d7bd56d9c0d46c57884a",
+      "currentSha256": "dffd6b77f92de5226a4d648458452b31313cd6c85ff7a03844bda040bf69c250",
       "modified": true
     },
     {
@@ -371,73 +371,55 @@
     {
       "path": "src/Axiom.Core/LineDiffService.cs",
       "upstreamSha256": "2024730a6f46d8feb9dd0f86ee9429cdba92c5c3c17bcb49170ef76cc797f146",
-      "currentSha256": "6a502cee75bdf5534c74da2a76573b33f238a760d856feee2f56f14e7ed65e48",
+      "currentSha256": "c9b416b93232c27659fd3acd571a31a6a74d6ebd3d2a907b7cc9a41724d6d84a",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/MarkdownDocumentLink.cs",
       "upstreamSha256": "2508cb0152e06101b2a39081c0553a2fd25f4875e12df9c6e26d545c197bc19a",
-      "currentSha256": "0d63b4598d6e0d9dc1adf9add22ac0e5047abc6e42eb8f1945f5e81830181f68",
+      "currentSha256": "b99fe9054f6863248d22dfcd0edcd029627f7c4b7020aace6d633622e1162b5b",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/MarkdownEditService.HardBreak.cs",
       "upstreamSha256": "1af705959785de5cbb2aaffa61b3bf636cbeaa071805dfb83a470f8829c79438",
-      "currentSha256": "4a0ef2f3daf5df9bde4a8ac0a492a160e48a75e4b7fde5aaaa5eb8b7eb643437",
+      "currentSha256": "c45c0394e4e5e58ca5b6ce7964dcad9905814da52d8901cb818b42b796bd708f",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/MarkdownEditService.Templates.cs",
       "upstreamSha256": "ef3a50f2aa24599285b1fc241c05019c5d25fc463d51f2b229837591f093d337",
-      "currentSha256": "2937a6590ec1632c34f87d185d82905e637bc7d4a35d621677a7fd497ff132fe",
-      "modified": true
-    },
-    {
-      "path": "src/Axiom.Core/MarkdownEditing.cs",
-      "upstreamSha256": "373af746c65ad0aaa920e8f705c94a9a8043d7c395d9509c42370731bfcf024b",
-      "currentSha256": "98c0686c662fa79b727f63c7d673806b39d93cf48ac6c28f6b09d9c45c61bb7a",
+      "currentSha256": "e51ce43d39b104935ff607fe52c2a6995a73ec754b925507ccda69904b91ef9c",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/MarkdownExportService.cs",
       "upstreamSha256": "867f984085d6562c77b8b472d58ce348f49ed54343a9f00d394f428a052c8101",
-      "currentSha256": "a09e662316ee420638b843bc0b5fd45fda41b8b658a6f73dd4f333e644721947",
-      "modified": true
-    },
-    {
-      "path": "src/Axiom.Core/MarkdownImageReferences.cs",
-      "upstreamSha256": "a7c03e7fdab223e6abcf59a815d49c9a00750fbccd9487cdafa1630135513d56",
-      "currentSha256": "9d072ad3a4c82d0b79a8f2a591285647644e4793e77cc77760101cda8c16fbcd",
+      "currentSha256": "68b29cdb061bff1e15892877b671cba2041baf204fc6d75faa689794ea26363a",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/MarkdownListEditService.Deletion.cs",
       "upstreamSha256": "6a3ace9fe5330f503cab036fea05acddab54f59276c5abe895d8bb1f44e28d3d",
-      "currentSha256": "dfc6e58e1a67e3a384e0b5cb9263b3fde2750c109a8e0db1d6086d5b21bf0d04",
-      "modified": true
-    },
-    {
-      "path": "src/Axiom.Core/MarkdownListEditing.cs",
-      "upstreamSha256": "b239357e055428fb0975d10a099c0b06e33b35b041188adab411f90ac9fcfb17",
-      "currentSha256": "e0c13e54ddcc068533d0bdc108b7c0b1b01d1d58f1c348faee317ca87d745e0c",
+      "currentSha256": "9324eb4c4eaa343f612307380dbbe9b84d8d7c1700a4e9da7b787e4060342e5a",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/MarkdownPreviewService.cs",
       "upstreamSha256": "1d71e13678b2bcd4c9a5110e34c5ceb6484e522ca6ebb8d97b7df2dbeb586c73",
-      "currentSha256": "5d9a2d9b3cb69be64d2396fbc93426bc5e679329049222820dad3ee72c420d02",
+      "currentSha256": "921a2d1080c301356c1b57ab0219e686e07b2a4017a6e082a948bf788cf73187",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/MarkdownReferenceDefinition.cs",
       "upstreamSha256": "4ee0e0a941fb8bcd16e1957227de162c5b8b97445829e70b3d3ce101ef9d32d2",
-      "currentSha256": "7b3d802e1fcc288c2a52dac552bdbef492c76a9ac2de9b24934e6a561e0609e6",
+      "currentSha256": "a7cfd297c1fbdc823911b33069d89fb833dbabe61fb11b8d98f99c1470c91f17",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/MarkdownStructureService.cs",
       "upstreamSha256": "b39660d4c222e938bf746427dd7d5f87be0048e96c86c2166f6e36793e07dc03",
-      "currentSha256": "924f467abcee0421f6f91b8277cc79b1a6b2522a027e20b1aa261b72a652e347",
+      "currentSha256": "c84e2b73e242f95885430f0696ea262ca17aee9abb5ef52008534f3911f010c1",
       "modified": true
     },
     {
@@ -449,67 +431,61 @@
     {
       "path": "src/Axiom.Core/PreviewLinkRenderer.cs",
       "upstreamSha256": "47ab0ffa094c82e34fbca91804f748cd53ea99e741c78b46f85c920c8f1bee52",
-      "currentSha256": "57003066dc6cafcfd308f5691c2f0bf82380a9a2c03bd32f3685f0cc84e815e7",
+      "currentSha256": "4470c6e2903409421fc6ddead84bd1cb55e3dc262d3673c850e7546f8b18fbee",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/PreviewTaskRenderer.cs",
       "upstreamSha256": "ddaaf33eac2a365eab3cf47ae655a11eaae847d6f40cb3415fa81f18f7989657",
-      "currentSha256": "b55a7fd8bc0d5705c21a818187922cdc1e02f82e66914f0882eb52d228063ada",
+      "currentSha256": "f1b7ff151e6720ae15eba7b5b59f16ecc783524a15359e5c0c3d3a23d17c61a2",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/PreviewTaskToggle.cs",
       "upstreamSha256": "677de30ba28f7a3ca65d6cacd51f66dffc64bd8f3c64084df7aab3656b3f43ec",
-      "currentSha256": "cc8fdfdaf033a7b4210c39b922a545fa6cbfb3110efd4d922356f15c07c9b398",
+      "currentSha256": "f27c7c447200c544341bd4efc7b77e0d9e808716d576181991d07cfeee4a4c6f",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/RevisionRestoreService.cs",
       "upstreamSha256": "9021115d3375891b63870497a249184ec438b7151044c23ca87267e29a1a92db",
-      "currentSha256": "bb7bde551ec1615763eec50ecfd21451cb5984aa9f50f7c695a1ffaffbd6c3d1",
+      "currentSha256": "a4b5f49161d42adad4e96f96d4f3c02b8816275eb5c2f37e68c84c454a9a683b",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/TerminalInputState.cs",
       "upstreamSha256": "f1187bfb7d238aa71b0d1e6652d79e2f799d90fbc70d5cdd625bd81e3269977c",
-      "currentSha256": "9dbae144effc9f2a558e28f74c18767a822c8227f5562b5ff6a2eb244336ad8c",
+      "currentSha256": "8a6ce419c66e4ff9fdbe98667288f59ec6d346eb2ca88e8e73829f8e4f515bf3",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/WikiLinkInlineParser.cs",
       "upstreamSha256": "c2761d0d43fee53f3325266a444533e2f081ca94d1f8c474e1edbd2b6d04cc75",
-      "currentSha256": "d03c4a4b0810277fc6859855c4629ab8fb809c03e1a41c1d0529db1b9b1158e3",
+      "currentSha256": "5a4fbfc19ff752d894e24537aee8864446eed7ba916b42e008e9a245c40fa8cc",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/WorkspaceMutationPolicy.cs",
       "upstreamSha256": "f1353f48f1dab18f0a94b431786c2fe94784b019eb31c40841e6b1b097096851",
-      "currentSha256": "3ee9756ba7408ab9dcf61989da4e828722d1c5faced7fd691906d6580b6cfd8b",
+      "currentSha256": "b35954ef4545a3108777dd95c9bfde9c20ee519b76ce268846a94850aa312f51",
       "modified": true
     },
     {
       "path": "src/Axiom.Core/WorkspacePathBoundary.cs",
       "upstreamSha256": "a03c9c9368af3491f6dece2b0dfd1e9b120263428e51ddcf494d957a44744617",
-      "currentSha256": "a7f5969e29084d76e837f238bb831ac14ede59bc55294568a0f9cab759e65c5f",
-      "modified": true
-    },
-    {
-      "path": "src/Axiom.Core/Workspaces.cs",
-      "upstreamSha256": "942871b68306d15120f9715e08394bf849cac7028d13c90ae9e69b46390ac189",
-      "currentSha256": "d17ca48c3ef6aff7a9e510816b2114c3ba3d28501137e5defd6e10019d670999",
+      "currentSha256": "303f0d0751235c3972ca7dd66687cc8d5836a161aa6cb5c833861623fc8d485c",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/AppDataPaths.cs",
       "upstreamSha256": "824457345b47e5aa4d27dbb34ba0106eefed4de1e008f3735777d425e5e58b6a",
-      "currentSha256": "b27464d34410af3d5f239dc72d380b4f0433ffbe84cc6912701391c6b2c1c280",
+      "currentSha256": "f51de05a99e7f981140a57794db9b615035f58278bc45fc252b6e9d6a03444d9",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/AssemblyInfo.cs",
       "upstreamSha256": "0169fd93c668d8ce6a8ab979dd1cc7bd5af88cff4a79cfa942da4c9c1adaaddf",
-      "currentSha256": "c0e89bdc66cf9fdfdaa9bbcc7bef50a519a1b617d172edf855b48dbcb772cd59",
+      "currentSha256": "53dcb2dae019fce1cf6b7af06d4878ff89f1dbec34a0c3827a21c5b6686fa957",
       "modified": true
     },
     {
@@ -521,7 +497,7 @@
     {
       "path": "src/Axiom.Infrastructure/AutomaticUpdatePreferencesStore.cs",
       "upstreamSha256": "8ebfb268e90cd212d398dd401810b091d4e204e735274b111b7312f0982556a0",
-      "currentSha256": "fa4d3072f8f427dfd4ba80837de105aed6794c0693ab86f99409ed98241fafdc",
+      "currentSha256": "9af54e716f74b7e2d029fa0debe4786b65dff6cdc9ae968ad6b13872b4c12684",
       "modified": true
     },
     {
@@ -533,19 +509,19 @@
     {
       "path": "src/Axiom.Infrastructure/DocumentExportService.cs",
       "upstreamSha256": "072c5475569865f7d7a27e9db6e0442c65dd1ffbdd8074a350958399759424bc",
-      "currentSha256": "eea11a7a544d991dc13395d0498faaa85a0908a2cd0927c5de59714df643ef0e",
+      "currentSha256": "caf52469e70a4b691b68215906ae1750742b4744cdb8861d63b4a13bbb9f95ee",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/DocumentImportService.cs",
       "upstreamSha256": "850052ebcb154da30bc2167782ea09a87bd5625020face95f61538ce4e6b28f6",
-      "currentSha256": "a8e594ce37c846f7b8618f6dddc980cd7f34f11461dd68ad7c641a74b8a5604b",
+      "currentSha256": "900bb34d063bf6e9a8928d2baf226240e824dd33cba591c3fe693a922fe303c4",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/EpubExportWriter.cs",
       "upstreamSha256": "eb8e7823a26bfc4d3d4b00318004e2e12738c6bb0847223d3ceb3f5bb9219a4c",
-      "currentSha256": "922d4161ef2ba6acd0eb4d898ea9d4eda2985d8115b825e1ea3485993d08c725",
+      "currentSha256": "4ccae2a930712f9d08c2b1f7685b16c60365f06d2420bec9324baa2ccb0add74",
       "modified": true
     },
     {
@@ -557,13 +533,13 @@
     {
       "path": "src/Axiom.Infrastructure/ExportImageDimensions.cs",
       "upstreamSha256": "a9278b163f53575b33d32f137d054300814a27c4abe53b30a0ca18cc625b08e0",
-      "currentSha256": "8c9091d5bd4664ed9b5fcf828f821418c9b080107e708173b4284446a0dd76e9",
+      "currentSha256": "3481c23b2310628539937eb1356edd23bd971ee944f629b16ed3801892bc4fdf",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/ExportImageReader.cs",
       "upstreamSha256": "8e6ed998f30c8be54eb3acafdd1ea3a90456b602de1f5b20780f8e8b7e74f379",
-      "currentSha256": "7e09b7292275d53172ee094e925224bd250fc319ba170eb4449c2be4997d5ea6",
+      "currentSha256": "2855ec218d780d5ded6223bad817a1f9b0cbd7c1657ae48340e278f4802aac18",
       "modified": true
     },
     {
@@ -575,13 +551,13 @@
     {
       "path": "src/Axiom.Infrastructure/ExternalFileMonitor.cs",
       "upstreamSha256": "0343948571def6a43551eea4b7f483982f960ef4de04b737ef55a8fc4555676e",
-      "currentSha256": "d7f3bf89c896c7dfdf918dcf08168d8223259a810d3131e51936c871ce365093",
+      "currentSha256": "c3fddf49654fb4d0e6313475d4a0f2ec0b2c09cc5c7fe66a23251c98024d61bc",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/FileDocumentStore.cs",
       "upstreamSha256": "d24a24eca816809f70b862a12a04634e41a78bb677a21866a951268f4e96032c",
-      "currentSha256": "6edbaec134d67d2f77374b1d9a5174ba38c80ed8f48b6f7ef10664d4568c5d45",
+      "currentSha256": "ac9ca6b5655621c3aaa4484b2ca3128da2cd1a058360fe8a0d3211c1c9ffbdb8",
       "modified": true
     },
     {
@@ -593,43 +569,43 @@
     {
       "path": "src/Axiom.Infrastructure/GitCommandRunner.cs",
       "upstreamSha256": "828e1c9049b6ad56b361d6b9bdda617134b539ebb52d73b3c79613a12a19c9f8",
-      "currentSha256": "ac98e94c496570ffd6ebd9fbbe0d8229b7a1c9969844600bdefd75848bdf5338",
+      "currentSha256": "22cbf51f09a0d09dbd42733cfab9dbe6669da6c9378e0b07d0de7c664d4fea00",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/GitDocumentHistoryService.Checkpoints.cs",
       "upstreamSha256": "faef82cad86a786f76857a08ff6cb5155d205cb2a19b5c36c00f4d1ad2f6388e",
-      "currentSha256": "8513090c0ce3cdfae9d1cb7d60ade41caebb48c8942a8966afaf06db4bcb004f",
+      "currentSha256": "38fd9014cff9605e2854708ddf16719e42b5ae8a3f6c2103bbc3088920490772",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/GitDocumentHistoryService.cs",
       "upstreamSha256": "bb9e6ad5d973ae1c0a7844b691ca2e64fbc658e5306136e0da305fc9f64275d6",
-      "currentSha256": "6fe297b4391f2f8e519218802d86c8948149ff35856ca46421f41d8de32d0954",
+      "currentSha256": "87b5f2a06fe64bbec26ccaad87a1d0ab7627039e7c84cc329297411fef35f53d",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/GitWorkspaceService.Mutations.cs",
       "upstreamSha256": "80b2d690e0051b40dec92337375a41ead15f05c365ef317f120cbb1ef82f5209",
-      "currentSha256": "70afacc542d38c163eca680e507ebaca3bd836af04b307c131c9e9ce44daf8ce",
+      "currentSha256": "50d54161cebb51995ca998cc9fa383c01b12aede4d7231423da6aabfd2d9d0e0",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/GitWorkspaceService.Staging.cs",
       "upstreamSha256": "1a7885f4fe4909f09ceaf6a096062786c9a2e315f38754730d1f320296fc62b3",
-      "currentSha256": "7b1676c96ff06dcbd234159218ce805601e45c041dca95df0060713102a6009f",
+      "currentSha256": "0f92aed8e07aad5ba8f245e83ed39ce2ea3c6fdcd1124bf6b6111e618dad4b49",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/GitWorkspaceService.cs",
       "upstreamSha256": "5566c030c2a9d515b252ff6fe10c904840f472fce620d4cbf42e9632fac3bff9",
-      "currentSha256": "d11f4eb35a943536a40838a1e6dfcf2c5be78509cde2b6fbc5b6fa3c3c7fe073",
+      "currentSha256": "b6724ae615f67a26a55ecce97a2a0cb56eb948eb30976a6642ba5689ac0b3762",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/HtmlExportWriter.cs",
       "upstreamSha256": "436ae2c6b28d176434096f583254f44b52cc897eb7569fff5d636ff0e1385a0b",
-      "currentSha256": "77047ff81dffa1be65ac4c2054e70df071fc1f52ed44ade381555ea8beb1d25e",
+      "currentSha256": "c8953b57f87a630b8a0af5451c9a5c9700f24d8456e752bc8a984deff2506e26",
       "modified": true
     },
     {
@@ -641,25 +617,25 @@
     {
       "path": "src/Axiom.Infrastructure/IStructuredPdfExportRenderer.cs",
       "upstreamSha256": "2bda04f6c25a24855c736dc3230e29406f9867d47083490d6c0d3c5603a246d0",
-      "currentSha256": "c7940259ab7208bec2a64d41ec5db5f00966e9c0ca4e07492dc77e73e4577a3d",
+      "currentSha256": "0d7dc8563df09ae694bcca7fd9074ad9566294fa3240072f00ac5c5fb9c79454",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/ImportMarkdownWriter.cs",
       "upstreamSha256": "c60b4e76ba017b0a799c4508e8ed580d2c3b6c02d0828cb66ddce6aefc9ba173",
-      "currentSha256": "e829d67754db40b2408fafcb5d634cc1a86a4f14b71bc692342f404a1ec7690f",
+      "currentSha256": "d80731fe7a66a40e2933f6003d3898a43875f6ddcd00411b256fa22168737651",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/ImportedImageSavePreparation.cs",
       "upstreamSha256": "941a032d07d3cc616c4aa97b7eec0479ff4491785eed4fc179a0616f6fd27fc2",
-      "currentSha256": "c6832c2ef6f8fd0a923ea675f803217046bed41c37fab0c5fd521e692575a984",
+      "currentSha256": "df19e1948eb36a080e4f334c34ab83adec75e1473d60b9ec0bfd032267b51469",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/OpenDocumentExportWriter.cs",
       "upstreamSha256": "66170507cfca9cdb4e741e62c3607507984b0db2990ee7f185ec54758fddc235",
-      "currentSha256": "3387c2bf03ad4671d23f89acd9c13fd8b59d9ae50b338a087363a363f8dbe9d6",
+      "currentSha256": "82fa9e3af2c2f12c0c480a2a5818b8fec32164b17dba0fd094b6925407ad7fdd",
       "modified": true
     },
     {
@@ -671,43 +647,43 @@
     {
       "path": "src/Axiom.Infrastructure/RollingFileLog.cs",
       "upstreamSha256": "4ebac900ce576703d03aa813d73a5ab61bae2f9d648f9c3714fd9df2b2c06e9b",
-      "currentSha256": "e6805709559def801f0983919f7bb8350079ba274d5ab9aceac3882a50526cf4",
+      "currentSha256": "c418f9882b496edd0cacc9b84783b93730e160d970e1736a49e7b4f81f9118fd",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/SingleInstanceCoordinator.cs",
       "upstreamSha256": "ebdabddc937a3136023af20f131e3fdd38dc7fc0895f547cecb1b418b57231b9",
-      "currentSha256": "dd314bd861c66aa8bdd4b5a10721c32e0fe886a07f160f722835bf52f0106e5e",
+      "currentSha256": "9341967bbd3fc1d3392189a16b749f645a0fd64e7dcaa9e899c0cc0a6319086d",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/TextExportWriter.cs",
       "upstreamSha256": "811008bf936e4ef2747cca79e26e2919f02379a03d0d3e300950d4556d61cdaf",
-      "currentSha256": "d9aea5797c421ba60c9d263714c2e92e91f37740135773578111b66c9278014f",
+      "currentSha256": "7cabd8253ccb62e8ded85125f45d82457d89528aa3be3dcd7581cd7aeb3c72af",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/WindowsTerminalSession.cs",
       "upstreamSha256": "b25836f8e2f2567b9e6de5e1a877bfee6687a30df2390b8597a3d554d65724c8",
-      "currentSha256": "cfebea80f5f6b6c645f923452587ebecfbd007633173d30a28f9cc6a517d7985",
+      "currentSha256": "1b4ea1a9dec750e757c419abd26d418ef0201e1a57770114541897d1b7dbfb8d",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/WordExportWriter.cs",
       "upstreamSha256": "8f0d73dc18ebd03b76b1ddba690c91326dcb66eefba3ab0f27a58345c11fdd40",
-      "currentSha256": "3de64329def3a63c192982fac7af828506559b8bf4ae6713166afd973e6cdd08",
+      "currentSha256": "e70c94119fab0caa7c00d118d6fef540454a0ace9d0c5af4be557648007525d2",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/WordImportReader.cs",
       "upstreamSha256": "5020a0ee4e33b1d565be9d754bd0a2aa1f823776f7730c0b7a3b9bd147ffd959",
-      "currentSha256": "60d249ee2d10b2d44c9bb759366681cdc07b2268230bfb2faa0f71d26345684a",
+      "currentSha256": "f38b3e76bc75009e55a98ab661b553849dc1ac0d4696467015e8ae2e8d934663",
       "modified": true
     },
     {
       "path": "src/Axiom.Infrastructure/WorkspaceFileOperations.cs",
       "upstreamSha256": "f6d75423e540f6055e4805f71291edfa60171af49b6e2ec149cfa2ac2ec9ba0d",
-      "currentSha256": "6513fafe6c1775529fee1169bf01d3828aeb06c0984579a35be07ca84c37dc32",
+      "currentSha256": "82894c1b71a62e8379aa117848f99e75731fa668c9a1317c493496b3c1602429",
       "modified": true
     }
   ],
@@ -741,6 +717,7 @@
     "src/Axiom.App/DocumentCreationPreviewWindow.cs",
     "src/Axiom.App/DocumentHistoryProbe.cs",
     "src/Axiom.App/DocumentImportProbe.cs",
+    "src/Axiom.App/DocumentImportWindows.cs",
     "src/Axiom.App/DocumentTab.cs",
     "src/Axiom.App/EndOfLineElementGenerator.cs",
     "src/Axiom.App/EndOfLineTextElement.cs",
@@ -766,7 +743,6 @@
     "src/Axiom.App/MainWindow.Classification.cs",
     "src/Axiom.App/MainWindow.Clipboard.cs",
     "src/Axiom.App/MainWindow.CommandMenus.cs",
-    "src/Axiom.App/MainWindow.Commands.cs",
     "src/Axiom.App/MainWindow.CompactWorkbench.cs",
     "src/Axiom.App/MainWindow.CpAnalysis.cs",
     "src/Axiom.App/MainWindow.Creation.cs",
@@ -779,7 +755,6 @@
     "src/Axiom.App/MainWindow.ExplorerSelection.cs",
     "src/Axiom.App/MainWindow.Export.cs",
     "src/Axiom.App/MainWindow.FolderManagement.cs",
-    "src/Axiom.App/MainWindow.Git.cs",
     "src/Axiom.App/MainWindow.Help.cs",
     "src/Axiom.App/MainWindow.History.cs",
     "src/Axiom.App/MainWindow.Import.cs",
@@ -800,12 +775,10 @@
     "src/Axiom.App/MainWindow.ReviewedMoves.cs",
     "src/Axiom.App/MainWindow.SessionRestore.cs",
     "src/Axiom.App/MainWindow.SessionTransitions.cs",
-    "src/Axiom.App/MainWindow.Settings.cs",
     "src/Axiom.App/MainWindow.Shortcuts.cs",
     "src/Axiom.App/MainWindow.StateRestore.cs",
     "src/Axiom.App/MainWindow.Structure.cs",
     "src/Axiom.App/MainWindow.TabDrag.cs",
-    "src/Axiom.App/MainWindow.Tabs.cs",
     "src/Axiom.App/MainWindow.Templates.cs",
     "src/Axiom.App/MainWindow.Toolbar.cs",
     "src/Axiom.App/MainWindow.ViewModes.cs",
@@ -899,6 +872,7 @@
     "src/Axiom.Core/AnalysisEmbeddings.cs",
     "src/Axiom.Core/AnalysisInsight.cs",
     "src/Axiom.Core/AnalysisSnapshot.cs",
+    "src/Axiom.Core/Appearance.cs",
     "src/Axiom.Core/AxiomCommand.cs",
     "src/Axiom.Core/ClassificationCatalog.cs",
     "src/Axiom.Core/ClassificationChange.cs",
@@ -909,6 +883,7 @@
     "src/Axiom.Core/CommandDispatcher.cs",
     "src/Axiom.Core/CommandOutcome.cs",
     "src/Axiom.Core/CommandResult.cs",
+    "src/Axiom.Core/Contracts.cs",
     "src/Axiom.Core/DeletedDocument.cs",
     "src/Axiom.Core/DocumentClassification.cs",
     "src/Axiom.Core/DocumentIdentityPolicy.cs",
@@ -920,6 +895,7 @@
     "src/Axiom.Core/DocumentRelationship.cs",
     "src/Axiom.Core/DocumentStatistics.cs",
     "src/Axiom.Core/DocumentTemplateService.cs",
+    "src/Axiom.Core/Documents.cs",
     "src/Axiom.Core/EditorPreferences.cs",
     "src/Axiom.Core/HelpSearchResult.cs",
     "src/Axiom.Core/HelpSearchService.cs",
@@ -938,10 +914,13 @@
     "src/Axiom.Core/IWorkspaceSessionStore.cs",
     "src/Axiom.Core/MarkdownEditPatches.cs",
     "src/Axiom.Core/MarkdownEditProposal.cs",
+    "src/Axiom.Core/MarkdownEditing.cs",
+    "src/Axiom.Core/MarkdownImageReferences.cs",
     "src/Axiom.Core/MarkdownLinkResolution.cs",
     "src/Axiom.Core/MarkdownLinkResolutionStatus.cs",
     "src/Axiom.Core/MarkdownLinkResolver.cs",
     "src/Axiom.Core/MarkdownLinkTarget.cs",
+    "src/Axiom.Core/MarkdownListEditing.cs",
     "src/Axiom.Core/MarkdownProseRanges.cs",
     "src/Axiom.Core/MenuStyle.cs",
     "src/Axiom.Core/MetadataImportProposal.cs",
@@ -977,6 +956,7 @@
     "src/Axiom.Core/WorkspaceRenamePlan.cs",
     "src/Axiom.Core/WorkspaceSearch.cs",
     "src/Axiom.Core/WorkspaceWikiLinkService.cs",
+    "src/Axiom.Core/Workspaces.cs",
     "src/Axiom.Infrastructure/Assets/Spellcheck/DICTIONARY-LICENSE.txt",
     "src/Axiom.Infrastructure/Assets/Spellcheck/HUNSPELL-LICENSE.txt",
     "src/Axiom.Infrastructure/Assets/Spellcheck/en.aff",
@@ -1044,43 +1024,275 @@
   "new": [
     {
       "path": "src/Axiom.App/AssemblyInfo.cs",
-      "sha256": "c0e89bdc66cf9fdfdaa9bbcc7bef50a519a1b617d172edf855b48dbcb772cd59"
+      "sha256": "53dcb2dae019fce1cf6b7af06d4878ff89f1dbec34a0c3827a21c5b6686fa957"
+    },
+    {
+      "path": "src/Axiom.App/AutomaticUpdateProgress.cs",
+      "sha256": "5a8a97b8b2fbd58b3c7a0f8b513421ff600e37c0b5e05761e0a5d7af284c3b54"
+    },
+    {
+      "path": "src/Axiom.App/DocumentImportPreviewWindow.cs",
+      "sha256": "371395212538251327228873a213c1b5aded378fdb5a8c5356421cd514795a5b"
+    },
+    {
+      "path": "src/Axiom.App/DocumentImportProgressWindow.cs",
+      "sha256": "83f91a4168a5736c3744f86c0f21f5ca41b8ad27216977d1ca4a9c5c057ce493"
+    },
+    {
+      "path": "src/Axiom.App/EditorTab.cs",
+      "sha256": "c97d4a827baf614fcccce3a06ac7b8c56277dce15e40290674159e07d9c3ed85"
+    },
+    {
+      "path": "src/Axiom.App/IAutomaticUpdateClient.cs",
+      "sha256": "4285106181050d5231fda2355080baef92791ee4f6f8c5af72181e4a37365ff3"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Editor.cs",
+      "sha256": "8a4b5a11df7586fbdf13e0be38fbf00cffbb18bfab0173260b9e8816c5a1839d"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.ExternalChanges.cs",
+      "sha256": "2e423795a8291b689ff37fcff4df40e1861a3b8f035756deef97180d07925a1a"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Files.cs",
+      "sha256": "89cc09530ae4aa209d981d65592a97053d106283eca1245ff4b36a2f77080ced"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.FolderNavigation.cs",
+      "sha256": "7212d1cc5e93d24052ab94c8d0a0cacea2e2bab7ded06d3e7df13f366e3f89b3"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.ImportExport.cs",
+      "sha256": "872e67ea8315d36576a312143e5581800f2402a84ab4974487d50b5b52c7806e"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Layout.cs",
+      "sha256": "1f717c096af8101fb810f8b097b18a4eeee635be01d459a390cde12b702bdc03"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Lifecycle.cs",
+      "sha256": "6433595ad0d6ee6ce0e7897e060bf59df96c8bc72c6bab63c25472ff2b528b1d"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Navigation.cs",
+      "sha256": "05704d6ac657cd3fbff10b189d027b8de9446709ae2ed2ae330a9b70ea9b1943"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Preview.cs",
+      "sha256": "5f30505fbdab0e52dcbee9b7c05bb4b90ff7afc85c38d71339012ca367cea9e2"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Review.cs",
+      "sha256": "e6049be4488c68f7d4eb9a2607f0bcea78dbd13da1f778258494087d6c773ca1"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.Updates.cs",
+      "sha256": "8335710de4858fd4d983e87ac0a3a7af69fc34ca459ebe4ec0602c6030867187"
     },
     {
       "path": "src/Axiom.App/MainWindow.cs",
-      "sha256": "8223399a53377dd37e65d549d8be5a857f5df8c60e5c01d0e0d2839ab98484f4"
+      "sha256": "64ccd87fb359a59f21e8a07a8232f4ee4ca87af8319577d1d2e56f0f0108cba8"
     },
     {
       "path": "src/Axiom.App/MarkdownHighlighting.cs",
       "sha256": "59d7a2e0c6e675e68e862ad49af1232ea0087a6219bb94f96376701d2f2409fe"
     },
     {
+      "path": "src/Axiom.App/PreviewBrowserPolicy.cs",
+      "sha256": "0b12b097c21d86a0db0ddb2d6bfba50e964465dc0ba8c6de35c28493093f966e"
+    },
+    {
       "path": "src/Axiom.App/ReviewProbe.cs",
-      "sha256": "a04b46975a8b73d2c4eaaa022223b727168cdcac4b35cff3b3ef98dc8c6408b8"
+      "sha256": "e52f2ea04575a4e04783397474067fe1a9887841925ceaada8246c1c845a56cb"
+    },
+    {
+      "path": "src/Axiom.App/VelopackUpdateClient.cs",
+      "sha256": "30bf69c7e6b2b977208d8f1bd8332f73056ad7230777e6279a75951b6d8f6bb2"
+    },
+    {
+      "path": "src/Axiom.Core/AppearancePreference.cs",
+      "sha256": "e723c82c7a131b6efa2df6e27839f1e10f133db9906ca34c1837c3f3552c9420"
+    },
+    {
+      "path": "src/Axiom.Core/DocumentFile.cs",
+      "sha256": "75305a32d733a1b6d8e938957b233a0a77234926e8a7069646d369125e5db2d5"
+    },
+    {
+      "path": "src/Axiom.Core/DocumentIdCodec.cs",
+      "sha256": "98e55f0d1eb2585c698a44f7e6843e10059a35b488d36cca71f7905628086395"
+    },
+    {
+      "path": "src/Axiom.Core/DocumentIdentityOccurrence.cs",
+      "sha256": "ad86795fd277225335e6fe406677fd336e1b324349dd76cf58ef5c06517a54e7"
+    },
+    {
+      "path": "src/Axiom.Core/DocumentSession.cs",
+      "sha256": "f50abbb97627907fa2afc95c215ec25e9ce06840c22454f54f914e2c619196e4"
+    },
+    {
+      "path": "src/Axiom.Core/ExternalConflict.cs",
+      "sha256": "422cd78b6a6a9fa7f5da290fb179c43a5516672a3a04d997832c0583e257ec21"
+    },
+    {
+      "path": "src/Axiom.Core/ExternalDocumentConflictException.cs",
+      "sha256": "9aa0a171b22b2e3c1601b553ac981f1cde3c56e7be89094150c172f2dbaab7e1"
     },
     {
       "path": "src/Axiom.Core/FeatureAccess.cs",
-      "sha256": "36162f749811928220bdf1ecbf64ea2952f05ab59f53ea11570d9dc4c3bba284"
+      "sha256": "3b07f536f8dd00043683747c1ed1f3a886e26c6e84abb264f784cacec1445f8f"
+    },
+    {
+      "path": "src/Axiom.Core/FeatureDecision.cs",
+      "sha256": "d16fc75bf66c199df967e839444f29af2fd1aee2e36a00a1edfbaf46ddbbf447"
+    },
+    {
+      "path": "src/Axiom.Core/IAppearanceStore.cs",
+      "sha256": "35eb7bad910f924145611f03de8e2607fde8f6ab940cd7c598367b3d685a1ec1"
+    },
+    {
+      "path": "src/Axiom.Core/IAxiomLog.cs",
+      "sha256": "0526417eb21068107a934ed62a40f83e317153e1f45fa71c1bbbe715be6251c7"
+    },
+    {
+      "path": "src/Axiom.Core/IDocumentFileStore.cs",
+      "sha256": "e4a6630cbfd4854526298fe16cd2672eb15ea063af3ab9fc243c6aa8f4f7d60a"
+    },
+    {
+      "path": "src/Axiom.Core/IDocumentMetadataStore.cs",
+      "sha256": "1cd31a93122267b27ce27ce62491064e89a8e54d03fbc83b84aa14f4bee0e8b0"
+    },
+    {
+      "path": "src/Axiom.Core/IRecoveryStore.cs",
+      "sha256": "cfb5c7234b70d3f0a67d63f2546ac75221ec6888a8973d628bd43bfeef85702c"
+    },
+    {
+      "path": "src/Axiom.Core/IWorkspaceStore.cs",
+      "sha256": "5eb75b1a70c12cbf844a8393b1369db4e2b185a533dee4c2e7a2212b550e8d49"
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownDiscoveryResult.cs",
+      "sha256": "ef62ecb4bfa80de9c0815dd98c8a39cccb8c2cf1239d830da81f838ca4f20b3c"
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownEditKind.cs",
+      "sha256": "97e3ad3b83757a9c83a82f190f1d98ebbc55d14fe3b9d036162bf0fe496e0799"
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownEditResult.cs",
+      "sha256": "c8850819e63d1809883d4e7b7035e80fd45d14f0bc18f1f7070050aa1d65d6a6"
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownEditService.cs",
+      "sha256": "c5125558ccb072b11b0207c8e06530b94cc8e037130a944365ff0f7455a93c9b"
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownImageReferenceResult.cs",
+      "sha256": "6d50f6a0026ae86e4ee3ef836bc2c64f697134935028e05974a72b4f66921911"
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownImageReferenceService.cs",
+      "sha256": "8bf24bf2bc074b3842712e6c221a80bfd4d0844de27b42d8f25c4572cc2c9942"
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownListEditKind.cs",
+      "sha256": "b02c4e219f2754065aaa5203f6b98612aef58c93572547c0d1f69472f97c3c83"
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownListEditService.cs",
+      "sha256": "50a0c7e9cc631a560a38d4fc4acb7c596b2c9c24449ac6a2101ef98190bae8aa"
+    },
+    {
+      "path": "src/Axiom.Core/NullAxiomLog.cs",
+      "sha256": "df8bb4cc25812ed215ff61421bbe5fc0a040fde1bd75203d7ffa4f059c4099cb"
+    },
+    {
+      "path": "src/Axiom.Core/OptionalFeature.cs",
+      "sha256": "7ae03ebee33c6015f765675a1d10970fc22c7eb59e6be397755fa8c1215accdf"
     },
     {
       "path": "src/Axiom.Core/PreviewSanitizer.cs",
-      "sha256": "4a40c358a16870667bef765ce6e23b11400aa4e5578949078f9c509311b752ba"
+      "sha256": "638f8942c5b42344ed82e2f0dcdbe81a17d9f230d640dab1d68913ec18cba912"
+    },
+    {
+      "path": "src/Axiom.Core/PreviewTaskMarker.cs",
+      "sha256": "81cb5b7213195f5e1b8ead94661ba610c7ffa3dc37afdf33f0d0db131e6d5c53"
+    },
+    {
+      "path": "src/Axiom.Core/RecoveryDraft.cs",
+      "sha256": "f0640a1af8577cfacc9ebbe07291c50c2142020566f9c0a3a62be3d9f86ef7f8"
+    },
+    {
+      "path": "src/Axiom.Core/SanitizedPreview.cs",
+      "sha256": "48e18ddc5e7516bbf11eea67e6faa062ee5339c99359a0f1b5d102c80b6942a7"
+    },
+    {
+      "path": "src/Axiom.Core/WorkspacePin.cs",
+      "sha256": "706cced0320404fd70c826441113c55666783addeef2de590e075452febb0f34"
+    },
+    {
+      "path": "src/Axiom.Core/WorkspaceRecord.cs",
+      "sha256": "26644b7f3233d88d89192c7df80e819988c99f3361c2adcd6b3904a146b1254f"
+    },
+    {
+      "path": "src/Axiom.Core/WorkspaceService.cs",
+      "sha256": "190367cc1704025fe99985ad671e6933682ef3cd4d137491a479677166978010"
+    },
+    {
+      "path": "src/Axiom.Core/WorkspaceTreeBuilder.MutableFolder.cs",
+      "sha256": "6ff8bf1fd776d07844ba96ade1669e0d0c172fa5ed77d1042a09e913c64b5d7b"
+    },
+    {
+      "path": "src/Axiom.Core/WorkspaceTreeBuilder.cs",
+      "sha256": "9f52236f9f63466a4df07a450a8606015c3e3a33707ce928185400c451961d6b"
+    },
+    {
+      "path": "src/Axiom.Core/WorkspaceTreeNode.cs",
+      "sha256": "0af204d701ac93d62324113f0ee9d2c143a83472f9f1150caad25d8c51befcb3"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/DocumentImportResult.cs",
+      "sha256": "4d42a7867556d18a18f629adf61fd1bfcfebb23ae3ac2f725a8668fb93448052"
     },
     {
       "path": "src/Axiom.Infrastructure/EditorPreferencesStore.cs",
-      "sha256": "3d5a9a3f6a536c4891d2fcd8314e8572ebcc11395f2e96aaf24d3270f6b70243"
+      "sha256": "1f61f0c3c0a707ed5195aed1468eab0340bce53195a54a51712fd29bf7e0132f"
     },
     {
       "path": "src/Axiom.Infrastructure/EditorStateStore.cs",
-      "sha256": "677de956e519d3fd9dfefcd584268d84c5527e0a066a05483ca620622c2faa49"
+      "sha256": "317a46bc65590d9ddd4e8a84d4d9c7ffe0c1f57f5632b200aede3c3b91ca2568"
     },
     {
       "path": "src/Axiom.Infrastructure/FeaturePolicyStore.cs",
-      "sha256": "8ac943e0aa8f6381a86c44832cdfd7b9595d57e611a134f0fc936b9d601a34d3"
+      "sha256": "6caa267840db436729025c2d8f5122c5178ac84b47d8c610e0be87d16c17da6d"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/MarkdownPreferences.cs",
+      "sha256": "ec5b68507cf9a9d10ab5a43e8fa4370f689ac19f58386637525f7be075347cdf"
     },
     {
       "path": "src/Axiom.Infrastructure/RemoteImageLoader.cs",
-      "sha256": "83115d7019f3c1273fe02bb3f90d82b706d70b1a564f3d7ebb2a6aee0994830a"
+      "sha256": "eaed197b34543287b20855088b1cce1a3724ccc0207f578ff72b15e67c6de342"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/SingleInstanceCoordinator.ActivationRequest.cs",
+      "sha256": "6cbbebeede005896bdf20cd0ede5f1deeae294d7c99cfef48432856950d80193"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/WindowsTerminalSession.Coord.cs",
+      "sha256": "4fcb07f1525d77c5b9fa115b34a73033714831999e092512e283254ba70e796c"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/WindowsTerminalSession.ProcessInformation.cs",
+      "sha256": "45388151a8bde7e3295968fd3255845558088c1833db398971ab49ef1affc1c1"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/WindowsTerminalSession.StartupInfo.cs",
+      "sha256": "b2f0d8069e1edb7689021643552ceee4fb4adf4e1c44f484dfbfa7f041883be6"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/WindowsTerminalSession.StartupInfoEx.cs",
+      "sha256": "723a23c535f756b2a30c8be8982f805fc95b0eebc761365c5d79212fc33c4835"
     }
   ],
   "note": "Fresh repository history; manifests list current source selections rather than hidden feature flags. No upstream Git history or local state is copied."

@@ -4,19 +4,19 @@ namespace Axiom.Core;
 
 public sealed class DocumentStructure
 {
-    internal DocumentStructure(string sourceText
-                             , MarkdownDocument syntax
-                             , IEnumerable<DocumentHeading> headings
-                             , IEnumerable<MarkdownDocumentLink> links
+    internal DocumentStructure(string                                   sourceText
+                             , MarkdownDocument                         syntax
+                             , IEnumerable<DocumentHeading>             headings
+                             , IEnumerable<MarkdownDocumentLink>        links
                              , IEnumerable<MarkdownReferenceDefinition> definitions
-                             , IEnumerable<DocumentStructureNode>? nodes = null)
+                             , IEnumerable<DocumentStructureNode>?      nodes = null)
     {
-        SourceText = sourceText;
-        Syntax = syntax;
-        Headings = Array.AsReadOnly(headings.ToArray());
-        Links = Array.AsReadOnly(links.ToArray());
+        SourceText           = sourceText;
+        Syntax               = syntax;
+        Headings             = Array.AsReadOnly(headings.ToArray());
+        Links                = Array.AsReadOnly(links.ToArray());
         ReferenceDefinitions = Array.AsReadOnly(definitions.ToArray());
-        Nodes = Array.AsReadOnly((nodes ?? []).ToArray());
+        Nodes                = Array.AsReadOnly((nodes ?? []).ToArray());
     }
 
     public string SourceText { get; }
@@ -26,9 +26,11 @@ public sealed class DocumentStructure
     public IReadOnlyList<DocumentStructureNode> Nodes { get; }
     internal MarkdownDocument Syntax { get; }
 
-    public DocumentHeading? FindHeading(string decodedFragment) =>
-        Headings.FirstOrDefault(heading => heading.Fragment.Equals(decodedFragment, StringComparison.Ordinal));
+    public DocumentHeading? FindHeading(string decodedFragment)
+    {
+        return Headings.FirstOrDefault(heading => heading.Fragment.Equals(decodedFragment
+                                                                        , StringComparison.Ordinal));
+    }
 
-    public MarkdownDocumentLink? FindLinkAt(int offset) =>
-        Links.FirstOrDefault(link => link.Source.Contains(offset));
+    public MarkdownDocumentLink? FindLinkAt(int offset) => Links.FirstOrDefault(link => link.Source.Contains(offset));
 }

@@ -7,7 +7,10 @@ public static class ExportDocumentTraversal
         foreach (var block in blocks)
         {
             yield return block;
-            foreach (var nested in Flatten(block.Children)) yield return nested;
+            foreach (var nested in Flatten(block.Children))
+            {
+                yield return nested;
+            }
         }
     }
 }

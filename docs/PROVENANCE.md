@@ -9,3 +9,5 @@ Retained components include document sessions and atomic file saving, Markdown e
 The repository is public for security review at Ben's explicit request. Copyright/authorship and third-party notices are retained. NuGet package licenses and bundled-asset notices are listed separately; public source publication alone does not select a new project-wide open-source license.
 
 Full Axiom remains independently maintained. Future Markdown fixes can be selectively ported with a new source reference and dependency review; full-project merges are not automatic.
+
+Standards alignment in 0.1.1 moves types into named files and divides the UI coordinator. The manifest is path-based: a removed upstream path may contain types relocated into the new-source list, rather than removed functionality. Git rename/diff history and docs/As-Built/StandardsAlignment.md explain this distinction; the original delivery record retains its original extraction counts.

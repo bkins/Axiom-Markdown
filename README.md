@@ -37,3 +37,5 @@ The packaging script refuses an existing output directory. It never publishes a 
 Use **Tools → Feature controls and policy** to disable optional features. Organization policy takes precedence. A disabled capability's code remains in this edition; further physical exclusions require a separately verified build.
 
 The preview reports sanitization with a visible notice and details. Remote images remain blocked until you approve the listed destinations for the current document session; original Markdown is unchanged. Mermaid runs locally and document-supplied scripts remain blocked.
+
+Coding and review: [standards](docs/CODING-STANDARDS.md), [responsibility review](docs/As-Built/StandardsAlignment.md), [design decisions](docs/As-Built/DesignDecisions.md). Run scripts/Check-CodingStandards.ps1 alongside the behavioral tests.

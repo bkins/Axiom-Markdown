@@ -1,6 +1,6 @@
-# Axiom Markdown 0.1.0 review
+# Axiom Markdown 0.1.1 review
 
-Status: **0.1.0+a38096d2e00e** is ready for review; exact source, evidence and asset hashes are in [the delivery record](DELIVERY.md). Ben's and Security's approval remain pending under ENH-270; implementation owners are ENH-266 and ENH-269 on the existing multi-project board.
+Status: **0.1.1** is being verified after ENH-272 standards alignment; the final exact source, evidence and asset hashes will be recorded in [the delivery record](DELIVERY.md). Ben's and Security's approval remain pending under ENH-270; implementation owners are ENH-266 and ENH-269 on the existing multi-project board.
 
 ## Automation can test
 

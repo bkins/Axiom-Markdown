@@ -2,10 +2,9 @@ using System.Reflection;
 
 namespace Axiom.Core;
 
-public sealed record ApplicationBuildIdentity(
-    string ProductVersion,
-    string InformationalVersion,
-    string Provenance)
+public sealed record ApplicationBuildIdentity(string ProductVersion
+                                            , string InformationalVersion
+                                            , string Provenance)
 {
     public string DisplayText => $"Axiom {ProductVersion} ({Provenance})";
 
@@ -15,11 +14,11 @@ public sealed record ApplicationBuildIdentity(
         return Parse(informationalVersion, assembly.GetName().Version);
     }
 
-    public static ApplicationBuildIdentity Parse(string? informationalVersion, Version? assemblyVersion)
+    public static ApplicationBuildIdentity Parse(string?  informationalVersion
+                                               , Version? assemblyVersion)
     {
-        var fallback = assemblyVersion is null
-            ? "0.0.0"
-            : $"{assemblyVersion.Major}.{assemblyVersion.Minor}.{Math.Max(assemblyVersion.Build, 0)}";
+        var fallback = assemblyVersion is null ? "0.0.0" : $"{assemblyVersion.Major}.{assemblyVersion.Minor}.{Math.Max(assemblyVersion.Build
+                                                                                                                     , 0)}";
         var normalized = string.IsNullOrWhiteSpace(informationalVersion) ? fallback + "+dev" : informationalVersion.Trim();
         var separator = normalized.IndexOf('+');
         var productVersion = separator < 0 ? normalized : normalized[..separator];

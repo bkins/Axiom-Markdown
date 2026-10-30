@@ -4,10 +4,11 @@ public sealed class AppDataPaths
 {
     public AppDataPaths(string? root = null)
     {
-        Root = root ?? Environment.GetEnvironmentVariable("AXIOM_MARKDOWN_STATE_ROOT") ?? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "AxiomMarkdown");
-        DatabasePath = Path.Combine(Root, "State", "axiom.db");
+        Root            = root ?? Environment.GetEnvironmentVariable("AXIOM_MARKDOWN_STATE_ROOT") ?? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)
+                                                                                                                , "AxiomMarkdown");
+        DatabasePath    = Path.Combine(Root, "State", "axiom.db");
         BackupDirectory = Path.Combine(Root, "State", "Backups");
-        LogDirectory = Path.Combine(Root, "Logs");
+        LogDirectory    = Path.Combine(Root, "Logs");
     }
 
     public string Root { get; }
@@ -22,4 +23,3 @@ public sealed class AppDataPaths
         Directory.CreateDirectory(LogDirectory);
     }
 }
-

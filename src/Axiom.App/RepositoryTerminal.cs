@@ -7,19 +7,35 @@ internal static class RepositoryTerminal
     internal static ProcessStartInfo CreateStartInfo(string repositoryRoot)
     {
         Axiom.Core.FeatureAccess.Require(Axiom.Core.OptionalFeature.Terminal);
-        if (!OperatingSystem.IsWindows()) throw new PlatformNotSupportedException("External terminal access is currently available on Windows.");
-        var root = Path.GetFullPath(repositoryRoot);
-        if (!Directory.Exists(root)) throw new DirectoryNotFoundException("The Git repository no longer exists.");
-        var start = new ProcessStartInfo(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "WindowsPowerShell", "v1.0", "powershell.exe"))
+        if (!OperatingSystem.IsWindows())
         {
-            WorkingDirectory = root
-          , UseShellExecute = false
-          , CreateNoWindow = false
-          , WindowStyle = ProcessWindowStyle.Normal
-        };
+            throw new PlatformNotSupportedException("External terminal access is currently available on Windows.");
+        }
+
+        var root = Path.GetFullPath(repositoryRoot);
+        if (!Directory.Exists(root))
+        {
+            throw new DirectoryNotFoundException("The Git repository no longer exists.");
+        }
+
+        var start = new ProcessStartInfo(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System)
+                                                    , "WindowsPowerShell"
+                                                    , "v1.0"
+                                                    , "powershell.exe"))
+                    {
+                        WorkingDirectory = root
+                      , UseShellExecute  = false
+                      , CreateNoWindow   = false
+                      , WindowStyle      = ProcessWindowStyle.Normal
+                    };
         start.ArgumentList.Add("-NoProfile");
         start.ArgumentList.Add("-NoExit");
-        foreach (var key in start.Environment.Keys.Where(key => key.StartsWith("GIT_", StringComparison.OrdinalIgnoreCase)).ToArray()) start.Environment.Remove(key);
+        foreach (var key in start.Environment.Keys.Where(key => key.StartsWith("GIT_"
+                                                                             , StringComparison.OrdinalIgnoreCase)).ToArray())
+        {
+            start.Environment.Remove(key);
+        }
+
         return start;
     }
 

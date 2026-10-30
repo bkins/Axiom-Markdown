@@ -5,14 +5,24 @@ using Axiom.Infrastructure;
 using Xunit;
 
 [assembly: CollectionBehavior(DisableTestParallelization = true)]
-
 namespace Axiom.Markdown.Tests;
 
 public sealed class SecurityBoundaryTests : IDisposable
 {
-    private readonly string _root = Path.Combine(Path.GetTempPath(), "AxiomMarkdownTests", Guid.NewGuid().ToString("N"));
-    public SecurityBoundaryTests() { Directory.CreateDirectory(_root); FeatureAccess.Initialize(_ => new(true, "test")); }
-    public void Dispose() { FeatureAccess.Initialize(_ => new(false, "uninitialized")); Directory.Delete(_root, true); }
+    private readonly string _root = Path.Combine(Path.GetTempPath()
+                                               , "AxiomMarkdownTests"
+                                               , Guid.NewGuid().ToString("N"));
+    public SecurityBoundaryTests()
+    {
+        Directory.CreateDirectory(_root);
+        FeatureAccess.Initialize(_ => new(true, "test"));
+    }
+
+    public void Dispose()
+    {
+        FeatureAccess.Initialize(_ => new(false, "uninitialized"));
+        Directory.Delete(_root, true);
+    }
 
     [Theory]
     [InlineData("<script>alert(1)</script><p>retained</p>")]
@@ -26,7 +36,8 @@ public sealed class SecurityBoundaryTests : IDisposable
     public void UnsafeContentIsRemovedAndReported(string html)
     {
         var report = new PreviewSanitizer().Sanitize(html);
-        Assert.NotEmpty(report.Changes); Assert.Contains("retained", report.Html);
+        Assert.NotEmpty(report.Changes);
+        Assert.Contains("retained", report.Html);
         using var document = new HtmlParser().ParseDocument(report.Html);
         Assert.Null(document.QuerySelector("script,iframe,object,embed,svg,meta,[onclick],[style],[srcset]"));
         Assert.DoesNotContain("javascript:", report.Html, StringComparison.OrdinalIgnoreCase);
@@ -36,7 +47,8 @@ public sealed class SecurityBoundaryTests : IDisposable
     public void SafeRawHtmlIsRetainedWithoutFalseSanitizationNotice()
     {
         var report = new PreviewSanitizer().Sanitize("<details><summary>More</summary><p><strong>retained</strong></p></details>");
-        Assert.Empty(report.Changes); Assert.Contains("<strong>retained</strong>", report.Html);
+        Assert.Empty(report.Changes);
+        Assert.Contains("<strong>retained</strong>", report.Html);
     }
 
     [Fact]
@@ -46,28 +58,42 @@ public sealed class SecurityBoundaryTests : IDisposable
         const string data = "data:image/png;base64,AAAA";
         var sanitizer = new PreviewSanitizer();
         var blocked = sanitizer.Sanitize($"<img src='{approved}'><img src='https://two.invalid/image.png'>");
-        Assert.Equal(2, blocked.RemoteImages.Count); Assert.DoesNotContain("src=", blocked.Html);
-        var trusted = sanitizer.Sanitize($"<img src='{approved}'><img src='https://two.invalid/image.png'>", new Dictionary<string, string> { [approved] = data });
-        Assert.Contains(data, trusted.Html); Assert.DoesNotContain("two.invalid", trusted.Html);
+        Assert.Equal(2, blocked.RemoteImages.Count);
+        Assert.DoesNotContain("src=", blocked.Html);
+        var trusted = sanitizer.Sanitize($"<img src='{approved}'><img src='https://two.invalid/image.png'>"
+                                       , new Dictionary<string, string> { [approved] = data });
+        Assert.Contains(data, trusted.Html);
+        Assert.DoesNotContain("two.invalid", trusted.Html);
     }
 
     [Fact]
     public void WholePreviewContainsOnlyTrustedHeadAndCannotEscapeTheSanitizer()
     {
         var source = "# retained\n\n</body></html><head><script>evil()</script><meta http-equiv='refresh' content='0;url=https://example.invalid'></head><body><p onclick='evil()'>body</p>";
-        var result = new MarkdownPreviewService().RenderWithReport(source, null, AppearancePreference.Light, null, "abc");
+        var result = new MarkdownPreviewService().RenderWithReport(source
+                                                                 , null
+                                                                 , AppearancePreference.Light
+                                                                 , null
+                                                                 , "abc");
         using var parsed = new HtmlParser().ParseDocument(result.Html);
         Assert.Null(parsed.QuerySelector("script,[onclick],meta[http-equiv=refresh]"));
-        Assert.NotEmpty(result.Changes); Assert.Contains("script-src 'none'", result.Html);
+        Assert.NotEmpty(result.Changes);
+        Assert.Contains("script-src 'none'", result.Html);
         Assert.DoesNotContain("img-src file:", result.Html);
     }
 
     [Fact]
     public void LocalImagesOutsideDocumentFolderAndLinkedImagesRemainBlocked()
     {
-        var folder = Path.Combine(_root, "docs"); Directory.CreateDirectory(folder);
+        var folder = Path.Combine(_root, "docs");
+        Directory.CreateDirectory(folder);
         File.WriteAllBytes(Path.Combine(_root, "secret.png"), [137, 80, 78, 71]);
-        var result = new MarkdownPreviewService().RenderWithReport("![secret](../secret.png)", Path.Combine(folder, "note.md"), AppearancePreference.Light, folder, "abc");
+        var result = new MarkdownPreviewService().RenderWithReport("![secret](../secret.png)"
+                                                                 , Path.Combine(folder
+                                                                              , "note.md")
+                                                                 , AppearancePreference.Light
+                                                                 , folder
+                                                                 , "abc");
         Assert.Contains("Blocked an unsupported", string.Join(" ", result.Changes));
         Assert.DoesNotContain("data:image/png;base64", result.Html);
     }
@@ -87,12 +113,38 @@ public sealed class SecurityBoundaryTests : IDisposable
         {
             switch (feature)
             {
-                case OptionalFeature.Import: await new DocumentImportService().ConvertAsync(Path.Combine(_root, "missing.html")); break;
-                case OptionalFeature.Export: await new DocumentExportService().WriteAsync(new("# hi", null), target, false, [], _root); break;
-                case OptionalFeature.Git: await new GitCommandRunner("must-not-launch-any-process").RunAsync(_root, ["status"]); break;
-                case OptionalFeature.Terminal: await using (var terminal = new WindowsTerminalSession(_root, new string('a', 32), _ => { })) { } break;
-                case OptionalFeature.RemoteContent: await new RemoteImageLoader().LoadAsync("https://example.invalid", CancellationToken.None); break;
-                case OptionalFeature.Updates: await new AutomaticUpdateService(_ => throw new Exception("Factory must not execute")).CheckAsync(new(), CancellationToken.None); break;
+                case OptionalFeature.Import:
+                    await new DocumentImportService().ConvertAsync(Path.Combine(_root, "missing.html"));
+                    break;
+                case OptionalFeature.Export:
+                    await new DocumentExportService().WriteAsync(new("# hi"
+                                                                   , null)
+                                                               , target
+                                                               , false
+                                                               , []
+                                                               , _root);
+                    break;
+                case OptionalFeature.Git:
+                    await new GitCommandRunner("must-not-launch-any-process").RunAsync(_root, ["status"]);
+                    break;
+                case OptionalFeature.Terminal:
+                    await using (var terminal = new WindowsTerminalSession(_root
+                                                                         , new string ('a'
+                                                                                     , 32)
+                                                                         , _ =>
+                    {
+                    }))
+                    {
+                    }
+
+                    break;
+                case OptionalFeature.RemoteContent:
+                    await new RemoteImageLoader().LoadAsync("https://example.invalid", CancellationToken.None);
+                    break;
+                case OptionalFeature.Updates:
+                    await new AutomaticUpdateService(_ => throw new Exception("Factory must not execute")).CheckAsync(new()
+                                                                                                                    , CancellationToken.None);
+                    break;
             }
         });
         Assert.False(File.Exists(target));
@@ -116,8 +168,12 @@ public sealed class SecurityBoundaryTests : IDisposable
     [InlineData(1, true, true)]
     [InlineData(1, false, false)]
     [InlineData(2, true, false)]
-    public void MachineDenyWinsOverUserChoice(int machine, bool user, bool expected)
-        => Assert.Equal(expected, FeaturePolicyStore.Resolve(machine, user).Allowed);
+    public void MachineDenyWinsOverUserChoice(int  machine
+                                            , bool user
+                                            , bool expected)
+    {
+        Assert.Equal(expected, FeaturePolicyStore.Resolve(machine, user).Allowed);
+    }
 
     [Fact]
     public void MalformedMachineValueCannotBeEnabledByUser()
@@ -134,7 +190,9 @@ public sealed class SecurityBoundaryTests : IDisposable
         const string source = "<h1>Title</h1><p onclick='bad()'>retained</p><script>bad()</script>";
         await File.WriteAllTextAsync(path, source);
         var result = await new DocumentImportService().ConvertAsync(path);
-        Assert.Contains("retained", result.Markdown); Assert.DoesNotContain("bad()", result.Markdown);
-        Assert.Contains(result.Warnings, warning => warning.Contains("sanitization")); Assert.Equal(source, await File.ReadAllTextAsync(path));
+        Assert.Contains("retained", result.Markdown);
+        Assert.DoesNotContain("bad()", result.Markdown);
+        Assert.Contains(result.Warnings, warning => warning.Contains("sanitization"));
+        Assert.Equal(source, await File.ReadAllTextAsync(path));
     }
 }

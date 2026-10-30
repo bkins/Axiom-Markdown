@@ -5,7 +5,9 @@ namespace Axiom.Core;
 
 internal static class CalloutTitle
 {
-    internal static void Write(HtmlRenderer renderer, string kind, string title)
+    internal static void Write(HtmlRenderer renderer
+                             , string       kind
+                             , string       title)
     {
         var path = kind.ToLowerInvariant() switch
         {
@@ -16,6 +18,9 @@ internal static class CalloutTitle
             _ => "M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M12 10v7m0-11v1"
         };
         renderer.Write("<p class=\"markdown-alert-title\"><svg class=\"callout-icon\" aria-hidden=\"true\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"")
-            .Write(path).Write("\"/></svg><span>").Write(WebUtility.HtmlEncode(title)).WriteLine("</span></p>");
+                .Write(path)
+                .Write("\"/></svg><span>")
+                .Write(WebUtility.HtmlEncode(title))
+                .WriteLine("</span></p>");
     }
 }

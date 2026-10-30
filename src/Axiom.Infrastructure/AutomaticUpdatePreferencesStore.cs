@@ -3,15 +3,19 @@ using Axiom.Core;
 
 namespace Axiom.Infrastructure;
 
-public sealed class AutomaticUpdatePreferencesStore(AppDataPaths paths, string defaultChannel = "stable")
+public sealed class AutomaticUpdatePreferencesStore(AppDataPaths paths
+                                                  , string       defaultChannel = "stable")
 {
     private string FilePath => Path.Combine(paths.Root, "automatic-updates.json");
 
     public AutomaticUpdatePreferences Load()
     {
-        if (!File.Exists(FilePath)) return new(Channel: defaultChannel);
-        var value = JsonSerializer.Deserialize<AutomaticUpdatePreferences>(File.ReadAllText(FilePath))
-            ?? throw new IOException("Update settings are empty.");
+        if (!File.Exists(FilePath))
+        {
+            return new(Channel: defaultChannel);
+        }
+
+        var value = JsonSerializer.Deserialize<AutomaticUpdatePreferences>(File.ReadAllText(FilePath)) ?? throw new IOException("Update settings are empty.");
         _ = value.FeedChannel;
         return value;
     }
@@ -26,6 +30,12 @@ public sealed class AutomaticUpdatePreferencesStore(AppDataPaths paths, string d
             File.WriteAllText(temporary, JsonSerializer.Serialize(value));
             File.Move(temporary, FilePath, true);
         }
-        finally { if (File.Exists(temporary)) File.Delete(temporary); }
+        finally
+        {
+            if (File.Exists(temporary))
+            {
+                File.Delete(temporary);
+            }
+        }
     }
 }

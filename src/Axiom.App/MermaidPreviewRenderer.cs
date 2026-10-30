@@ -12,9 +12,10 @@ internal static class MermaidPreviewRenderer
         using var reader = new StreamReader(stream, Encoding.UTF8);
         return reader.ReadToEnd();
     });
-
-    public static string BuildScript(string token, bool dark) =>
-        "if (!window.axiomMermaid) { " + Runtime.Value + " }\n" + $$"""
+    public static string BuildScript(string token
+                                   , bool   dark)
+    {
+        return "if (!window.axiomMermaid) { " + Runtime.Value + " }\n" + $$"""
         (() => {
           const token = {{JsonSerializer.Serialize(token)}};
           if (document.documentElement.dataset.linkToken !== token) return false;
@@ -84,5 +85,5 @@ internal static class MermaidPreviewRenderer
           return true;
         })()
         """;
+    }
 }
-

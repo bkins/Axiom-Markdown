@@ -45,3 +45,5 @@ Tools → Feature controls and policy shows effective controls for Updates, Impo
 Installed copies check the separate Axiom-Markdown GitHub feed at startup and every six hours, download an available package and wait for a deliberate restart. Tools → Check for updates shows progress in the status line. Save/close dirty documents before restarting. Portable review packages do not install or update themselves. No feed release is published merely by building this repository.
 
 Local data lives under `%LOCALAPPDATA%\AxiomMarkdown`, or the separate review state path printed by its launcher. It includes plaintext recovery drafts, document paths, preferences, diagnostic errors and browser cache; Windows account permissions protect it. No CP service, AI key, backend or model is needed.
+
+Version 0.1.1 reorganizes the maintained source to follow Ben's coding standards. Its document, policy, sanitation-warning and remote-content behavior is intended to remain the same as 0.1.0.

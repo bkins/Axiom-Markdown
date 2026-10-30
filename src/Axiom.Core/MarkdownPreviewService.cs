@@ -6,55 +6,86 @@ namespace Axiom.Core;
 public sealed partial class MarkdownPreviewService
 {
     private const long MaximumEmbeddedImageBytes = 20 * 1024 * 1024;
-    private static readonly IReadOnlyDictionary<string, string> ImageMediaTypes =
-        new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-        {
-            [".png"] = "image/png",
-            [".jpg"] = "image/jpeg",
-            [".jpeg"] = "image/jpeg",
-            [".gif"] = "image/gif",
-            [".webp"] = "image/webp",
-            [".bmp"] = "image/bmp",
-            [".svg"] = "image/svg+xml"
-        };
+    private static readonly IReadOnlyDictionary<string, string> ImageMediaTypes = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+                                                                                  {
+                                                                                      [".png"]  = "image/png"
+                                                                                    , [".jpg"]  = "image/jpeg"
+                                                                                    , [".jpeg"] = "image/jpeg"
+                                                                                    , [".gif"]  = "image/gif"
+                                                                                    , [".webp"] = "image/webp"
+                                                                                    , [".bmp"]  = "image/bmp"
+                                                                                    , [".svg"]  = "image/svg+xml"
+                                                                                  };
     private readonly MarkdownStructureService _structure = new();
-
-    public SanitizedPreview RenderWithReport(string markdown, string? documentPath, AppearancePreference appearance,
-        string? folder, string token, IReadOnlyDictionary<string, string>? trustedImages = null)
+    public SanitizedPreview RenderWithReport(string                               markdown
+                                           , string?                              documentPath
+                                           , AppearancePreference                 appearance
+                                           , string?                              folder
+                                           , string                               token
+                                           , IReadOnlyDictionary<string, string>? trustedImages = null)
     {
-        return RenderContent(_structure.Parse(markdown), documentPath, appearance, folder, token, false, true, true, trustedImages);
+        return RenderContent(_structure.Parse(markdown)
+                           , documentPath
+                           , appearance
+                           , folder
+                           , token
+                           , false
+                           , true
+                           , true
+                           , trustedImages);
     }
 
-    public string RenderDocument(
-        string markdown,
-        string? documentPath,
-        AppearancePreference appearance = AppearancePreference.System,
-        string? workspaceRoot = null,
-        bool preserveLineBreaks = true)
-    {
-        return RenderDocument(_structure.Parse(markdown), documentPath, appearance, workspaceRoot, preserveLineBreaks: preserveLineBreaks);
-    }
-
-    public string RenderDocument(DocumentStructure document
-                               , string? documentPath
+    public string RenderDocument(string               markdown
+                               , string?              documentPath
                                , AppearancePreference appearance = AppearancePreference.System
-                               , string? workspaceRoot = null
-                               , string? linkToken = null
-                               , bool showLineNumbers = false
-                               , bool showNavigation = true
-                               , bool preserveLineBreaks = true)
-        => RenderContent(document, documentPath, appearance, workspaceRoot, linkToken, showLineNumbers, showNavigation, preserveLineBreaks, null).Html;
+                               , string?              workspaceRoot = null
+                               , bool                 preserveLineBreaks = true)
+    {
+        return RenderDocument(_structure.Parse(markdown)
+                            , documentPath
+                            , appearance
+                            , workspaceRoot
+                            , preserveLineBreaks: preserveLineBreaks);
+    }
 
-    private SanitizedPreview RenderContent(DocumentStructure document, string? documentPath, AppearancePreference appearance,
-        string? workspaceRoot, string? linkToken, bool showLineNumbers, bool showNavigation, bool preserveLineBreaks,
-        IReadOnlyDictionary<string, string>? trustedImages)
+    public string RenderDocument(DocumentStructure    document
+                               , string?              documentPath
+                               , AppearancePreference appearance = AppearancePreference.System
+                               , string?              workspaceRoot = null
+                               , string?              linkToken = null
+                               , bool                 showLineNumbers = false
+                               , bool                 showNavigation = true
+                               , bool                 preserveLineBreaks = true)
+    {
+        return RenderContent(document
+                           , documentPath
+                           , appearance
+                           , workspaceRoot
+                           , linkToken
+                           , showLineNumbers
+                           , showNavigation
+                           , preserveLineBreaks
+                           , null).Html;
+    }
+
+    private SanitizedPreview RenderContent(DocumentStructure                    document
+                                         , string?                              documentPath
+                                         , AppearancePreference                 appearance
+                                         , string?                              workspaceRoot
+                                         , string?                              linkToken
+                                         , bool                                 showLineNumbers
+                                         , bool                                 showNavigation
+                                         , bool                                 preserveLineBreaks
+                                         , IReadOnlyDictionary<string, string>? trustedImages)
     {
         // Identity is source metadata: preserve it in Markdown/editor but not in preview.
         // Fenced examples are unaffected because the marker must be on the first line.
         var previewMarkdown = DocumentIdCodec.RemoveCanonicalMarkerForPreview(document.SourceText);
-        var body = string.IsNullOrWhiteSpace(previewMarkdown)
-            ? "<p class=\"empty-state\">Start typing Markdown to see a preview.</p>"
-            : MarkdownStructureService.RenderHtml(document, linkToken, showLineNumbers, showNavigation, preserveLineBreaks);
+        var body = string.IsNullOrWhiteSpace(previewMarkdown) ? "<p class=\"empty-state\">Start typing Markdown to see a preview.</p>" : MarkdownStructureService.RenderHtml(document
+                                                                                                                                                                           , linkToken
+                                                                                                                                                                           , showLineNumbers
+                                                                                                                                                                           , showNavigation
+                                                                                                                                                                           , preserveLineBreaks);
         body = EmbedWorkspaceImages(body, documentPath, workspaceRoot);
         var report = new PreviewSanitizer().Sanitize(body, trustedImages, linkToken);
         body = report.Html;
@@ -146,57 +177,110 @@ public sealed partial class MarkdownPreviewService
             @media (max-width: 640px) { body { padding: 22px 20px 48px; } }
             </style></head><body>{{body}}</body></html>
             """;
-        return report with { Html = html };
+        return report with
+
+        {
+            Html = html
+        };
     }
 
     private static string BuildBaseElement(string? documentPath)
     {
-        if (string.IsNullOrWhiteSpace(documentPath)) return string.Empty;
+        if (string.IsNullOrWhiteSpace(documentPath))
+        {
+            return string.Empty;
+        }
+
         var directory = Path.GetDirectoryName(Path.GetFullPath(documentPath));
-        if (directory is null) return string.Empty;
+        if (directory is null)
+        {
+            return string.Empty;
+        }
+
         var uri = new Uri(directory.TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar).AbsoluteUri;
         return $"<base href=\"{WebUtility.HtmlEncode(uri)}\">";
     }
 
-    private static string EmbedWorkspaceImages(string html, string? documentPath, string? workspaceRoot)
+    private static string EmbedWorkspaceImages(string  html
+                                             , string? documentPath
+                                             , string? workspaceRoot)
     {
-        if (string.IsNullOrWhiteSpace(documentPath)) return html;
-        var documentDirectory = Path.GetDirectoryName(Path.GetFullPath(documentPath));
-        if (documentDirectory is null) return html;
-        // Standalone imports also need their saved companion images. Keep their read boundary at the document folder.
-        var root = !string.IsNullOrWhiteSpace(workspaceRoot) && IsWithin(WorkspaceService.NormalizeRootPath(workspaceRoot), documentPath)
-            ? WorkspaceService.NormalizeRootPath(workspaceRoot) : documentDirectory;
+        if (string.IsNullOrWhiteSpace(documentPath))
+        {
+            return html;
+        }
 
-        return ImageSourceRegex().Replace(html, match =>
+        var documentDirectory = Path.GetDirectoryName(Path.GetFullPath(documentPath));
+        if (documentDirectory is null)
+        {
+            return html;
+        }
+
+        // Standalone imports also need their saved companion images. Keep their read boundary at the document folder.
+        var root = !string.IsNullOrWhiteSpace(workspaceRoot) && IsWithin(WorkspaceService.NormalizeRootPath(workspaceRoot)
+                                                                       , documentPath) ? WorkspaceService.NormalizeRootPath(workspaceRoot) : documentDirectory;
+        return ImageSourceRegex().Replace(html
+                                        , match =>
         {
             try
             {
                 var source = WebUtility.HtmlDecode(match.Groups["source"].Value);
-                if (Uri.TryCreate(source, UriKind.Absolute, out _)) return match.Value;
+                if (Uri.TryCreate(source, UriKind.Absolute, out _))
+                {
+                    return match.Value;
+                }
+
                 var pathOnly = source.Split(['?', '#'], 2)[0];
                 var relativePath = Uri.UnescapeDataString(pathOnly).Replace('/', Path.DirectorySeparatorChar);
                 var imagePath = Path.GetFullPath(Path.Combine(documentDirectory, relativePath));
-                if (!IsWithin(root, imagePath) || !File.Exists(imagePath)) return match.Value;
-                if (!ImageMediaTypes.TryGetValue(Path.GetExtension(imagePath), out var mediaType)) return match.Value;
-                if (mediaType == "image/svg+xml") return match.Value;
+                if (!IsWithin(root, imagePath) || !File.Exists(imagePath))
+                {
+                    return match.Value;
+                }
+
+                if (!ImageMediaTypes.TryGetValue(Path.GetExtension(imagePath), out var mediaType))
+                {
+                    return match.Value;
+                }
+
+                if (mediaType == "image/svg+xml")
+                {
+                    return match.Value;
+                }
+
                 for (var ancestor = imagePath; ancestor is not null; ancestor = Path.GetDirectoryName(ancestor))
-                    if ((File.Exists(ancestor) || Directory.Exists(ancestor)) && File.GetAttributes(ancestor).HasFlag(FileAttributes.ReparsePoint)) return match.Value;
+                {
+                    if ((File.Exists(ancestor) || Directory.Exists(ancestor)) && File.GetAttributes(ancestor).HasFlag(FileAttributes.ReparsePoint))
+                    {
+                        return match.Value;
+                    }
+                }
+
                 var info = new FileInfo(imagePath);
-                if (info.Length > MaximumEmbeddedImageBytes) return match.Value;
+                if (info.Length > MaximumEmbeddedImageBytes)
+                {
+                    return match.Value;
+                }
+
                 var dataUri = $"data:{mediaType};base64,{Convert.ToBase64String(File.ReadAllBytes(imagePath))}";
                 return match.Groups["prefix"].Value + dataUri + match.Groups["suffix"].Value;
             }
-            catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or ArgumentException or NotSupportedException)
+            catch (Exception exception)when (exception is IOException or UnauthorizedAccessException or ArgumentException or NotSupportedException)
             {
                 return match.Value;
             }
         });
     }
 
-    private static bool IsWithin(string root, string candidate)
+    private static bool IsWithin(string root
+                               , string candidate)
     {
         var comparison = OperatingSystem.IsWindows() ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal;
-        if (candidate.Equals(root, comparison)) return true;
+        if (candidate.Equals(root, comparison))
+        {
+            return true;
+        }
+
         var prefix = root.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar) + Path.DirectorySeparatorChar;
         return candidate.StartsWith(prefix, comparison);
     }
