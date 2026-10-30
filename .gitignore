@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+artifacts/
+verification/
+.vs/
+.idea/
+.tools/
+*.user
+*.suo
+**/TestResults/
+*.WebView2/

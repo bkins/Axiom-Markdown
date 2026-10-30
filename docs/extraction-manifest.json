@@ -1,0 +1,1082 @@
+{
+  "upstream": "https://github.com/bkins/Axiom",
+  "commit": "5a72d82c4c62b89199573b4b00f633572c030a2e",
+  "retained": [
+    {
+      "path": "src/Axiom.App/App.axaml",
+      "upstreamSha256": "3073ac41b7cc91b5651685874d91a33ccd32a67ce09f28389afc497233985338",
+      "currentSha256": "8a31c2411b457824aeb80e0651793741747e3b9c3c95b99fd901cb48baff6833",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/App.axaml.cs",
+      "upstreamSha256": "0885797729834755d55b71b55924ee0c7f07d44d560548cdda876faba1ccd3c6",
+      "currentSha256": "92425243262a49fa66f2758a104f2d44ceaf0524b08d35f407a5a15108a2a945",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Assets/Axiom.ico",
+      "upstreamSha256": "63afe9e502877b641e38e3fc7fb7b640187be05a32129a46715d84c294e7113e",
+      "currentSha256": "63afe9e502877b641e38e3fc7fb7b640187be05a32129a46715d84c294e7113e",
+      "modified": false
+    },
+    {
+      "path": "src/Axiom.App/Assets/Mermaid/README.md",
+      "upstreamSha256": "6237f370b93309bfd181dc47328347286df1d5c527aaa8375a3d2976e5c70621",
+      "currentSha256": "ae3c6b6e056b238a3a1efb16129741acd31184c931b1c983ef2e465451236448",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Assets/Mermaid/THIRD-PARTY-NOTICES.txt",
+      "upstreamSha256": "f7fa92af1dea9a1490822a8c736ea949d9293542ac27323e5f2b3c7373aa2d16",
+      "currentSha256": "b51714be5fafa933aea1aee692f3134e53b1ee5bc4a3f0e23cede0533a179bd4",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Assets/Mermaid/manifest.json",
+      "upstreamSha256": "226a97d433641811d84cd3756d1baaec1056af29503431b5cc8fb146ea03d724",
+      "currentSha256": "b4a684189f8d8f3ba34034bc62f6efa314d26747bc5624f921390c17d214e002",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Assets/Mermaid/mermaid.js",
+      "upstreamSha256": "52ab672c9810405628c9d209aa033127e4ee61d0abe681c97c59613bf5a1bd36",
+      "currentSha256": "7885b493df74252acdcf025a650d6fe84360c6588415825f660dc4bce05d9e4a",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Assets/Mermaid/mermaid.js.LEGAL.txt",
+      "upstreamSha256": "f178b78281a9650a3f76f1ea18740ea63b69b40472ce334c95670a7076932f77",
+      "currentSha256": "e92aa8b1fc54113ebde271a9c66afa1ad02b06abea28ef93bd1da4cffd5c11d1",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Assets/Mermaid/package-lock.json",
+      "upstreamSha256": "fed85339e14c6755e53af2cbdc386766664ccba104cba1d651a550ef98b44cfa",
+      "currentSha256": "9d4e11467a34bc985437d850682f63b7de7026ec78dbeccc8dc838712dc8d5c6",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Assets/Terminal/THIRD-PARTY-NOTICES.txt",
+      "upstreamSha256": "ecdb3fe5a67ab4596fa3210d6b8739fec23acbb8bf4aa6745839248a36d51c57",
+      "currentSha256": "f1c4ef01693eef73fe69a096789aa0f9a5c5a6e73bb3e134464e4dd71eab8fa5",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Assets/Terminal/addon-fit.js",
+      "upstreamSha256": "3f43135a129d65e79195b184ced2777262428946a758d2b0d17dcbcf875f2988",
+      "currentSha256": "ba3ea256ce0620a0992a197d6c9baea64823fc93d8da07a9e366ca9943c18527",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Assets/Terminal/xterm.css",
+      "upstreamSha256": "df5c6a47028d56c50f5eb8e3c099a04afd76ad0a20554bac93f8eec55b61ca10",
+      "currentSha256": "854a7c0fb70e8b1a083c16797ab827299fb18744f5ad34f227b48337e33293c6",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Assets/Terminal/xterm.js",
+      "upstreamSha256": "f68403f92e5552d69fab42d98571c8e16b6f03cba3e5233b4c8a99d3eb9d4653",
+      "currentSha256": "14903579ff54664cd72f8e8699e6961a6272c21863ec1c3b118cdc8af5d4a972",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/AutomaticUpdateService.cs",
+      "upstreamSha256": "e8ec716bda98bed6579b4f13defc2e13a73d9ee9ac0eebf41d2349b4a944f5a2",
+      "currentSha256": "45f37bc4fb9fdf099a8c30ecce2d70b8dd8c342f3f0accc88a6072db55727b5f",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Axiom.App.csproj",
+      "upstreamSha256": "71a662c6cd62b238492945c2348ca291dd2735367f1e2df4328715663d843002",
+      "currentSha256": "6ea91c511c576acc026137623b956ff970730d3b2180c69fadedbf537003c16e",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/ChoiceDialog.cs",
+      "upstreamSha256": "6fa714adfb8bb710aba365561b49774a4b7198a6256096369d8144c534952739",
+      "currentSha256": "43d3749cdd98165795f961644952092cc7beb9b68f86240b335bbff625e8b1c5",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/DocumentHistoryWindow.cs",
+      "upstreamSha256": "5ca94fc97b872a0c994623d67e950fb8274848404c9ecb51c7b9d4e2b92efcc9",
+      "currentSha256": "894909bc99169a737bb765b12e8d9bd44133f9e64bd7f5274c196dbef0da2514",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/DocumentImportWindows.cs",
+      "upstreamSha256": "a45fa4b23612722935c85955e65fb016fb8f827ed9dc81097346ef1458bd0dc5",
+      "currentSha256": "144eac3b1b134ba5c41eef69e0a8988d47605e204647e6c8c605756e7125d2d9",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/GitTerminalView.cs",
+      "upstreamSha256": "2667c4d58e1d4026640f9247667eda0ea58a5fae19a5954cf55412c63dba9f85",
+      "currentSha256": "b1497297fbfd6674a1a8bdefdbf9fa9dff1245be4f91746c8aa7abee8652de1f",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/HistoricalRestoreRequest.cs",
+      "upstreamSha256": "0c997204619b9624f3b764f3005bd7ddcbe01e5876b036dc4d060efb6f144168",
+      "currentSha256": "4a562319d080ae251d0edbf481167a04270a9c7a5eb242c102b9d695bbf6de47",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/LineDiffWindow.cs",
+      "upstreamSha256": "1978c0ab6719252f2ce688d2678c95d1d8e2d88a7578b58093e3c6d59a4cc073",
+      "currentSha256": "906825fbddabf73e0907500af67efa5c9defbde83ea714b57a072591d48b0a9c",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/MermaidPreviewRenderer.cs",
+      "upstreamSha256": "bd7b1e4d58f76a1e2c6e03ebf20abd597e1a9bc90a6c3de6a3b6d32d8bbc77e0",
+      "currentSha256": "87aa6e451b723527c0c79c5f80b0b0afc9165cb78be84318631622942ffd3fbb",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/NativeHtmlContent.cs",
+      "upstreamSha256": "792274685fe6e56aec61c795601f0e18534224462d4132550c10bf17b7db4d7a",
+      "currentSha256": "fa8bfb6fb87a60b39548ae919db76e3cdbf92d00398b46d2d79c6b8623978379",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/NativePdfExportRenderer.cs",
+      "upstreamSha256": "343886eab9863755533232fd115b7e332d7eae46f3e1d8a538bb60834ac9c746",
+      "currentSha256": "c90296a7d71d976c2fb953092841f55b55cebef6a0d872aa6e6cbcdc1205379d",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/Program.cs",
+      "upstreamSha256": "281622c3087c8c4f0b5545fde86fa28e1df333821a4e7aad726aa25fa1e0755b",
+      "currentSha256": "fdef90599f0d3e549566f5c679c1ab68ab8e59523da0e22074a60e58d795ca9b",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/RepositoryTerminal.cs",
+      "upstreamSha256": "c0a51a36c6872e867e82934933c60fbdf5170053f9ada279a7188280bd28cafe",
+      "currentSha256": "c565b276c0dff77f64a02f947a5820fa84a78f07278c6220dc5f00eea20e4ba1",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/WindowsPdfPrinter.cs",
+      "upstreamSha256": "b01d8a9a532c95fd5ad61119ea4bc130130ba7cb40fc2983617154e45b9b6cb6",
+      "currentSha256": "be571893d188e3108673c9a09c21f5510aef2b6908a971f12abacc976b3a4360",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/WorkspaceGitView.cs",
+      "upstreamSha256": "004556ab1eae8c8737534281fb7572d5283e3111c2d1e69b0834d8ae815be7ec",
+      "currentSha256": "47aa274a9e2ac99730153b1f3cc0b45d00ef67d59aca539d1e197e3ae550593c",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.App/app.manifest",
+      "upstreamSha256": "b0620182fb2ffa89ea58a3966fa6d2691ee57b2c771a01c33af174260aa034d7",
+      "currentSha256": "6743e14c1c868b6aec6f03a3be340f9b973506415dfefd7fdb0655c86f98c3af",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/Appearance.cs",
+      "upstreamSha256": "587cc137a80f93ad59a35a5bb1ef8e98f9d3cefad02b19ae3010f2ec38d7d06c",
+      "currentSha256": "65f473f002445e23e01945ed31c86d3bd317510d140f440a5c248b57602c9e1b",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/ApplicationBuildIdentity.cs",
+      "upstreamSha256": "530b4788671b46482ae3f178a0c7b5e84c5af47a4daea34d7dcd614825c98aa3",
+      "currentSha256": "2112ef73d269a4ad526cf29aeaf565e11c30de843d1ed7078d9b8184f3c63ecd",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/AutomaticUpdatePreferences.cs",
+      "upstreamSha256": "0b6dd6179f2aa6e1e7224fa3e4001151da32e8dbb092fc79761f0520a6965d37",
+      "currentSha256": "8a5371fda42452708d97c8406c6d8f0b86e7f37becaa5a474fee6779f25e729a",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/Axiom.Core.csproj",
+      "upstreamSha256": "76b2633b183d2c5d495d278bf0cf246d21dfc5e78bf981bc46a424eb714a3e89",
+      "currentSha256": "4d2fe0b17b2d9794d5db034716343463826ab9c4dbbe27c01d2442ad2215e465",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/CSharpCodeRenderer.cs",
+      "upstreamSha256": "72df78a39f80b625ca51518016e8ba13824a0a536e9226e9c07152b8f8b927a8",
+      "currentSha256": "df19352c890107b0317d6699cf8186e3f64ff5f634cc613be57fa349ef75418a",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/CSharpSyntax.cs",
+      "upstreamSha256": "76b50a2e18e8e23bb001cc8fa06077b3928674ab905cc504fd27c06a3b2aa8bb",
+      "currentSha256": "f0168acc09e6f4f322dfa37da12e4934eba7991300072a13c90ac9d851c050b0",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/CSharpToken.cs",
+      "upstreamSha256": "6598872d915ef6a6f91e91550acadc680707e5122a2130c19443a72186f29e2b",
+      "currentSha256": "a654df5f59127cf21ad525f8d80bedd1039440bbef62416d6e81d814f7ed1c23",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/CalloutQuoteRenderer.cs",
+      "upstreamSha256": "db5d40ef4530ce870bdc5ed10554b075bf59c039926efe2f57dbc9bac95691be",
+      "currentSha256": "75bf47af6c7e231760df5fb8c69c5867a09111a89f924d2e243d96635de628b0",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/CalloutTitle.cs",
+      "upstreamSha256": "e96fe4a5ceafc5b70c23857e118424aac2fd25e86675ed0aa37877fa203cd943",
+      "currentSha256": "16d725fe2fc8695d7d2e0eb83d746748a2ff32d1897d3666fd22645a7e735373",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/Contracts.cs",
+      "upstreamSha256": "3e9b75727341a1b58b81e702df6b33da8939c549dad5b09626a39d91c94554da",
+      "currentSha256": "c9caff346d1b1e8f70130c2b88b2409f7bba0509002ca1a7239c97999d0d1885",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/DocumentHeading.cs",
+      "upstreamSha256": "243938c7c265d402efd5c68fc0f387ca4bfed216ff4a043169573044bcd27464",
+      "currentSha256": "0c6bddba30321a594e85a6b0c46f9c731637983eeb09c93e1e3a5bf27b8512e8",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/DocumentHistoryLocation.cs",
+      "upstreamSha256": "6fb6ce04b43beae521520cae3387d9f2274b3fba4b924b037b422f49cfb0344e",
+      "currentSha256": "4c9f22ad7f5cf294f88c1a8351d8e61dc484a2e8659b09c04019b6de0e5b44b6",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/DocumentNodeReconciler.cs",
+      "upstreamSha256": "286f0b8d37c1b31ff1b75c9bb8c1c77bd5e80921f81743a22aa4afa84553d499",
+      "currentSha256": "b36505200a053b3aa5d05cde8dc74f5d64a969af25b4ef2a59526fab0537b356",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/DocumentRevision.cs",
+      "upstreamSha256": "3052a227f32dca0f549108cce6b5d734fef4b673c61f50267344b365e6143dcc",
+      "currentSha256": "f3ee640db663674bd198c4708e8832cd16205850b026795af1507e730cbb5fbf",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/DocumentService.cs",
+      "upstreamSha256": "cc72ef1e590c0260981ad6153dc783d59be5e3aaa73673140631c072c5361861",
+      "currentSha256": "312e56dcfd406bbfd2287a00e6267767408c2613360b57b248381987483a654e",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/DocumentSourceRange.cs",
+      "upstreamSha256": "cc81d0d0abc877f13ebecdd1282c6941311a10ae6474fe3b6ab1eb87abf43f3e",
+      "currentSha256": "d9e5c99401d768b1a9840d19f02b749291d7605b0187908f8c98f151c74a4ddd",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/DocumentStructure.cs",
+      "upstreamSha256": "79bb8c8abd2aa5e3e121cc552f623d6ba56bdabc1a0a9434d5466cedcd4f8db8",
+      "currentSha256": "f9863613b59f13a17ea9ed72145e3c690c818ae5650570ff27ce0d2abf255d33",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/DocumentStructureNode.cs",
+      "upstreamSha256": "c8f73b0357c9c79cb6eae7e3158fd3844e1accb1321f81c9f377b7b7bf6d183b",
+      "currentSha256": "5ca7327075e13ad20de561aa4f1d161fbd666c080abacb69668c5298b5d85377",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/DocumentStructureNodeKind.cs",
+      "upstreamSha256": "335c68064e193cd117003cd2301287eacb4c5996d471b9e23ab7e403387f0bce",
+      "currentSha256": "49fd4a067d34bb776f7cc5463b3c945825c48985f0176ac12a8e8d721ab8fd80",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/Documents.cs",
+      "upstreamSha256": "3bd2bc537077f132a98c29bcc234a44d11201fd9b7ceefc3ff79196ae5a1b5da",
+      "currentSha256": "778d4cae9bd080c112988d7befb2bfbdc53618e47414aaac9286a24556d62b6f",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/ExportBlock.cs",
+      "upstreamSha256": "2cf65a4e9d2971fb0b083d4916e1457a8bd710a16a88fac87eb917c7be6a1a27",
+      "currentSha256": "fa90591b72fceea4838e40c9a6a3226416a94d41c9908d1d53c86fe0ac0e1221",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/ExportDocument.cs",
+      "upstreamSha256": "5c6a82ae990a3790fe28b7f566295dd9bf192477c1290a7a9dff94b602fb5e1e",
+      "currentSha256": "99d0e22adefef53e97675ed69ad8e775ce43eb88dfe6867f74039056aa878293",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/ExportDocumentTraversal.cs",
+      "upstreamSha256": "43098c4495d735f24d98ff966294ee0fec828768e095c6101c29cfa88e52cb56",
+      "currentSha256": "292aff3b953bfc1ff442427a93023d561b0f5747f5e8c7461008277f15f0eb3b",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/ExportRun.cs",
+      "upstreamSha256": "2f3708df7e9c40db73e4c0c17b5285f45cb0217e59530629a6be9e94a2b0660d",
+      "currentSha256": "74ae540f7304337123c41d4459b95a4bb7b6834822ad8e137c44709266d63017",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/ExportSnapshot.cs",
+      "upstreamSha256": "ffe5bb65cf9bdc78573984d4bd3a2b88b9c58f8f87b8d4294ed38bcb8791adfa",
+      "currentSha256": "91be1e574f32c47438394f6049ec2c34ab5a43a78737fa0a9b3a3c08cf566692",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/GitChangedFile.cs",
+      "upstreamSha256": "b0ad2e11f10fb256e65263b1e62d18621b6b2a74f69bfbe5e44c63c957e4e482",
+      "currentSha256": "5847759bfc6d84f80b7b9d445d4c9682a3895636a87ab3f6277bc6ecbe2ac891",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/GitDocumentDiff.cs",
+      "upstreamSha256": "139990963f91a6a97cab33b69f78021f7c9059f0e85fc3fe8f97dcd8e0d6c438",
+      "currentSha256": "8e43b67f6fd96903c1578c15ea17e91e813190fe3f1ddd4f0df25bb434130bb6",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/GitRepositorySnapshot.cs",
+      "upstreamSha256": "bcbfcb472068057cc492fb97faf669dc542c1fc2fe141939330ad023568ea9c3",
+      "currentSha256": "e7dc1b536abfe5e91ab152c0f3e2902de8c851e5cdc5ece17f08c3097870c566",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/GitSelectedCommitReview.cs",
+      "upstreamSha256": "56832a56f982680e98c8f54ba14a67bd43d717f4462bb9631164e486747d6d9a",
+      "currentSha256": "4f4fa60a97000c0ede02e30a52f0b3a6f28491f6513d9f551326558faa5823d0",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/IBatchIdentityStore.cs",
+      "upstreamSha256": "104e4f9c737e9296502a28cfc90c10ef767f22f1ce81edb88ed17d7d2adabdb6",
+      "currentSha256": "a1ad3099f7438895869104786a6e3c6cb29d5d2b795028d0321d315534d6de98",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/LineDiffEntry.cs",
+      "upstreamSha256": "a9656854ccfb43722ca3eff1e53922c6e2c3ed13453dd3d40b608c1317ac32b0",
+      "currentSha256": "b5733fdfd8beca21a69f134173e3d2e2118df0b56474d7bd56d9c0d46c57884a",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/LineDiffKind.cs",
+      "upstreamSha256": "b20bb9be2115d188157387679b363a1ad14a7fe5344abe5cccb958ba1991ef2c",
+      "currentSha256": "1a47d115eef4adc5cdb784e75cee49cfb9acd6283bab2e7f7d9cb1b917126e29",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/LineDiffService.cs",
+      "upstreamSha256": "2024730a6f46d8feb9dd0f86ee9429cdba92c5c3c17bcb49170ef76cc797f146",
+      "currentSha256": "6a502cee75bdf5534c74da2a76573b33f238a760d856feee2f56f14e7ed65e48",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownDocumentLink.cs",
+      "upstreamSha256": "2508cb0152e06101b2a39081c0553a2fd25f4875e12df9c6e26d545c197bc19a",
+      "currentSha256": "0d63b4598d6e0d9dc1adf9add22ac0e5047abc6e42eb8f1945f5e81830181f68",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownEditService.HardBreak.cs",
+      "upstreamSha256": "1af705959785de5cbb2aaffa61b3bf636cbeaa071805dfb83a470f8829c79438",
+      "currentSha256": "4a0ef2f3daf5df9bde4a8ac0a492a160e48a75e4b7fde5aaaa5eb8b7eb643437",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownEditService.Templates.cs",
+      "upstreamSha256": "ef3a50f2aa24599285b1fc241c05019c5d25fc463d51f2b229837591f093d337",
+      "currentSha256": "2937a6590ec1632c34f87d185d82905e637bc7d4a35d621677a7fd497ff132fe",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownEditing.cs",
+      "upstreamSha256": "373af746c65ad0aaa920e8f705c94a9a8043d7c395d9509c42370731bfcf024b",
+      "currentSha256": "98c0686c662fa79b727f63c7d673806b39d93cf48ac6c28f6b09d9c45c61bb7a",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownExportService.cs",
+      "upstreamSha256": "867f984085d6562c77b8b472d58ce348f49ed54343a9f00d394f428a052c8101",
+      "currentSha256": "a09e662316ee420638b843bc0b5fd45fda41b8b658a6f73dd4f333e644721947",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownImageReferences.cs",
+      "upstreamSha256": "a7c03e7fdab223e6abcf59a815d49c9a00750fbccd9487cdafa1630135513d56",
+      "currentSha256": "9d072ad3a4c82d0b79a8f2a591285647644e4793e77cc77760101cda8c16fbcd",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownListEditService.Deletion.cs",
+      "upstreamSha256": "6a3ace9fe5330f503cab036fea05acddab54f59276c5abe895d8bb1f44e28d3d",
+      "currentSha256": "dfc6e58e1a67e3a384e0b5cb9263b3fde2750c109a8e0db1d6086d5b21bf0d04",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownListEditing.cs",
+      "upstreamSha256": "b239357e055428fb0975d10a099c0b06e33b35b041188adab411f90ac9fcfb17",
+      "currentSha256": "e0c13e54ddcc068533d0bdc108b7c0b1b01d1d58f1c348faee317ca87d745e0c",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownPreviewService.cs",
+      "upstreamSha256": "1d71e13678b2bcd4c9a5110e34c5ceb6484e522ca6ebb8d97b7df2dbeb586c73",
+      "currentSha256": "5d9a2d9b3cb69be64d2396fbc93426bc5e679329049222820dad3ee72c420d02",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownReferenceDefinition.cs",
+      "upstreamSha256": "4ee0e0a941fb8bcd16e1957227de162c5b8b97445829e70b3d3ce101ef9d32d2",
+      "currentSha256": "7b3d802e1fcc288c2a52dac552bdbef492c76a9ac2de9b24934e6a561e0609e6",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownStructureService.cs",
+      "upstreamSha256": "b39660d4c222e938bf746427dd7d5f87be0048e96c86c2166f6e36793e07dc03",
+      "currentSha256": "924f467abcee0421f6f91b8277cc79b1a6b2522a027e20b1aa261b72a652e347",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/PdfPageSize.cs",
+      "upstreamSha256": "312149e996c26c3fdf391115dc69c2bafbc4ea307bb9393646f7135f75cc5b0b",
+      "currentSha256": "28110e3e42ec75cdeb37ea834e38e420e381cbb761ff28cb52d6385556d28a20",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/PreviewLinkRenderer.cs",
+      "upstreamSha256": "47ab0ffa094c82e34fbca91804f748cd53ea99e741c78b46f85c920c8f1bee52",
+      "currentSha256": "57003066dc6cafcfd308f5691c2f0bf82380a9a2c03bd32f3685f0cc84e815e7",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/PreviewTaskRenderer.cs",
+      "upstreamSha256": "ddaaf33eac2a365eab3cf47ae655a11eaae847d6f40cb3415fa81f18f7989657",
+      "currentSha256": "b55a7fd8bc0d5705c21a818187922cdc1e02f82e66914f0882eb52d228063ada",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/PreviewTaskToggle.cs",
+      "upstreamSha256": "677de30ba28f7a3ca65d6cacd51f66dffc64bd8f3c64084df7aab3656b3f43ec",
+      "currentSha256": "cc8fdfdaf033a7b4210c39b922a545fa6cbfb3110efd4d922356f15c07c9b398",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/RevisionRestoreService.cs",
+      "upstreamSha256": "9021115d3375891b63870497a249184ec438b7151044c23ca87267e29a1a92db",
+      "currentSha256": "bb7bde551ec1615763eec50ecfd21451cb5984aa9f50f7c695a1ffaffbd6c3d1",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/TerminalInputState.cs",
+      "upstreamSha256": "f1187bfb7d238aa71b0d1e6652d79e2f799d90fbc70d5cdd625bd81e3269977c",
+      "currentSha256": "9dbae144effc9f2a558e28f74c18767a822c8227f5562b5ff6a2eb244336ad8c",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/WikiLinkInlineParser.cs",
+      "upstreamSha256": "c2761d0d43fee53f3325266a444533e2f081ca94d1f8c474e1edbd2b6d04cc75",
+      "currentSha256": "d03c4a4b0810277fc6859855c4629ab8fb809c03e1a41c1d0529db1b9b1158e3",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/WorkspaceMutationPolicy.cs",
+      "upstreamSha256": "f1353f48f1dab18f0a94b431786c2fe94784b019eb31c40841e6b1b097096851",
+      "currentSha256": "3ee9756ba7408ab9dcf61989da4e828722d1c5faced7fd691906d6580b6cfd8b",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/WorkspacePathBoundary.cs",
+      "upstreamSha256": "a03c9c9368af3491f6dece2b0dfd1e9b120263428e51ddcf494d957a44744617",
+      "currentSha256": "a7f5969e29084d76e837f238bb831ac14ede59bc55294568a0f9cab759e65c5f",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Core/Workspaces.cs",
+      "upstreamSha256": "942871b68306d15120f9715e08394bf849cac7028d13c90ae9e69b46390ac189",
+      "currentSha256": "d17ca48c3ef6aff7a9e510816b2114c3ba3d28501137e5defd6e10019d670999",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/AppDataPaths.cs",
+      "upstreamSha256": "824457345b47e5aa4d27dbb34ba0106eefed4de1e008f3735777d425e5e58b6a",
+      "currentSha256": "b27464d34410af3d5f239dc72d380b4f0433ffbe84cc6912701391c6b2c1c280",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/AssemblyInfo.cs",
+      "upstreamSha256": "0169fd93c668d8ce6a8ab979dd1cc7bd5af88cff4a79cfa942da4c9c1adaaddf",
+      "currentSha256": "c0e89bdc66cf9fdfdaa9bbcc7bef50a519a1b617d172edf855b48dbcb772cd59",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/Assets/ThirdParty/AngleSharp-LICENSE.txt",
+      "upstreamSha256": "c948db93b50a1133bf7f1e1247682ed8099624f19e0611478b9c56a269ed765d",
+      "currentSha256": "2c594d9bfcf21dbcf3077e2c49bb53ceae4464f655e87be86fe1af76a5a73e39",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/AutomaticUpdatePreferencesStore.cs",
+      "upstreamSha256": "8ebfb268e90cd212d398dd401810b091d4e204e735274b111b7312f0982556a0",
+      "currentSha256": "fa4d3072f8f427dfd4ba80837de105aed6794c0693ab86f99409ed98241fafdc",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/Axiom.Infrastructure.csproj",
+      "upstreamSha256": "7cc805adf74e4d56bcd05ba3e756518e339cf463e2c66b9dc0eb94703b9c15e7",
+      "currentSha256": "71d1bba5772436d2125e800885d4d3f6a6d118bcca0e459f4b853d703186cff9",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/DocumentExportService.cs",
+      "upstreamSha256": "072c5475569865f7d7a27e9db6e0442c65dd1ffbdd8074a350958399759424bc",
+      "currentSha256": "eea11a7a544d991dc13395d0498faaa85a0908a2cd0927c5de59714df643ef0e",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/DocumentImportService.cs",
+      "upstreamSha256": "850052ebcb154da30bc2167782ea09a87bd5625020face95f61538ce4e6b28f6",
+      "currentSha256": "a8e594ce37c846f7b8618f6dddc980cd7f34f11461dd68ad7c641a74b8a5604b",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/EpubExportWriter.cs",
+      "upstreamSha256": "eb8e7823a26bfc4d3d4b00318004e2e12738c6bb0847223d3ceb3f5bb9219a4c",
+      "currentSha256": "922d4161ef2ba6acd0eb4d898ea9d4eda2985d8115b825e1ea3485993d08c725",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/ExportImage.cs",
+      "upstreamSha256": "63728b0d48878825ff7c3edc80c2797905cace80eb8e0a927bd4195335d67b33",
+      "currentSha256": "b0ab8ad981b17b55dcf22f2383017db35f9b6268b439e6f76314ec6ec3f46216",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/ExportImageDimensions.cs",
+      "upstreamSha256": "a9278b163f53575b33d32f137d054300814a27c4abe53b30a0ca18cc625b08e0",
+      "currentSha256": "8c9091d5bd4664ed9b5fcf828f821418c9b080107e708173b4284446a0dd76e9",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/ExportImageReader.cs",
+      "upstreamSha256": "8e6ed998f30c8be54eb3acafdd1ea3a90456b602de1f5b20780f8e8b7e74f379",
+      "currentSha256": "7e09b7292275d53172ee094e925224bd250fc319ba170eb4449c2be4997d5ea6",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/ExportResult.cs",
+      "upstreamSha256": "d41745a02c28ca12b73bddaac844964bbf3f15d5f47aed56cf35707d2a0c1d5e",
+      "currentSha256": "a97c1071bd6fb128ba07b069fd35117318ec84a473f271484b234422f8a9f9c0",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/ExternalFileMonitor.cs",
+      "upstreamSha256": "0343948571def6a43551eea4b7f483982f960ef4de04b737ef55a8fc4555676e",
+      "currentSha256": "d7f3bf89c896c7dfdf918dcf08168d8223259a810d3131e51936c871ce365093",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/FileDocumentStore.cs",
+      "upstreamSha256": "d24a24eca816809f70b862a12a04634e41a78bb677a21866a951268f4e96032c",
+      "currentSha256": "6edbaec134d67d2f77374b1d9a5174ba38c80ed8f48b6f7ef10664d4568c5d45",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/GitCommandResult.cs",
+      "upstreamSha256": "2fc7cd279da600fb8bb94e22b46243b17cfab0a96311ddf2183134c0eeb48b55",
+      "currentSha256": "d5850d21945c72ccda827157bdcd602bed46d1f7e30d1ffd210000cdf7b9414c",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/GitCommandRunner.cs",
+      "upstreamSha256": "828e1c9049b6ad56b361d6b9bdda617134b539ebb52d73b3c79613a12a19c9f8",
+      "currentSha256": "ac98e94c496570ffd6ebd9fbbe0d8229b7a1c9969844600bdefd75848bdf5338",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/GitDocumentHistoryService.Checkpoints.cs",
+      "upstreamSha256": "faef82cad86a786f76857a08ff6cb5155d205cb2a19b5c36c00f4d1ad2f6388e",
+      "currentSha256": "8513090c0ce3cdfae9d1cb7d60ade41caebb48c8942a8966afaf06db4bcb004f",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/GitDocumentHistoryService.cs",
+      "upstreamSha256": "bb9e6ad5d973ae1c0a7844b691ca2e64fbc658e5306136e0da305fc9f64275d6",
+      "currentSha256": "6fe297b4391f2f8e519218802d86c8948149ff35856ca46421f41d8de32d0954",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/GitWorkspaceService.Mutations.cs",
+      "upstreamSha256": "80b2d690e0051b40dec92337375a41ead15f05c365ef317f120cbb1ef82f5209",
+      "currentSha256": "70afacc542d38c163eca680e507ebaca3bd836af04b307c131c9e9ce44daf8ce",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/GitWorkspaceService.Staging.cs",
+      "upstreamSha256": "1a7885f4fe4909f09ceaf6a096062786c9a2e315f38754730d1f320296fc62b3",
+      "currentSha256": "7b1676c96ff06dcbd234159218ce805601e45c041dca95df0060713102a6009f",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/GitWorkspaceService.cs",
+      "upstreamSha256": "5566c030c2a9d515b252ff6fe10c904840f472fce620d4cbf42e9632fac3bff9",
+      "currentSha256": "d11f4eb35a943536a40838a1e6dfcf2c5be78509cde2b6fbc5b6fa3c3c7fe073",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/HtmlExportWriter.cs",
+      "upstreamSha256": "436ae2c6b28d176434096f583254f44b52cc897eb7569fff5d636ff0e1385a0b",
+      "currentSha256": "77047ff81dffa1be65ac4c2054e70df071fc1f52ed44ade381555ea8beb1d25e",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/IPdfExportRenderer.cs",
+      "upstreamSha256": "31dfcc14b134310b033667f1b7191d8bd6f66347867ee185bd6c8d92a545ee30",
+      "currentSha256": "58d945f54605fd35b31e754fb18c32b82ad0a9f149ad469442be7d53ad680aad",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/IStructuredPdfExportRenderer.cs",
+      "upstreamSha256": "2bda04f6c25a24855c736dc3230e29406f9867d47083490d6c0d3c5603a246d0",
+      "currentSha256": "c7940259ab7208bec2a64d41ec5db5f00966e9c0ca4e07492dc77e73e4577a3d",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/ImportMarkdownWriter.cs",
+      "upstreamSha256": "c60b4e76ba017b0a799c4508e8ed580d2c3b6c02d0828cb66ddce6aefc9ba173",
+      "currentSha256": "e829d67754db40b2408fafcb5d634cc1a86a4f14b71bc692342f404a1ec7690f",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/ImportedImageSavePreparation.cs",
+      "upstreamSha256": "941a032d07d3cc616c4aa97b7eec0479ff4491785eed4fc179a0616f6fd27fc2",
+      "currentSha256": "c6832c2ef6f8fd0a923ea675f803217046bed41c37fab0c5fd521e692575a984",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/OpenDocumentExportWriter.cs",
+      "upstreamSha256": "66170507cfca9cdb4e741e62c3607507984b0db2990ee7f185ec54758fddc235",
+      "currentSha256": "3387c2bf03ad4671d23f89acd9c13fd8b59d9ae50b338a087363a363f8dbe9d6",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/PdfRenderResult.cs",
+      "upstreamSha256": "8b9a29b884d58fe3b709fc1962f8ca5d9f6527c2b42d98160159bb9447034208",
+      "currentSha256": "0ba5a1983d6213abf4c2f15ca385b1f5f2a86cefc67e0d74217cbf7a7fb330d7",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/RollingFileLog.cs",
+      "upstreamSha256": "4ebac900ce576703d03aa813d73a5ab61bae2f9d648f9c3714fd9df2b2c06e9b",
+      "currentSha256": "e6805709559def801f0983919f7bb8350079ba274d5ab9aceac3882a50526cf4",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/TextExportWriter.cs",
+      "upstreamSha256": "811008bf936e4ef2747cca79e26e2919f02379a03d0d3e300950d4556d61cdaf",
+      "currentSha256": "d9aea5797c421ba60c9d263714c2e92e91f37740135773578111b66c9278014f",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/WindowsTerminalSession.cs",
+      "upstreamSha256": "b25836f8e2f2567b9e6de5e1a877bfee6687a30df2390b8597a3d554d65724c8",
+      "currentSha256": "cfebea80f5f6b6c645f923452587ebecfbd007633173d30a28f9cc6a517d7985",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/WordExportWriter.cs",
+      "upstreamSha256": "8f0d73dc18ebd03b76b1ddba690c91326dcb66eefba3ab0f27a58345c11fdd40",
+      "currentSha256": "3de64329def3a63c192982fac7af828506559b8bf4ae6713166afd973e6cdd08",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/WordImportReader.cs",
+      "upstreamSha256": "5020a0ee4e33b1d565be9d754bd0a2aa1f823776f7730c0b7a3b9bd147ffd959",
+      "currentSha256": "60d249ee2d10b2d44c9bb759366681cdc07b2268230bfb2faa0f71d26345684a",
+      "modified": true
+    },
+    {
+      "path": "src/Axiom.Infrastructure/WorkspaceFileOperations.cs",
+      "upstreamSha256": "f6d75423e540f6055e4805f71291edfa60171af49b6e2ec149cfa2ac2ec9ba0d",
+      "currentSha256": "6513fafe6c1775529fee1169bf01d3828aeb06c0984579a35be07ca84c37dc32",
+      "modified": true
+    }
+  ],
+  "excluded": [
+    "src/Axiom.App/App.Activation.cs",
+    "src/Axiom.App/AppComposition.cs",
+    "src/Axiom.App/Assets/Axiom.png",
+    "src/Axiom.App/Assets/Axiom.svg",
+    "src/Axiom.App/AuthoringAssistanceProbe.cs",
+    "src/Axiom.App/AuthoringPolishProbe.cs",
+    "src/Axiom.App/AutomaticUpdateProbe.cs",
+    "src/Axiom.App/BulkEnrollmentWindow.cs",
+    "src/Axiom.App/CSharpSourceColorizer.cs",
+    "src/Axiom.App/ClassificationBenchmarkProbe.cs",
+    "src/Axiom.App/CommandPaletteEntry.cs",
+    "src/Axiom.App/CommandPaletteWindow.cs",
+    "src/Axiom.App/CommandWorkflowProbe.cs",
+    "src/Axiom.App/CompactWorkbenchProbe.cs",
+    "src/Axiom.App/ConflictWindow.cs",
+    "src/Axiom.App/ConnectedDocumentsProbe.cs",
+    "src/Axiom.App/ConnectedDocumentsProbeResult.cs",
+    "src/Axiom.App/CpAnalysisWindow.cs",
+    "src/Axiom.App/CpDocumentActionWindow.cs",
+    "src/Axiom.App/CpHelpProbe.cs",
+    "src/Axiom.App/CpWorkspaceAnalysisWindow.cs",
+    "src/Axiom.App/CreationProbe.cs",
+    "src/Axiom.App/DailyAuthoringProbe.cs",
+    "src/Axiom.App/DeletedDocumentProbe.cs",
+    "src/Axiom.App/DeletedDocumentsWindow.cs",
+    "src/Axiom.App/DiscoveryTerminalProbe.cs",
+    "src/Axiom.App/DocumentCreationPreviewWindow.cs",
+    "src/Axiom.App/DocumentHistoryProbe.cs",
+    "src/Axiom.App/DocumentImportProbe.cs",
+    "src/Axiom.App/DocumentTab.cs",
+    "src/Axiom.App/EndOfLineElementGenerator.cs",
+    "src/Axiom.App/EndOfLineTextElement.cs",
+    "src/Axiom.App/EverydayUseProbe.cs",
+    "src/Axiom.App/ExternalOpeningProbe.cs",
+    "src/Axiom.App/FieldHelp.cs",
+    "src/Axiom.App/Help/UserGuide.md",
+    "src/Axiom.App/Help/source.json",
+    "src/Axiom.App/HelpPanel.cs",
+    "src/Axiom.App/HelpWindow.cs",
+    "src/Axiom.App/InformationWindow.cs",
+    "src/Axiom.App/InlineIndexProgress.cs",
+    "src/Axiom.App/InstallationWindowProbe.cs",
+    "src/Axiom.App/LinkIndexBenchmarkProbe.cs",
+    "src/Axiom.App/LinkIndexBenchmarkResult.cs",
+    "src/Axiom.App/LocalCpConnection.cs",
+    "src/Axiom.App/LocalCpSetup.cs",
+    "src/Axiom.App/MainWindow.Activation.cs",
+    "src/Axiom.App/MainWindow.AdditionalCommands.cs",
+    "src/Axiom.App/MainWindow.Authoring.cs",
+    "src/Axiom.App/MainWindow.AutomaticUpdates.cs",
+    "src/Axiom.App/MainWindow.Backlinks.cs",
+    "src/Axiom.App/MainWindow.Classification.cs",
+    "src/Axiom.App/MainWindow.Clipboard.cs",
+    "src/Axiom.App/MainWindow.CommandMenus.cs",
+    "src/Axiom.App/MainWindow.Commands.cs",
+    "src/Axiom.App/MainWindow.CompactWorkbench.cs",
+    "src/Axiom.App/MainWindow.CpAnalysis.cs",
+    "src/Axiom.App/MainWindow.Creation.cs",
+    "src/Axiom.App/MainWindow.DeletedDocuments.cs",
+    "src/Axiom.App/MainWindow.Discovery.cs",
+    "src/Axiom.App/MainWindow.DocumentImport.cs",
+    "src/Axiom.App/MainWindow.ExplorerCommands.cs",
+    "src/Axiom.App/MainWindow.ExplorerDrag.cs",
+    "src/Axiom.App/MainWindow.ExplorerOpening.cs",
+    "src/Axiom.App/MainWindow.ExplorerSelection.cs",
+    "src/Axiom.App/MainWindow.Export.cs",
+    "src/Axiom.App/MainWindow.FolderManagement.cs",
+    "src/Axiom.App/MainWindow.Git.cs",
+    "src/Axiom.App/MainWindow.Help.cs",
+    "src/Axiom.App/MainWindow.History.cs",
+    "src/Axiom.App/MainWindow.Import.cs",
+    "src/Axiom.App/MainWindow.Installation.cs",
+    "src/Axiom.App/MainWindow.LinkNavigation.cs",
+    "src/Axiom.App/MainWindow.ListDeletion.cs",
+    "src/Axiom.App/MainWindow.Management.cs",
+    "src/Axiom.App/MainWindow.Mermaid.cs",
+    "src/Axiom.App/MainWindow.MultiSelect.cs",
+    "src/Axiom.App/MainWindow.Operations.cs",
+    "src/Axiom.App/MainWindow.PathIdentity.cs",
+    "src/Axiom.App/MainWindow.PreviewSynchronization.cs",
+    "src/Axiom.App/MainWindow.PreviewTasks.cs",
+    "src/Axiom.App/MainWindow.ReadingFeedback.cs",
+    "src/Axiom.App/MainWindow.ReadingMode.cs",
+    "src/Axiom.App/MainWindow.RecentDocuments.cs",
+    "src/Axiom.App/MainWindow.Relationships.cs",
+    "src/Axiom.App/MainWindow.ReviewedMoves.cs",
+    "src/Axiom.App/MainWindow.SessionRestore.cs",
+    "src/Axiom.App/MainWindow.SessionTransitions.cs",
+    "src/Axiom.App/MainWindow.Settings.cs",
+    "src/Axiom.App/MainWindow.Shortcuts.cs",
+    "src/Axiom.App/MainWindow.StateRestore.cs",
+    "src/Axiom.App/MainWindow.Structure.cs",
+    "src/Axiom.App/MainWindow.TabDrag.cs",
+    "src/Axiom.App/MainWindow.Tabs.cs",
+    "src/Axiom.App/MainWindow.Templates.cs",
+    "src/Axiom.App/MainWindow.Toolbar.cs",
+    "src/Axiom.App/MainWindow.ViewModes.cs",
+    "src/Axiom.App/MainWindow.Walkthrough.cs",
+    "src/Axiom.App/MainWindow.Workbench.cs",
+    "src/Axiom.App/MainWindow.WorkspaceLoading.cs",
+    "src/Axiom.App/MainWindow.WorkspaceRefresh.cs",
+    "src/Axiom.App/MainWindow.WorkspaceTools.cs",
+    "src/Axiom.App/MainWindow.axaml",
+    "src/Axiom.App/MainWindow.axaml.cs",
+    "src/Axiom.App/MetadataImportWindow.cs",
+    "src/Axiom.App/MultiBufferRecoveryProbe.cs",
+    "src/Axiom.App/NativeProbeInput.cs",
+    "src/Axiom.App/NativeProbeKeyboardInput.cs",
+    "src/Axiom.App/NativeScreenPoint.cs",
+    "src/Axiom.App/NewWorkspaceWindow.cs",
+    "src/Axiom.App/NextUiStoriesProbe.cs",
+    "src/Axiom.App/OfflineHelp.cs",
+    "src/Axiom.App/PackageUpdateFixtureHandler.cs",
+    "src/Axiom.App/PdfExportProbe.cs",
+    "src/Axiom.App/PdfExportServiceFactory.cs",
+    "src/Axiom.App/PersonalizationProbe.cs",
+    "src/Axiom.App/PortablePackageProbe.cs",
+    "src/Axiom.App/PortablePdfExportRenderer.cs",
+    "src/Axiom.App/PresentationProbe.cs",
+    "src/Axiom.App/PreviewResilienceProbe.cs",
+    "src/Axiom.App/Properties/AssemblyInfo.cs",
+    "src/Axiom.App/ReadingFeedbackProbe.cs",
+    "src/Axiom.App/RecentDocumentsWindow.cs",
+    "src/Axiom.App/RecoveryProbeBuffer.cs",
+    "src/Axiom.App/RecoveryProbeBufferResult.cs",
+    "src/Axiom.App/RecoveryProbeResult.cs",
+    "src/Axiom.App/RecoveryProtectionSnapshot.cs",
+    "src/Axiom.App/RelationshipEditorWindow.cs",
+    "src/Axiom.App/SemanticLayoutProbe.cs",
+    "src/Axiom.App/SemanticReviewProbe.cs",
+    "src/Axiom.App/SettingsWindow.cs",
+    "src/Axiom.App/ShortcutSettingsWindow.cs",
+    "src/Axiom.App/SpellingUnderlineRenderer.cs",
+    "src/Axiom.App/StartupFailure.cs",
+    "src/Axiom.App/StateRestoreHelper.cs",
+    "src/Axiom.App/StateRestoreProbe.cs",
+    "src/Axiom.App/StructureBrowserWindow.cs",
+    "src/Axiom.App/StructuredWikiProbe.cs",
+    "src/Axiom.App/TemplateAssetProbe.cs",
+    "src/Axiom.App/TextEntryDialog.cs",
+    "src/Axiom.App/ToolbarChoice.cs",
+    "src/Axiom.App/ToolbarCustomizationWindow.cs",
+    "src/Axiom.App/TurnkeyCpProbe.cs",
+    "src/Axiom.App/UnicodePickerWindow.cs",
+    "src/Axiom.App/UpdateDownloadWindow.cs",
+    "src/Axiom.App/UsageReliabilityProbe.cs",
+    "src/Axiom.App/Walkthrough/capture.json",
+    "src/Axiom.App/Walkthrough/images/01-workspace.jpg",
+    "src/Axiom.App/Walkthrough/images/02-filter.jpg",
+    "src/Axiom.App/Walkthrough/images/03-outline.jpg",
+    "src/Axiom.App/Walkthrough/images/04-reading.jpg",
+    "src/Axiom.App/Walkthrough/images/05-panels.jpg",
+    "src/Axiom.App/Walkthrough/images/06-export.jpg",
+    "src/Axiom.App/Walkthrough/images/07-help.jpg",
+    "src/Axiom.App/Walkthrough/images/08-commands.jpg",
+    "src/Axiom.App/Walkthrough/images/09-tools.jpg",
+    "src/Axiom.App/Walkthrough/images/10-diagnostics.jpg",
+    "src/Axiom.App/Walkthrough/images/11-maintenance.jpg",
+    "src/Axiom.App/Walkthrough/images/12-portable-update.jpg",
+    "src/Axiom.App/Walkthrough/images/13-user-install.jpg",
+    "src/Axiom.App/Walkthrough/images/14-trusted-update.jpg",
+    "src/Axiom.App/Walkthrough/images/15-switch-version.jpg",
+    "src/Axiom.App/Walkthrough/images/16-about.jpg",
+    "src/Axiom.App/Walkthrough/index.html",
+    "src/Axiom.App/Walkthrough/steps.json",
+    "src/Axiom.App/Walkthrough/walkthrough.css",
+    "src/Axiom.App/Walkthrough/walkthrough.js",
+    "src/Axiom.App/WikiTargetWindow.cs",
+    "src/Axiom.App/WindowsExplorerReveal.cs",
+    "src/Axiom.App/WindowsInstallationProbe.cs",
+    "src/Axiom.App/WindowsInteractionProbe.Workspace.cs",
+    "src/Axiom.App/WindowsInteractionProbe.cs",
+    "src/Axiom.App/WorkbenchIcon.cs",
+    "src/Axiom.App/WorkbenchProbe.cs",
+    "src/Axiom.App/WorkbenchViewSnapshot.cs",
+    "src/Axiom.App/WorkspaceCatalogWindow.cs",
+    "src/Axiom.App/WorkspaceExplorerNode.cs",
+    "src/Axiom.App/WorkspaceGitProbe.cs",
+    "src/Axiom.App/WorkspaceLoadSnapshot.cs",
+    "src/Axiom.App/WorkspaceNavigationProbe.cs",
+    "src/Axiom.App/WorkspaceSafetyProbe.cs",
+    "src/Axiom.App/WorkspaceToolsProbe.cs",
+    "src/Axiom.Core/AnalysisCapabilities.cs",
+    "src/Axiom.Core/AnalysisCitationPolicy.cs",
+    "src/Axiom.Core/AnalysisEmbeddings.cs",
+    "src/Axiom.Core/AnalysisInsight.cs",
+    "src/Axiom.Core/AnalysisSnapshot.cs",
+    "src/Axiom.Core/AxiomCommand.cs",
+    "src/Axiom.Core/ClassificationCatalog.cs",
+    "src/Axiom.Core/ClassificationChange.cs",
+    "src/Axiom.Core/ClassificationPolicy.cs",
+    "src/Axiom.Core/ClassifiedDocument.cs",
+    "src/Axiom.Core/CommandAvailability.cs",
+    "src/Axiom.Core/CommandContext.cs",
+    "src/Axiom.Core/CommandDispatcher.cs",
+    "src/Axiom.Core/CommandOutcome.cs",
+    "src/Axiom.Core/CommandResult.cs",
+    "src/Axiom.Core/DeletedDocument.cs",
+    "src/Axiom.Core/DocumentClassification.cs",
+    "src/Axiom.Core/DocumentIdentityPolicy.cs",
+    "src/Axiom.Core/DocumentMutationIntent.cs",
+    "src/Axiom.Core/DocumentMutationKind.cs",
+    "src/Axiom.Core/DocumentNavigationLocation.cs",
+    "src/Axiom.Core/DocumentOutlineEntry.cs",
+    "src/Axiom.Core/DocumentOutlineService.cs",
+    "src/Axiom.Core/DocumentRelationship.cs",
+    "src/Axiom.Core/DocumentStatistics.cs",
+    "src/Axiom.Core/DocumentTemplateService.cs",
+    "src/Axiom.Core/EditorPreferences.cs",
+    "src/Axiom.Core/HelpSearchResult.cs",
+    "src/Axiom.Core/HelpSearchService.cs",
+    "src/Axiom.Core/IBatchRecoveryStore.cs",
+    "src/Axiom.Core/IClassificationStore.cs",
+    "src/Axiom.Core/IConnectedMetadataStore.cs",
+    "src/Axiom.Core/IDeletedDocumentStore.cs",
+    "src/Axiom.Core/IDocumentMutationStore.cs",
+    "src/Axiom.Core/IMarkdownLinkTargetReader.cs",
+    "src/Axiom.Core/IReadingModeStore.cs",
+    "src/Axiom.Core/ISemanticDocumentProvider.cs",
+    "src/Axiom.Core/ISemanticDocumentResultStore.cs",
+    "src/Axiom.Core/IWorkbenchLayoutStore.cs",
+    "src/Axiom.Core/IWorkspaceCatalogStore.cs",
+    "src/Axiom.Core/IWorkspaceLinkIndexStore.cs",
+    "src/Axiom.Core/IWorkspaceSessionStore.cs",
+    "src/Axiom.Core/MarkdownEditPatches.cs",
+    "src/Axiom.Core/MarkdownEditProposal.cs",
+    "src/Axiom.Core/MarkdownLinkResolution.cs",
+    "src/Axiom.Core/MarkdownLinkResolutionStatus.cs",
+    "src/Axiom.Core/MarkdownLinkResolver.cs",
+    "src/Axiom.Core/MarkdownLinkTarget.cs",
+    "src/Axiom.Core/MarkdownProseRanges.cs",
+    "src/Axiom.Core/MenuStyle.cs",
+    "src/Axiom.Core/MetadataImportProposal.cs",
+    "src/Axiom.Core/MetadataTransfer.cs",
+    "src/Axiom.Core/MetadataTransferRecord.cs",
+    "src/Axiom.Core/MetadataTransferRelationship.cs",
+    "src/Axiom.Core/RecentDocument.cs",
+    "src/Axiom.Core/RelationshipChange.cs",
+    "src/Axiom.Core/RelationshipPolicy.cs",
+    "src/Axiom.Core/RelationshipView.cs",
+    "src/Axiom.Core/RelativeReferenceRepair.cs",
+    "src/Axiom.Core/SemanticDocumentResult.cs",
+    "src/Axiom.Core/SemanticDocumentSnapshot.cs",
+    "src/Axiom.Core/SemanticMatch.cs",
+    "src/Axiom.Core/SemanticRanking.cs",
+    "src/Axiom.Core/SemanticSection.cs",
+    "src/Axiom.Core/ShortcutConfiguration.cs",
+    "src/Axiom.Core/SpellingIssue.cs",
+    "src/Axiom.Core/ToolbarCommandDefinition.cs",
+    "src/Axiom.Core/ToolbarLayout.cs",
+    "src/Axiom.Core/WikiLinkResolver.cs",
+    "src/Axiom.Core/WorkbenchLayout.cs",
+    "src/Axiom.Core/WorkbenchPlacement.cs",
+    "src/Axiom.Core/WorkbenchViewMode.cs",
+    "src/Axiom.Core/WorkspaceBacklinkIndex.cs",
+    "src/Axiom.Core/WorkspaceDocumentLocation.cs",
+    "src/Axiom.Core/WorkspaceDocumentResolver.cs",
+    "src/Axiom.Core/WorkspaceDocumentSession.cs",
+    "src/Axiom.Core/WorkspaceIndexProgress.cs",
+    "src/Axiom.Core/WorkspaceIndexedDocument.cs",
+    "src/Axiom.Core/WorkspaceLinkIndexService.cs",
+    "src/Axiom.Core/WorkspaceLinkReference.cs",
+    "src/Axiom.Core/WorkspaceRenamePlan.cs",
+    "src/Axiom.Core/WorkspaceSearch.cs",
+    "src/Axiom.Core/WorkspaceWikiLinkService.cs",
+    "src/Axiom.Infrastructure/Assets/Spellcheck/DICTIONARY-LICENSE.txt",
+    "src/Axiom.Infrastructure/Assets/Spellcheck/HUNSPELL-LICENSE.txt",
+    "src/Axiom.Infrastructure/Assets/Spellcheck/en.aff",
+    "src/Axiom.Infrastructure/Assets/Spellcheck/en.dic",
+    "src/Axiom.Infrastructure/Assets/Spellcheck/package-lock.json",
+    "src/Axiom.Infrastructure/BulkEnrollmentEntry.cs",
+    "src/Axiom.Infrastructure/BulkEnrollmentResult.cs",
+    "src/Axiom.Infrastructure/BulkEnrollmentService.cs",
+    "src/Axiom.Infrastructure/ClassificationService.cs",
+    "src/Axiom.Infrastructure/CpDocumentAnalysisClient.cs",
+    "src/Axiom.Infrastructure/CpSemanticIndex.cs",
+    "src/Axiom.Infrastructure/DiagnosticsPresentation.cs",
+    "src/Axiom.Infrastructure/DiagnosticsReader.cs",
+    "src/Axiom.Infrastructure/EnglishSpellingService.cs",
+    "src/Axiom.Infrastructure/ExclusiveDirectoryCreator.cs",
+    "src/Axiom.Infrastructure/IRecycleBin.cs",
+    "src/Axiom.Infrastructure/IWindowsFileOperation.cs",
+    "src/Axiom.Infrastructure/IWindowsShellItem.cs",
+    "src/Axiom.Infrastructure/LinuxRecycleBin.cs",
+    "src/Axiom.Infrastructure/MacRecycleBin.cs",
+    "src/Axiom.Infrastructure/MarkdownIdentityBytes.cs",
+    "src/Axiom.Infrastructure/MarkdownLinkTargetReader.cs",
+    "src/Axiom.Infrastructure/MetadataTransferService.cs",
+    "src/Axiom.Infrastructure/PortableAssemblyMetadata.cs",
+    "src/Axiom.Infrastructure/PortablePackageFile.cs",
+    "src/Axiom.Infrastructure/PortablePackageManifest.cs",
+    "src/Axiom.Infrastructure/PortablePackageService.cs",
+    "src/Axiom.Infrastructure/PortableUpdateLauncher.cs",
+    "src/Axiom.Infrastructure/ProtectedFolderRecycle.cs",
+    "src/Axiom.Infrastructure/ReviewedFolderCopy.cs",
+    "src/Axiom.Infrastructure/ReviewedWorkspaceMove.cs",
+    "src/Axiom.Infrastructure/SingleInstanceCoordinator.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.Classification.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.DeletedDocuments.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.EverydayUse.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.FolderMoves.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.IdentityBatch.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.LinkIndex.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.Management.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.PathPolicy.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.ReadingMode.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.RecoveryBatch.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.Relationships.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.SemanticResults.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.Sessions.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.Shortcuts.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.WorkbenchLayout.cs",
+    "src/Axiom.Infrastructure/SqliteStateStore.cs",
+    "src/Axiom.Infrastructure/StateInspection.cs",
+    "src/Axiom.Infrastructure/StateMaintenanceService.cs",
+    "src/Axiom.Infrastructure/StateRestoreService.cs",
+    "src/Axiom.Infrastructure/UnixFileIdentityReader.cs",
+    "src/Axiom.Infrastructure/VerifiedUpdateOffer.cs",
+    "src/Axiom.Infrastructure/VerifiedUpdateService.cs",
+    "src/Axiom.Infrastructure/WindowsInstallationService.cs",
+    "src/Axiom.Infrastructure/WindowsRecycleBin.cs",
+    "src/Axiom.Infrastructure/WorkspaceAnalysisSnapshotReader.cs",
+    "src/Axiom.Infrastructure/WorkspaceBatchExport.cs",
+    "src/Axiom.Infrastructure/WorkspaceChangeMonitor.cs",
+    "src/Axiom.Infrastructure/WorkspaceCreationService.cs",
+    "src/Axiom.Infrastructure/WorkspaceFileOperations.Folders.cs",
+    "src/Axiom.Infrastructure/WorkspaceFolderClipboard.cs",
+    "src/Axiom.Infrastructure/WorkspaceFolderDiscovery.cs",
+    "src/Axiom.Infrastructure/WorkspaceImportService.cs"
+  ],
+  "new": [
+    {
+      "path": "src/Axiom.App/AssemblyInfo.cs",
+      "sha256": "c0e89bdc66cf9fdfdaa9bbcc7bef50a519a1b617d172edf855b48dbcb772cd59"
+    },
+    {
+      "path": "src/Axiom.App/MainWindow.cs",
+      "sha256": "f1c6461b4eb3038ca6db6513e381165023f593f3642b278dd7a87a457dcf8adc"
+    },
+    {
+      "path": "src/Axiom.App/MarkdownHighlighting.cs",
+      "sha256": "59d7a2e0c6e675e68e862ad49af1232ea0087a6219bb94f96376701d2f2409fe"
+    },
+    {
+      "path": "src/Axiom.App/ReviewProbe.cs",
+      "sha256": "8f22585c597816b10670bbd1f5f1297b12d68217f01998a9802061acf50b41b5"
+    },
+    {
+      "path": "src/Axiom.Core/FeatureAccess.cs",
+      "sha256": "36162f749811928220bdf1ecbf64ea2952f05ab59f53ea11570d9dc4c3bba284"
+    },
+    {
+      "path": "src/Axiom.Core/PreviewSanitizer.cs",
+      "sha256": "4a40c358a16870667bef765ce6e23b11400aa4e5578949078f9c509311b752ba"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/EditorPreferencesStore.cs",
+      "sha256": "3d5a9a3f6a536c4891d2fcd8314e8572ebcc11395f2e96aaf24d3270f6b70243"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/EditorStateStore.cs",
+      "sha256": "677de956e519d3fd9dfefcd584268d84c5527e0a066a05483ca620622c2faa49"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/FeaturePolicyStore.cs",
+      "sha256": "8ac943e0aa8f6381a86c44832cdfd7b9595d57e611a134f0fc936b9d601a34d3"
+    },
+    {
+      "path": "src/Axiom.Infrastructure/RemoteImageLoader.cs",
+      "sha256": "83115d7019f3c1273fe02bb3f90d82b706d70b1a564f3d7ebb2a6aee0994830a"
+    }
+  ],
+  "note": "Fresh repository history; manifests list current source selections rather than hidden feature flags. No upstream Git history or local state is copied."
+}

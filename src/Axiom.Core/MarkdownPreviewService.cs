@@ -1,0 +1,206 @@
+using System.Net;
+using System.Text.RegularExpressions;
+
+namespace Axiom.Core;
+
+public sealed partial class MarkdownPreviewService
+{
+    private const long MaximumEmbeddedImageBytes = 20 * 1024 * 1024;
+    private static readonly IReadOnlyDictionary<string, string> ImageMediaTypes =
+        new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+        {
+            [".png"] = "image/png",
+            [".jpg"] = "image/jpeg",
+            [".jpeg"] = "image/jpeg",
+            [".gif"] = "image/gif",
+            [".webp"] = "image/webp",
+            [".bmp"] = "image/bmp",
+            [".svg"] = "image/svg+xml"
+        };
+    private readonly MarkdownStructureService _structure = new();
+
+    public SanitizedPreview RenderWithReport(string markdown, string? documentPath, AppearancePreference appearance,
+        string? folder, string token, IReadOnlyDictionary<string, string>? trustedImages = null)
+    {
+        return RenderContent(_structure.Parse(markdown), documentPath, appearance, folder, token, false, true, true, trustedImages);
+    }
+
+    public string RenderDocument(
+        string markdown,
+        string? documentPath,
+        AppearancePreference appearance = AppearancePreference.System,
+        string? workspaceRoot = null,
+        bool preserveLineBreaks = true)
+    {
+        return RenderDocument(_structure.Parse(markdown), documentPath, appearance, workspaceRoot, preserveLineBreaks: preserveLineBreaks);
+    }
+
+    public string RenderDocument(DocumentStructure document
+                               , string? documentPath
+                               , AppearancePreference appearance = AppearancePreference.System
+                               , string? workspaceRoot = null
+                               , string? linkToken = null
+                               , bool showLineNumbers = false
+                               , bool showNavigation = true
+                               , bool preserveLineBreaks = true)
+        => RenderContent(document, documentPath, appearance, workspaceRoot, linkToken, showLineNumbers, showNavigation, preserveLineBreaks, null).Html;
+
+    private SanitizedPreview RenderContent(DocumentStructure document, string? documentPath, AppearancePreference appearance,
+        string? workspaceRoot, string? linkToken, bool showLineNumbers, bool showNavigation, bool preserveLineBreaks,
+        IReadOnlyDictionary<string, string>? trustedImages)
+    {
+        // Identity is source metadata: preserve it in Markdown/editor but not in preview.
+        // Fenced examples are unaffected because the marker must be on the first line.
+        var previewMarkdown = DocumentIdCodec.RemoveCanonicalMarkerForPreview(document.SourceText);
+        var body = string.IsNullOrWhiteSpace(previewMarkdown)
+            ? "<p class=\"empty-state\">Start typing Markdown to see a preview.</p>"
+            : MarkdownStructureService.RenderHtml(document, linkToken, showLineNumbers, showNavigation, preserveLineBreaks);
+        body = EmbedWorkspaceImages(body, documentPath, workspaceRoot);
+        var report = new PreviewSanitizer().Sanitize(body, trustedImages, linkToken);
+        body = report.Html;
+        var baseElement = string.Empty;
+        var html = $$"""
+            <!doctype html>
+            <html data-theme="{{appearance.ToString().ToLowerInvariant()}}" data-link-token="{{WebUtility.HtmlEncode(linkToken ?? string.Empty)}}"><head><meta charset="utf-8">
+            <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'unsafe-inline'; font-src 'none'; media-src 'none'; connect-src 'none'; frame-src 'none'; object-src 'none'; script-src 'none'; base-uri 'none'; form-action 'none'">
+            {{baseElement}}
+            <style>
+            :root {
+              color-scheme: light dark;
+              --page: #111827; --text: #e5e7eb; --muted: #a8b3c4; --surface: #1f2937;
+              --border: #4b5563; --accent: #93c5fd; --quote: #a78bfa; --heading-rule: #334155;
+              --alert-info: #93c5fd; --alert-tip: #86efac; --alert-warning: #fcd34d; --alert-danger: #fca5a5;
+            }
+            @media (prefers-color-scheme: light) {
+              :root {
+                --page: #ffffff; --text: #1f2937; --muted: #526071; --surface: #f3f4f6;
+                --border: #cbd5e1; --accent: #1d4ed8; --quote: #6d28d9; --heading-rule: #e2e8f0;
+                --alert-info: #1d4ed8; --alert-tip: #166534; --alert-warning: #854d0e; --alert-danger: #b91c1c;
+              }
+            }
+            html[data-theme="light"] {
+              --page: #ffffff; --text: #1f2937; --muted: #526071; --surface: #f3f4f6;
+              --border: #cbd5e1; --accent: #1d4ed8; --quote: #6d28d9; --heading-rule: #e2e8f0;
+              --alert-info: #1d4ed8; --alert-tip: #166534; --alert-warning: #854d0e; --alert-danger: #b91c1c;
+            }
+            html[data-theme="dark"] {
+              --page: #111827; --text: #e5e7eb; --muted: #a8b3c4; --surface: #1f2937;
+              --border: #4b5563; --accent: #93c5fd; --quote: #a78bfa; --heading-rule: #334155;
+              --alert-info: #93c5fd; --alert-tip: #86efac; --alert-warning: #fcd34d; --alert-danger: #fca5a5;
+            }
+            * { box-sizing: border-box; }
+            html { background: var(--page); }
+            body { font-family: "Segoe UI", system-ui, sans-serif; font-size: 16px; line-height: 1.65; max-width: 920px; margin: 0 auto; padding: 30px 36px 64px; color: var(--text); background: var(--page); overflow-wrap: anywhere; }
+            h1,h2,h3,h4,h5,h6 { line-height: 1.25; margin: 1.55em 0 .55em; scroll-margin-top: 1rem; }
+            h1 { font-size: 2em; padding-bottom: .28em; border-bottom: 1px solid var(--heading-rule); }
+            h2 { font-size: 1.5em; padding-bottom: .2em; border-bottom: 1px solid var(--heading-rule); }
+            h3 { font-size: 1.24em; }
+            p,ul,ol,blockquote,pre,table { margin-top: 0; margin-bottom: 1em; }
+            li + li { margin-top: .22em; }
+            a.task-toggle { display: inline-flex; align-items: center; justify-content: center; width: 1.05em; height: 1.05em; margin-right: .35em; border: 1px solid var(--muted); border-radius: 3px; text-decoration: none; font-size: .9em; line-height: 1; vertical-align: middle; cursor: pointer; }
+            a.task-toggle[aria-checked="true"] { background: var(--accent); color: var(--page); border-color: var(--accent); }
+            a.task-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+            a { color: var(--accent); text-underline-offset: .16em; }
+            a:hover { text-decoration-thickness: 2px; }
+            code { font-family: "Cascadia Mono", Consolas, monospace; font-size: .92em; padding: .12em .32em; background: var(--surface); border-radius: 4px; }
+            pre { padding: 15px 17px; overflow: auto; background: var(--surface); border: 1px solid var(--border); border-radius: 7px; }
+            pre code { padding: 0; background: transparent; border-radius: 0; }
+            .csharp-keyword { color: #c4b5fd; } .csharp-string { color: #fca5a5; }
+            .csharp-comment { color: #86efac; } .csharp-number { color: #93c5fd; }
+            html[data-theme="light"] .csharp-keyword { color: #6d28d9; }
+            html[data-theme="light"] .csharp-string { color: #a32020; }
+            html[data-theme="light"] .csharp-comment { color: #166534; }
+            html[data-theme="light"] .csharp-number { color: #1d4ed8; }
+            @media (prefers-color-scheme: light) {
+              html[data-theme="system"] .csharp-keyword { color: #6d28d9; }
+              html[data-theme="system"] .csharp-string { color: #a32020; }
+              html[data-theme="system"] .csharp-comment { color: #166534; }
+              html[data-theme="system"] .csharp-number { color: #1d4ed8; }
+            }
+            .mermaid-diagram { margin: 1em 0; overflow: auto; }
+            .mermaid-diagram svg { max-width: 100%; height: auto; }
+            .mermaid-diagram summary { cursor: pointer; color: var(--muted); font-size: .85em; }
+            .mermaid-error { color: var(--text); border-left: 3px solid var(--border); padding-left: 10px; }
+            .markdown-alert { border-left: 4px solid #5986c9; border-radius: 5px; padding: 10px 16px; margin: 1em 0; background: var(--surface); }
+            .markdown-alert-title { display: flex; align-items: center; gap: .5em; font-weight: 600; margin: 0 0 .4em; }
+            .callout-icon { flex: 0 0 1.2em; width: 1.2em; height: 1.2em; }
+            .markdown-alert-title { color: var(--alert-info); }
+            .markdown-alert-tip .markdown-alert-title { color: var(--alert-tip); }
+            .markdown-alert-warning .markdown-alert-title, .markdown-alert-caution .markdown-alert-title { color: var(--alert-warning); }
+            .markdown-alert-danger .markdown-alert-title { color: var(--alert-danger); }
+            .markdown-alert-warning, .markdown-alert-caution, .markdown-alert-danger { border-color: #d99039; }
+            .markdown-alert-tip, .markdown-alert-success { border-color: #499b78; }
+            blockquote { border-left: 4px solid var(--quote); margin-left: 0; padding: .2em 0 .2em 1em; color: var(--muted); }
+            blockquote > :last-child { margin-bottom: 0; }
+            table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+            th,td { border: 1px solid var(--border); padding: .45em .7em; text-align: left; }
+            th { background: var(--surface); }
+            input[type=checkbox] { margin: 0 .5em 0 0; accent-color: var(--quote); }
+            li.task-list-item, li:has(input[type=checkbox]) { list-style: none; margin-left: -1.25em; }
+            hr { height: 1px; margin: 1.8em 0; border: 0; background: var(--border); }
+            img { display: block; max-width: 100%; height: auto; object-fit: contain; border-radius: 4px; }
+            .empty-state { margin-top: 2rem; color: var(--muted); font-style: italic; }
+            .source-block { position: relative; }
+            .source-navigation { display: block; width: fit-content; margin: 0 0 .15em auto; font-size: .75em; opacity: .55; }
+            .source-navigation:hover, .source-navigation:focus { opacity: 1; }
+            @media (max-width: 640px) { body { padding: 22px 20px 48px; } }
+            </style></head><body>{{body}}</body></html>
+            """;
+        return report with { Html = html };
+    }
+
+    private static string BuildBaseElement(string? documentPath)
+    {
+        if (string.IsNullOrWhiteSpace(documentPath)) return string.Empty;
+        var directory = Path.GetDirectoryName(Path.GetFullPath(documentPath));
+        if (directory is null) return string.Empty;
+        var uri = new Uri(directory.TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar).AbsoluteUri;
+        return $"<base href=\"{WebUtility.HtmlEncode(uri)}\">";
+    }
+
+    private static string EmbedWorkspaceImages(string html, string? documentPath, string? workspaceRoot)
+    {
+        if (string.IsNullOrWhiteSpace(documentPath)) return html;
+        var documentDirectory = Path.GetDirectoryName(Path.GetFullPath(documentPath));
+        if (documentDirectory is null) return html;
+        // Standalone imports also need their saved companion images. Keep their read boundary at the document folder.
+        var root = !string.IsNullOrWhiteSpace(workspaceRoot) && IsWithin(WorkspaceService.NormalizeRootPath(workspaceRoot), documentPath)
+            ? WorkspaceService.NormalizeRootPath(workspaceRoot) : documentDirectory;
+
+        return ImageSourceRegex().Replace(html, match =>
+        {
+            try
+            {
+                var source = WebUtility.HtmlDecode(match.Groups["source"].Value);
+                if (Uri.TryCreate(source, UriKind.Absolute, out _)) return match.Value;
+                var pathOnly = source.Split(['?', '#'], 2)[0];
+                var relativePath = Uri.UnescapeDataString(pathOnly).Replace('/', Path.DirectorySeparatorChar);
+                var imagePath = Path.GetFullPath(Path.Combine(documentDirectory, relativePath));
+                if (!IsWithin(root, imagePath) || !File.Exists(imagePath)) return match.Value;
+                if (!ImageMediaTypes.TryGetValue(Path.GetExtension(imagePath), out var mediaType)) return match.Value;
+                if (mediaType == "image/svg+xml") return match.Value;
+                for (var ancestor = imagePath; ancestor is not null; ancestor = Path.GetDirectoryName(ancestor))
+                    if ((File.Exists(ancestor) || Directory.Exists(ancestor)) && File.GetAttributes(ancestor).HasFlag(FileAttributes.ReparsePoint)) return match.Value;
+                var info = new FileInfo(imagePath);
+                if (info.Length > MaximumEmbeddedImageBytes) return match.Value;
+                var dataUri = $"data:{mediaType};base64,{Convert.ToBase64String(File.ReadAllBytes(imagePath))}";
+                return match.Groups["prefix"].Value + dataUri + match.Groups["suffix"].Value;
+            }
+            catch (Exception exception) when (exception is IOException or UnauthorizedAccessException or ArgumentException or NotSupportedException)
+            {
+                return match.Value;
+            }
+        });
+    }
+
+    private static bool IsWithin(string root, string candidate)
+    {
+        var comparison = OperatingSystem.IsWindows() ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal;
+        if (candidate.Equals(root, comparison)) return true;
+        var prefix = root.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar) + Path.DirectorySeparatorChar;
+        return candidate.StartsWith(prefix, comparison);
+    }
+
+    [GeneratedRegex("(?<prefix><img\\s+[^>]*?src=\\\")(?<source>[^\\\"]+)(?<suffix>\\\"[^>]*>)", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant)]
+    private static partial Regex ImageSourceRegex();
+}
