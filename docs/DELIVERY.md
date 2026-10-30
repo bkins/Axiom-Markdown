@@ -1,38 +1,32 @@
 # Axiom Markdown review delivery — October 30, 2026
 
-Exact review candidate: **0.1.0+a38096d2e00e**, Windows x64, unsigned.
+Exact review candidate: **0.1.1+001f084f9875**, Windows x64, unsigned.
 
-Source commit: **a38096d2e00e994fbdf2ade49b16db940ae02417** ([browse exact source](https://github.com/bkins/Axiom-Markdown/tree/a38096d2e00e994fbdf2ade49b16db940ae02417)). Public repository: [bkins/Axiom-Markdown](https://github.com/bkins/Axiom-Markdown).
+Source commit: **001f084f98752840b4239ea09ad4662adcd1c696** ([exact source](https://github.com/bkins/Axiom-Markdown/tree/001f084f98752840b4239ea09ad4662adcd1c696)). Public repository: [bkins/Axiom-Markdown](https://github.com/bkins/Axiom-Markdown).
 
-Implementation owners ENH-266/269 have separate acceptance owner ENH-270 on the existing multi-project board. Ben's usability review and organizational security approval remain pending.
+ENH-272 covers standards alignment; ENH-270 retains Ben's and organizational security acceptance. The original [0.1.0 delivery](DELIVERY-0.1.0.md) remains retained and unaccepted. This candidate has its own folder and state name.
 
 ## Verified
 
-- 112 tests pass in both Debug and Release; Release tests use this exact informational version.
-- 15 checks pass against the exact self-contained packaged app: actual WebView2 rendering, source unchanged by sanitization, visible notice, source-editor automatic links disabled, document scripts/handlers absent, remote images blocked, bundled Mermaid, recovery, forwarded second-file activation with dirty-tab retention, explicit Save, import warnings, HTML export and native PDF export.
-- Independent native keyboard typing and Ctrl+S were exercised on this exact packaged executable; separate file reads confirmed that typing did not save and Ctrl+S did save.
-- 260 portable payload file hashes verified; packaging verified those files survive the installer/portable archive. The payload manifest records the full source commit and version.
-- Source extraction: 118 retained upstream paths, 328 excluded upstream paths and 10 new source files. The manifest pins current source bytes; full Axiom's prior history and local state are absent.
-- NuGet and the reviewed Mermaid/xterm dependency locks report zero advisory findings at this checkpoint. Mermaid was rebuilt at 12.2.0 to replace inherited affected versions; available third-party licenses/notices and the production dependency inventory/SPDX document are included.
+- 112 tests pass in Debug and Release; final Release tests use this exact informational version.
+- All 15 native checks pass against this exact self-contained executable, including WebView2 rendering, visible sanitation details, unchanged source, blocked remote images, local Mermaid, recovery, file forwarding/dirty-buffer retention, import warning, HTML export and native PDF export.
+- Native keyboard typing and Ctrl+S passed on this executable; independent disk reads confirmed typing did not save and Ctrl+S saved the expected text. Computer-use skill provided the native input.
+- All 263 payload hashes match after execution. Packaging also verifies archived payload entries.
+- The source audit passes across 183 maintained C# files. The [responsibility review](As-Built/StandardsAlignment.md) and [design decisions](As-Built/DesignDecisions.md) explain architectural boundaries and remaining tradeoffs; automated style checks do not establish SOLID compliance.
+- The refreshed extraction manifest records 114 retained upstream paths, 332 absent upstream paths and 68 new paths. Type/file moves explain some path changes; these counts do not describe removed functionality. Attribution, dependency inventory and bundled-asset notices remain included.
 
-[Native results](checks/native-result.json) · [Keyboard results](checks/native-keyboard-result.json) · [NuGet advisories](checks/nuget-advisories.json) · [Mermaid advisories](checks/mermaid-advisories.json) · [Terminal advisories](checks/terminal-advisories.json).
+[Native results](checks/native-result.json) · [Keyboard results](checks/native-keyboard-result.json) · [Standards audit](checks/standards-audit.json).
+
+The earlier dependency advisory checkpoint is recorded in [NuGet](checks/nuget-advisories.json), [Mermaid](checks/mermaid-advisories.json) and [terminal](checks/terminal-advisories.json) reports. This refactor does not change production dependency versions.
 
 ## Review package
 
-The local candidate directory is **Axiom-Markdown-0.1.0-a38096d2e00e-win-x64**. Run **payload/Start-Axiom-Markdown.cmd** for isolated review state. Its releases directory contains an update-enabled installer, portable ZIP, full update package and generated feed metadata; these binaries/feed have not been published to GitHub Releases. The public repository makes source available for Security's review.
+Local directory: **Axiom-Markdown-0.1.1-001f084f9875-win-x64**. Run **payload/Start-Axiom-Markdown.cmd** for isolated state. The releases directory contains the portable ZIP, installer and update package/metadata. Binaries and feed have not been published to GitHub Releases. Use the [review checklist](REVIEW.md), [User Guide](USER-GUIDE.md), [Security packet](SECURITY-REVIEW.md) and [administrator controls](ADMIN-POLICY.md).
 
-Use the maintained [review checklist](REVIEW.md), [User Guide](USER-GUIDE.md), [Security packet](SECURITY-REVIEW.md) and [administrator controls](ADMIN-POLICY.md). The frozen payload contains the checklist template from its build commit; this delivery record and maintained checklist record completed automation after packaging. Source/binary identity remains the commit above even when later documentation commits update this record.
+The frozen payload contains build-time documentation; the outer review packet and maintained checklist record completed post-package evidence. Later documentation commits do not change the binary source identity above.
 
-Installer deployment, signing policy, real installed update/feed acceptance, accessibility/DPI, representative-document conversion/rendering and organizational security approval remain human checks. Terminal feature gates are application controls, not an OS sandbox. Full Axiom, its prior candidates/stable opener and deferred CP/PDF/OCR work remain separate; its inherited Mermaid dependency follow-up is deferred ENH-271.
+Representative-document usability/conversion quality, accessibility/DPI, organization security approval, signing/deployment and installed-update/feed acceptance remain pending. Terminal controls are application gates, not an OS sandbox. Full Axiom's reviews, stable opener, CP hold and PDF/OCR scope remain separate.
 
 ## Release-asset SHA-256
 
-2CBED80C348CE46DCD6B5A97CB842843EC8DD074698076E78E175F5A9DFC7555  releases\assets.win-x64-stable.json
-75F3265F9CD10F2B847BF09F43029A722DE7610219B07CCA43883A920B5ACB57  releases\AxiomMarkdown-0.1.0-win-x64-stable-full.nupkg
-4503108C83AE8F448B78CD64073F11BDC6A7E716FF69CA2BDA114C1BF64B0CFC  releases\AxiomMarkdown-win-x64-stable-Portable.zip
-47C5658EE194A176EB68506AD5DE32085132ADCF7FFE5F42876D89BD4A1F013C  releases\AxiomMarkdown-win-x64-stable-Setup.exe
-43406764FAE9F84EAF0007A9BBB7753AFB1607643E59C5C96F64CFE687A7EA27  releases\RELEASES-win-x64-stable
-AFD7AD28C2E77670AA9DBEE170D99A9718520B7A01E6C705BEA587824A7B0F6A  releases\releases.win-x64-stable.json
-
-
-[Machine-readable release asset checksums](checks/SHA256SUMS.txt).
+See [machine-readable checksums](checks/SHA256SUMS.txt).

@@ -1,6 +1,6 @@
 # Axiom Markdown 0.1.1 review
 
-Status: **0.1.1** is being verified after ENH-272 standards alignment; the final exact source, evidence and asset hashes will be recorded in [the delivery record](DELIVERY.md). Ben's and Security's approval remain pending under ENH-270; implementation owners are ENH-266 and ENH-269 on the existing multi-project board.
+Status: **0.1.1+001f084f9875** is ready for review after ENH-272 standards alignment; exact source, evidence and asset hashes are in [the delivery record](DELIVERY.md). Ben's and Security's approval remain pending under ENH-270; implementation owners are ENH-266 and ENH-269 on the existing multi-project board.
 
 ## Automation can test
 
@@ -11,6 +11,8 @@ Status: **0.1.1** is being verified after ENH-272 standards alignment; the final
 - [x] Each feature rejects direct service calls when disabled; policy precedence and malformed settings fail closed.
 - [x] Portable/installer payload hashes, isolated product/state/feed, dependency inventory/SBOM and NuGet advisory report.
 - [x] Independently observed native keyboard editing and Ctrl+S saved-file verification.
+
+- [x] Source audit passes across 183 maintained C# files; responsibility/design review recorded separately in As-Built. Source trailing whitespace check passes.
 
 ## Human needs to test
 

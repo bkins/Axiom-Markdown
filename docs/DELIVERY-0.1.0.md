@@ -15,13 +15,13 @@ Implementation owners ENH-266/269 have separate acceptance owner ENH-270 on the 
 - Source extraction: 118 retained upstream paths, 328 excluded upstream paths and 10 new source files. The manifest pins current source bytes; full Axiom's prior history and local state are absent.
 - NuGet and the reviewed Mermaid/xterm dependency locks report zero advisory findings at this checkpoint. Mermaid was rebuilt at 12.2.0 to replace inherited affected versions; available third-party licenses/notices and the production dependency inventory/SPDX document are included.
 
-[Native results](checks/native-result.json) · [Keyboard results](checks/native-keyboard-result.json) · [NuGet advisories](checks/nuget-advisories.json) · [Mermaid advisories](checks/mermaid-advisories.json) · [Terminal advisories](checks/terminal-advisories.json).
+[Native results](checks/native-result-0.1.0.json) · [Keyboard results](checks/native-keyboard-result-0.1.0.json) · [NuGet advisories](checks/nuget-advisories.json) · [Mermaid advisories](checks/mermaid-advisories.json) · [Terminal advisories](checks/terminal-advisories.json).
 
 ## Review package
 
 The local candidate directory is **Axiom-Markdown-0.1.0-a38096d2e00e-win-x64**. Run **payload/Start-Axiom-Markdown.cmd** for isolated review state. Its releases directory contains an update-enabled installer, portable ZIP, full update package and generated feed metadata; these binaries/feed have not been published to GitHub Releases. The public repository makes source available for Security's review.
 
-Use the maintained [review checklist](REVIEW.md), [User Guide](USER-GUIDE.md), [Security packet](SECURITY-REVIEW.md) and [administrator controls](ADMIN-POLICY.md). The frozen payload contains the checklist template from its build commit; this delivery record and maintained checklist record completed automation after packaging. Source/binary identity remains the commit above even when later documentation commits update this record.
+Use the maintained [review checklist](REVIEW-0.1.0.md), [User Guide](USER-GUIDE.md), [Security packet](SECURITY-REVIEW.md) and [administrator controls](ADMIN-POLICY.md). The frozen payload contains the checklist template from its build commit; this delivery record and maintained checklist record completed automation after packaging. Source/binary identity remains the commit above even when later documentation commits update this record.
 
 Installer deployment, signing policy, real installed update/feed acceptance, accessibility/DPI, representative-document conversion/rendering and organizational security approval remain human checks. Terminal feature gates are application controls, not an OS sandbox. Full Axiom, its prior candidates/stable opener and deferred CP/PDF/OCR work remain separate; its inherited Mermaid dependency follow-up is deferred ENH-271.
 
