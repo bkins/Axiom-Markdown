@@ -4,6 +4,8 @@
 
 Open `.md` and `.markdown` files with Open or Ctrl+O. Open folder lists Markdown files under a folder; filter by name and double-click or press Enter to open a match. Ordinary files do not require enrollment or identity markers.
 
+Launching another Markdown file with the same build/state forwards it into the running editor and retains dirty tabs. Different builds cannot share that recovery state; close the older build normally or use the isolated review launcher. This app does not register a file association automatically.
+
 Each document has its own editor, Undo history, cursor, view mode and unsaved marker. Choose Split, Editor or Preview above the document. Ctrl+N creates a new document, Ctrl+S saves, Ctrl+Shift+S saves all, Ctrl+W closes the current tab, and Ctrl+F opens find/replace. Save As chooses another Markdown path. Closing unsaved work offers Save, Discard changes or Cancel.
 
 Use Format for headings, bold, italic, lists, links, tables, code and hard breaks; Ctrl+B and Ctrl+I format the selection. View controls font size, word wrap and System/Light/Dark appearance. Those presentation preferences persist locally.

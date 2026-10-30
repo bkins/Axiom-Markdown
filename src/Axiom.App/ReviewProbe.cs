@@ -45,6 +45,18 @@ internal static class ReviewProbe
             checks["EditingDoesNotSilentlySave"] = await File.ReadAllTextAsync(sample) == source && window.ActiveForReview.Session.IsDirty;
             var state = new EditorStateStore(new AppDataPaths(Path.Combine(root, "state")));
             checks["RecoveryDraftPersisted"] = (await state.GetRecoverableDraftsAsync()).Any(draft => draft.Text.EndsWith("Unsaved buffer protected.\n", StringComparison.Ordinal));
+            var firstTab = window.ActiveForReview;
+            var secondPath = Path.Combine(root, "Secondary.md"); await File.WriteAllTextAsync(secondPath, "# Secondary file");
+            var launch = new System.Diagnostics.ProcessStartInfo(Environment.ProcessPath!) { UseShellExecute = false, CreateNoWindow = true };
+            launch.ArgumentList.Add(secondPath);
+            using (var secondary = System.Diagnostics.Process.Start(launch)!)
+            {
+                await secondary.WaitForExitAsync().WaitAsync(TimeSpan.FromSeconds(15));
+                for (var attempt = 0; attempt < 40 && window.ActiveForReview.Session.Path != secondPath; attempt++) await Task.Delay(100);
+                checks["SecondaryFileForwardedToSameBuild"] = secondary.ExitCode == 0 && window.ActiveForReview.Session.Path == secondPath;
+            }
+            checks["ForwardingRetainsUnsavedFirstTab"] = firstTab.Session.IsDirty && firstTab.Editor.Text.EndsWith("Unsaved buffer protected.\n", StringComparison.Ordinal);
+            await window.OpenAsync(sample);
             var saved = Path.Combine(root, "Saved.md");
             await window.SaveToAsync(window.ActiveForReview, saved);
             checks["ExplicitSaveMatchesBuffer"] = await File.ReadAllTextAsync(saved) == window.ActiveForReview.Session.Text && !window.ActiveForReview.Session.IsDirty;

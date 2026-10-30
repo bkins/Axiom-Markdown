@@ -49,6 +49,8 @@ public sealed class MainWindow : Window
     private readonly List<(Window Window, GitTerminalView View)> _terminals = [];
     private readonly List<(Window Window, WorkspaceGitView View)> _gitWindows = [];
     private readonly List<(MenuItem Item, OptionalFeature Feature)> _featureMenuItems = [];
+    private readonly Queue<string?> _externalRequests = new();
+    private bool _startupReady, _openingExternal;
     private MarkdownPreferences _preferences = new();
     private CancellationTokenSource? _updateCancellation;
     private AppearancePreference _appearance = AppearancePreference.System;
@@ -123,7 +125,7 @@ public sealed class MainWindow : Window
             catch (Exception error) { _status.Text = "Diagram rendering unavailable: " + error.Message; }
         };
         _previewTimer.Tick += (_, _) => { _previewTimer.Stop(); RenderPreview(); };
-        _protectTimer.Tick += async (_, _) => { if (!_busy) await ProtectAndCheckPolicyAsync(); };
+        _protectTimer.Tick += async (_, _) => { if (!_busy) { await ProtectAndCheckPolicyAsync(); await DrainExternalOpensAsync(); } };
         _updateTimer.Tick += async (_, _) => { if (!_busy && !_closing) await CheckUpdatesAsync(false); };
         _monitor.Changed += (_, path) => Dispatcher.UIThread.Post(async () => await RunAsync(() => CheckExternalAsync(path)));
         _monitor.Renamed += (_, pair) => Dispatcher.UIThread.Post(async () => await RunAsync(() => HandleRenameAsync(pair.OldPath, pair.NewPath)));
@@ -201,11 +203,24 @@ public sealed class MainWindow : Window
         if (_items.Count == 0) AddTab(_documents.NewDocument());
         _protectTimer.Start();
         RefreshFeatureMenus();
-        if (Program.ProbeRoot is { } probe) { await ReviewProbe.RunAsync(this, probe); return; }
+        _startupReady = true;
+        if (Program.ProbeRoot is { } probe) { Dispatcher.UIThread.Post(async () => await ReviewProbe.RunAsync(this, probe)); return; }
         if (FeatureAccess.Evaluate(OptionalFeature.Updates).Allowed) _ = CheckUpdatesAsync(false);
         _updateTimer.Start();
     }
     private Task NewAsync() { AddTab(_documents.NewDocument()); return Task.CompletedTask; }
+    internal void QueueExternalOpen(string? path) => _externalRequests.Enqueue(path);
+    private async Task DrainExternalOpensAsync()
+    {
+        if (!_startupReady || _busy || _closing || _openingExternal) return;
+        _openingExternal = true;
+        try
+        {
+            while (!_busy && !_closing && _externalRequests.TryDequeue(out var path))
+                await RunAsync(async () => { if (path is not null) await OpenAsync(path); if (WindowState == WindowState.Minimized) WindowState = WindowState.Normal; Activate(); });
+        }
+        finally { _openingExternal = false; }
+    }
     private EditorTab AddTab(DocumentSession session)
     {
         var editor = new TextEditor { Text = session.Text, ShowLineNumbers = true, WordWrap = _preferences.WordWrap, FontFamily = new FontFamily("Cascadia Mono,Consolas,monospace"), FontSize = _preferences.FontSize, Padding = new Thickness(12) };

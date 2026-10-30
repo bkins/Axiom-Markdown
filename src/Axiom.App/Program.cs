@@ -1,5 +1,3 @@
-using System.Security.Cryptography;
-using System.Text;
 using Avalonia;
 using Axiom.Core;
 using Axiom.Infrastructure;
@@ -27,12 +25,11 @@ internal static class Program
         var policy = new FeaturePolicyStore(paths.Root);
         FeatureAccess.Initialize(policy.Evaluate);
         Velopack.VelopackApp.Build().SetAutoApplyOnStartup(false).Run();
-        var mutexName = "AxiomMarkdown-" + Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(Path.GetFullPath(paths.Root).ToUpperInvariant())));
-        using var mutex = new Mutex(true, mutexName, out var created);
-        if (!created) return 2; // Never open a second writer against the same recovery state.
         if (args.Length == 1 && !args[0].StartsWith('-')) StartupDocument = Path.GetFullPath(args[0]);
-        try { return BuildAvaloniaApp().StartWithClassicDesktopLifetime(args); }
-        finally { mutex.ReleaseMutex(); }
+        using var instance = new SingleInstanceCoordinator(paths.Root, ApplicationBuildIdentity.FromAssembly(typeof(Program).Assembly).InformationalVersion);
+        if (!instance.IsPrimary) return instance.ForwardAsync(StartupDocument).GetAwaiter().GetResult() ? 0 : 2;
+        instance.Listen(App.RequestActivation);
+        return BuildAvaloniaApp().StartWithClassicDesktopLifetime(args);
     }
     public static AppBuilder BuildAvaloniaApp() => AppBuilder.Configure<App>().UsePlatformDetect().LogToTrace();
 }

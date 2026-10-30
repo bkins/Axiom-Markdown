@@ -8,6 +8,8 @@ The full Axiom personal knowledge-management shell, CP/AI clients/setup, semanti
 
 The smaller shell is newly composed around selected Axiom components; it is not a cosmetic mode of full Axiom and does not claim feature parity with every full-Axiom workflow. Its Windows application, storage, installer identity and update feed are separate. No existing Axiom association or review opener is retargeted.
 
+One writer owns each state root. Additional file launches use a bounded same-user named pipe and must match the exact informational build identity; queued requests open tabs after the current dialog/operation completes. A different build cannot write into the running build's recovery state. This local IPC opens no TCP listener.
+
 ## Document and renderer boundaries
 
 Markdown is data. Markdig creates HTML; an AngleSharp DOM allowlist strips active/unsupported elements, attributes and unsafe links before content is placed in the trusted HTML shell. The parser has no resource loader or scripting engine. The webview CSP denies scripts, frames, objects, connections, fonts and form actions; images are data URIs. Windows WebView2 additionally denies unapproved file and network resource requests, blocks popups and disables host objects/web messaging in the document preview. Link/task/source navigation uses fresh render tokens and validates the current source.
