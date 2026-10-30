@@ -103,6 +103,7 @@ public sealed partial class MainWindow
             }
         };
         tab.Item = item;
+        WireEditorContextMenu(tab);
         _items.Add(item);
         _tabs.SelectedItem = item;
         RefreshHeader(tab);

@@ -32,9 +32,14 @@ public static partial class DocumentIdCodec
                                 , Guid   id)
     {
         ArgumentOutOfRangeException.ThrowIfEqual(id, Guid.Empty);
-        var marker = $"{Prefix}{id:D} -->";
-        return IdentityRegex().IsMatch(markdown) ? IdentityRegex().Replace(markdown, marker, 1) : Enroll(markdown
-                                                                                                       , id);
+        var match = IdentityRegex().Match(markdown);
+        if (!match.Success)
+        {
+            return Enroll(markdown, id);
+        }
+
+        var identity = match.Groups["id"];
+        return markdown.Remove(identity.Index, identity.Length).Insert(identity.Index, id.ToString("D"));
     }
 
     public static string RemoveCanonicalMarkerForPreview(string markdown)

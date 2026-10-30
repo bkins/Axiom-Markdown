@@ -41,3 +41,7 @@ NuGet advisory results are a point-in-time check, not proof that packages are vu
 The inherited Mermaid 11.16.1 dependency tree produced DOMPurify and Mermaid/KaTeX advisory findings during this extraction. This edition rebuilds the offline bundle with pinned Mermaid 12.2.0 and patched transitive dependencies; the updated npm audit reports zero findings. The separately checked xterm 6.0.0/addon-fit 0.11.0 tree and NuGet advisory scan also report zero findings at this checkpoint. These results do not establish exploitability of full Axiom's configuration; its unchanged bundle is a separate follow-up.
 
 Design references: [Microsoft WebView2 security guidance](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/security), [AngleSharp parser documentation](https://github.com/AngleSharp/AngleSharp/blob/devel/docs/general/01-Basics.md).
+
+### Explorer context actions (0.2.1)
+
+User-initiated local filesystem actions now include create, rename/move, duplicate and Windows Recycle Bin operations. Moves are bounded to the open root, reject linked paths/metadata/collisions, and require clean affected tabs and confirmation. A private per-drag token prevents accepting foreign drag payloads. Relative references are not rewritten. Copy path uses the local clipboard; reveal launches the fixed Windows explorer.exe with structured arguments. See As-Built/ContextMenusAndExplorerMoves.md for boundaries and verification; these are application safeguards, not an OS sandbox.

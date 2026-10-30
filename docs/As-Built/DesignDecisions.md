@@ -21,3 +21,7 @@ Source is committed before packaging. Informational versions include that source
 ## Original Axiom is the presentation reference
 
 ENH-273 adapts the original compact command bar, theme palette, menu treatments, tab chrome, navigator and outline/status layout to the smaller Markdown shell. Visual resources and focused UI responsibility files are reused/adapted without importing the full application's management shell. Appearance preferences have backward-compatible defaults and remain separate from Security policy; sanitization warnings retain a dedicated visible surface. See OriginalAxiomPresentation.md for the exact mapping and limits.
+
+## Retained-scope interaction restoration
+
+ENH-274 groups existing commands under one hamburger and restores focused editor/explorer context actions. All explorer move entry points share a narrow filesystem service and affected-document gate; no full management/mutation dependency is introduced. Dirty/conflicted documents block moves, and relative references are explicitly retained rather than automatically rewritten. Caption glyphs use measured centered vectors. See ContextMenusAndExplorerMoves.md for responsibilities, guards and verification limits.

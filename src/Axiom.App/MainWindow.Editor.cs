@@ -140,7 +140,24 @@ public sealed partial class MainWindow
     private async void OnKeyDown(object?      sender
                                , KeyEventArgs eventArgs)
     {
-        if (eventArgs.KeyModifiers == KeyModifiers.Alt || eventArgs.Key == Key.F10)
+        if (eventArgs.Key == Key.Apps || eventArgs.Key == Key.F10 && eventArgs.KeyModifiers == KeyModifiers.Shift)
+        {
+            if (_folderFiles.IsKeyboardFocusWithin)
+            {
+                BuildExplorerContextMenu(_folderFiles.SelectedItem as WorkspaceTreeNode).Open(_folderFiles);
+                eventArgs.Handled = true;
+                return;
+            }
+
+            if (Current?.Editor is { IsKeyboardFocusWithin: true } editor)
+            {
+                BuildEditorContextMenu(editor).Open(editor);
+                eventArgs.Handled = true;
+                return;
+            }
+        }
+
+        if (eventArgs.KeyModifiers == KeyModifiers.Alt || eventArgs.Key == Key.F10 && eventArgs.KeyModifiers == KeyModifiers.None)
         {
             var menuIndex = eventArgs.Key switch
             {
@@ -150,15 +167,13 @@ public sealed partial class MainWindow
                 Key.T => 3,
                 Key.V => 4,
                 Key.H => 5,
-                Key.F10 => 0,
+                Key.F10 => 6,
                 _ => -1
             };
             if (menuIndex >= 0)
             {
                 eventArgs.Handled = true;
-                var button = _menuButtons[menuIndex];
-                button.Focus();
-                button.Flyout?.ShowAt(button);
+                OpenMainMenu(menuIndex == 6 ? -1 : menuIndex);
                 return;
             }
         }

@@ -1,6 +1,6 @@
-# Axiom Markdown 0.2.0 review
+# Axiom Markdown 0.2.1 review
 
-Status: **0.2.0+17be08c5f01c** is ready for original-Axiom presentation review under ENH-273. Exact post-package evidence is recorded in [the delivery record](DELIVERY.md). ENH-270 retains Ben's and Security's acceptance; earlier 0.1.0/0.1.1 candidates are preserved separately.
+Status: **0.2.1** is being verified for ENH-274's four interaction fixes. Exact post-package evidence will be recorded in [the delivery record](DELIVERY.md). ENH-270 retains human/security acceptance; previous candidates remain retained.
 
 ## Automation can test
 
@@ -12,9 +12,11 @@ Status: **0.2.0+17be08c5f01c** is ready for original-Axiom presentation review u
 - [x] Portable/installer payload hashes, isolated product/state/feed, dependency inventory/SBOM and NuGet advisory report.
 - [x] Independently observed native keyboard editing and Ctrl+S saved-file verification.
 
-- [x] Source audit passes across 191 maintained C# files; responsibility/design review recorded separately in As-Built. Source trailing whitespace check passes.
+- [x] Source audit passes across 198 maintained C# files; responsibility/design review recorded separately in As-Built. Source trailing whitespace check passes.
 
 ## Human needs to test
+
+- [ ] Verify the hamburger groups, mouse/keyboard context menus, selection preservation, file and folder drag moves, move/cancel/dirty-document safeguards, empty-folder destinations and centered caption buttons. Confirm Move/Recycle dialogs before applying them; try Recycle/restore only on a disposable item. Relative references are not rewritten.
 
 - [ ] Compare the compact command/title bar, tabs, navigator and outline with original Axiom. Try quiet/rounded menus, both title-bar modes, light/dark/system themes, pane resizing, heading selection and reading mode; report visual differences that matter.
 - [ ] Launch the exact portable candidate with its isolated launcher; review font/theme, layout, tabs, view modes, keyboard access, screen reader and relevant DPI settings.

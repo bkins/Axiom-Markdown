@@ -41,3 +41,5 @@ The preview reports sanitization with a visible notice and details. Remote image
 Coding and review: [standards](docs/CODING-STANDARDS.md), [responsibility review](docs/As-Built/StandardsAlignment.md), [design decisions](docs/As-Built/DesignDecisions.md). Run scripts/Check-CodingStandards.ps1 alongside the behavioral tests.
 
 The original Axiom is the visual reference: [presentation mapping](docs/As-Built/OriginalAxiomPresentation.md). The Markdown edition adapts its compact command bar, tabs, themes, navigator and outline to the retained feature set.
+
+Interaction details: [context menus and explorer moves](docs/As-Built/ContextMenusAndExplorerMoves.md).

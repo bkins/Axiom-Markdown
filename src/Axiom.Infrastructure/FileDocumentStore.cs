@@ -17,6 +17,7 @@ public sealed class FileDocumentStore(IAxiomLog? log = null, bool extractImportI
 
         var paths = new List<string>();
         var skipped = new List<string>();
+        var folders = new List<string>();
         var pending = new Stack<string>();
         pending.Push(root);
         while (pending.TryPop(out var current))
@@ -29,6 +30,14 @@ public sealed class FileDocumentStore(IAxiomLog? log = null, bool extractImportI
                                                                                                                                                 , StringComparison.OrdinalIgnoreCase)));
                 foreach (var child in Directory.EnumerateDirectories(current))
                 {
+                    var directoryName = Path.GetFileName(child);
+                    if (directoryName.Equals(".git", StringComparison.OrdinalIgnoreCase) || directoryName.Equals(".hg"
+                                                                                                               , StringComparison.OrdinalIgnoreCase) || directoryName.Equals(".svn"
+                                                                                                                                                                           , StringComparison.OrdinalIgnoreCase))
+                    {
+                        continue;
+                    }
+
                     cancellationToken.ThrowIfCancellationRequested();
                     try
                     {
@@ -38,6 +47,7 @@ public sealed class FileDocumentStore(IAxiomLog? log = null, bool extractImportI
                         }
                         else
                         {
+                            folders.Add(child);
                             pending.Push(child);
                         }
                     }
@@ -58,7 +68,8 @@ public sealed class FileDocumentStore(IAxiomLog? log = null, bool extractImportI
                                                          , skipped.Distinct(WorkspacePathBoundary.Comparer)
                                                                   .OrderBy(path => path
                                                                          , StringComparer.OrdinalIgnoreCase)
-                                                                  .ToArray()));
+                                                                  .ToArray()
+                                                         , folders.ToArray()));
     }
 
     public async Task<DocumentFile> ReadAsync(string            path

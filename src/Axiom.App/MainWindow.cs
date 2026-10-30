@@ -87,6 +87,7 @@ public sealed partial class MainWindow : Window
     private AppearancePreference _appearance = AppearancePreference.System;
     private string? _folder;
     private IReadOnlyList<string> _folderPaths = [];
+    private IReadOnlyList<string> _folderDirectories = [];
     private string? _sessionId;
     private bool _ready;
     private bool _busy;

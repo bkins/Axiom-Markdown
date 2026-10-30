@@ -1,5 +1,5 @@
 {
-  "FilesChecked": 191,
+  "FilesChecked": 198,
   "Findings": [],
   "Passed": true,
   "Scope": "Maintained C# source, tests and tools; generated/vendor assets are excluded.",

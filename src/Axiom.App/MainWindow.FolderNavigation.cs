@@ -37,9 +37,10 @@ public sealed partial class MainWindow
     internal async Task SetFolderAsync(string root)
     {
         var files = await _files.ListMarkdownFilesAsync(root);
-        _folder           = Path.GetFullPath(root);
-        _folderLabel.Text = _folder;
-        _folderPaths      = files.Files.Select(path => Path.GetRelativePath(_folder, path)).Order(StringComparer.OrdinalIgnoreCase).ToArray();
+        _folder            = Path.GetFullPath(root);
+        _folderDirectories = files.Folders ?? [];
+        _folderLabel.Text  = _folder;
+        _folderPaths       = files.Files.Select(path => Path.GetRelativePath(_folder, path)).Order(StringComparer.OrdinalIgnoreCase).ToArray();
         FilterFolder();
         _status.Text = $"{_folderPaths.Count} Markdown files; {files.SkippedDirectories.Count} inaccessible/linked folder(s) skipped.";
         RenderPreview();
@@ -54,7 +55,10 @@ public sealed partial class MainWindow
 
         var paths = _folderPaths.Where(path => string.IsNullOrEmpty(_folderFilter.Text) || path.Contains(_folderFilter.Text
                                                                                                        , StringComparison.OrdinalIgnoreCase));
-        var tree = WorkspaceTreeBuilder.Build(root, paths.Select(path => Path.Combine(root, path)));
+        var directories = _folderDirectories.Where(path => string.IsNullOrEmpty(_folderFilter.Text) || Path.GetRelativePath(root
+                                                                                                                          , path).Contains(_folderFilter.Text
+                                                                                                                                         , StringComparison.OrdinalIgnoreCase));
+        var tree = WorkspaceTreeBuilder.Build(root, paths.Select(path => Path.Combine(root, path)), directories);
         if (!string.IsNullOrEmpty(_folderFilter.Text))
         {
             ExpandFilteredTree(tree);

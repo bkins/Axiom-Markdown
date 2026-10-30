@@ -79,6 +79,8 @@ public sealed partial class MainWindow
                                               };
     private readonly StackPanel _captionButtons = new() { Orientation = Orientation.Horizontal };
     private readonly List<Button> _menuButtons = [];
+    private readonly List<MenuItem> _commandGroups = [];
+    private Button _mainMenuButton = null!;
     private readonly List<GridSplitter> _splitters = [];
     private Button _readingMode = null!;
     private Control BuildCommandBar()
@@ -112,31 +114,26 @@ public sealed partial class MainWindow
                                        , "Editor and appearance settings"
                                        , "M12 3V6 M12 18V21 M3 12H6 M18 12H21 M5 5L7 7 M17 17L19 19 M5 19L7 17 M17 7L19 5 M17 12A5 5 0 1 1 7 12A5 5 0 1 1 17 12"
                                        , ShowEditorSettingsAsync));
-        foreach (var group in BuildMenu().Items.OfType<MenuItem>().ToArray())
+        var menu = new MenuFlyout();
+        var groups = BuildMenu();
+        foreach (var group in groups.Items.OfType<MenuItem>().ToArray())
         {
-            var menu = new MenuFlyout();
-            foreach (var item in group.Items.Cast<object>().ToArray())
-            {
-                group.Items.Remove(item);
-                menu.Items.Add(item);
-            }
-
-            var label = group.Header?.ToString()?.Replace("_", "") ?? "";
-            var button = new Button
-                         {
-                             Content   = label + "…"
-                           , Flyout    = menu
-                           , Padding   = new Thickness(8
-                                                     , 5)
-                           , MinHeight = 30
-                         };
-            button.Classes.Add("quiet-menu");
-            AutomationProperties.SetName(button, label + " commands");
-            ToolTip.SetTip(button, label + " commands");
-            _menuButtons.Add(button);
-            commands.Children.Add(button);
+            groups.Items.Remove(group);
+            _commandGroups.Add(group);
+            menu.Items.Add(group);
         }
 
+        _mainMenuButton = new Button
+                          {
+                              Content = new WorkbenchIcon("M4 6H20 M4 12H20 M4 18H20")
+                            , Flyout  = menu
+                          };
+        _mainMenuButton.Classes.Add("toolbar-icon");
+        _mainMenuButton.Classes.Add("quiet-menu");
+        AutomationProperties.SetName(_mainMenuButton, "Main menu: File Edit Format Tools View Help");
+        ToolTip.SetTip(_mainMenuButton, "Main menu — F10; Alt+F/E/M/T/V/H opens a section");
+        _menuButtons.Add(_mainMenuButton);
+        commands.Children.Insert(0, _mainMenuButton);
         var titleRegion = new Border
                           {
                               Child      = _windowTitle
@@ -144,18 +141,13 @@ public sealed partial class MainWindow
                             , MinWidth   = 40
                           };
         WindowDecorationProperties.SetElementRole(titleRegion, WindowDecorationsElementRole.TitleBar);
-        AddCaptionButton("─"
-                       , "Minimize Axiom Markdown"
+        AddCaptionButton("Minimize Axiom Markdown"
                        , WindowDecorationsElementRole.MinimizeButton
                        , () => WindowState = WindowState.Minimized);
-        AddCaptionButton("□"
-                       , "Maximize or restore Axiom Markdown"
+        AddCaptionButton("Maximize or restore Axiom Markdown"
                        , WindowDecorationsElementRole.MaximizeButton
                        , () => WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized);
-        AddCaptionButton("×"
-                       , "Close Axiom Markdown"
-                       , WindowDecorationsElementRole.CloseButton
-                       , Close);
+        AddCaptionButton("Close Axiom Markdown", WindowDecorationsElementRole.CloseButton, Close);
         var layout = new Grid { ColumnDefinitions = new ColumnDefinitions("Auto,*,Auto") };
         layout.Children.Add(commands);
         layout.Children.Add(titleRegion);
@@ -166,12 +158,26 @@ public sealed partial class MainWindow
         return _commandBar;
     }
 
-    private void AddCaptionButton(string                       content
-                                , string                       name
+    private void AddCaptionButton(string                       name
                                 , WindowDecorationsElementRole role
                                 , Action                       action)
     {
-        var button = new Button { Content = content };
+        var geometry = role switch
+        {
+            WindowDecorationsElementRole.MinimizeButton => "M4 12H20",
+            WindowDecorationsElementRole.MaximizeButton => "M5 5H19V19H5Z",
+            _ => "M5 5L19 19 M19 5L5 19"
+        };
+        var button = new Button
+                     {
+                         Content                    = new WorkbenchIcon(geometry)
+                                   {
+                                       Width  = 12
+                                     , Height = 12
+                                   }
+                       , HorizontalContentAlignment = HorizontalAlignment.Center
+                       , VerticalContentAlignment   = VerticalAlignment.Center
+                     };
         button.Classes.Add("caption");
         if (role == WindowDecorationsElementRole.CloseButton)
         {
@@ -182,6 +188,22 @@ public sealed partial class MainWindow
         WindowDecorationProperties.SetElementRole(button, role);
         button.Click += (_, _) => action();
         _captionButtons.Children.Add(button);
+    }
+
+    private void OpenMainMenu(int section = -1)
+    {
+        _mainMenuButton.Focus();
+        _mainMenuButton.Flyout?.ShowAt(_mainMenuButton);
+        if (section < 0)
+        {
+            return;
+        }
+
+        Avalonia.Threading.Dispatcher.UIThread.Post(() =>
+        {
+            _commandGroups[section].Focus();
+            _commandGroups[section].IsSubMenuOpen = true;
+        });
     }
 
     private Button IconButton(string     name

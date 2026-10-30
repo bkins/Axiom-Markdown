@@ -50,7 +50,7 @@ Version 0.1.1 reorganizes the maintained source to follow Ben's coding standards
 
 ## Familiar Axiom interface (0.2.0)
 
-The top command bar follows original Axiom: New, Open, Save, Reading mode and Settings icons, followed by File, Edit, Format, Tools, View and Help menus. Hover over an icon for its name/shortcut. Alt+F/E/M/T/V/H opens the corresponding menu; F10 opens File. The title region supports ordinary Windows dragging and caption controls.
+The top command bar follows original Axiom: New, Open, Save, Reading mode and Settings icons, with File, Edit, Format, Tools, View and Help grouped in the top-left hamburger. Hover over an icon for its name/shortcut. Alt+F/E/M/T/V/H opens the corresponding menu; F10 opens the main menu. The title region supports ordinary Windows dragging and caption controls.
 
 Settings (the sun/gear icon, or View → Editor and appearance settings) saves the theme, quiet/rounded menu buttons, editor font size/wrapping, compact/native title bar and navigator/outline visibility. Cancel leaves preferences unchanged. Light, Dark and System are available.
 
@@ -59,3 +59,15 @@ Workspace Files uses a folder tree. Open a folder, expand its branches and doubl
 The right rail toggles Outline. Select a heading to move the editor caret to its source. Ctrl+Shift+R toggles reading mode and split editing without changing text. View also offers editor-only and split modes. Resize visible pane dividers as needed.
 
 Tabs retain dirty/conflict indicators and explicit close buttons. The bottom bar shows operation/recovery status, source word count/caret position and the exact version. Sanitization and blocked remote images appear in a separate warning bar with Details and the existing trust choices. These notices do not rewrite your document.
+
+## Context menus and explorer moves (0.2.1)
+
+The top-left hamburger now contains File, Edit, Format, Tools, View and Help. F10 opens the main menu; Alt+F/E/M/T/V/H opens a section. Right-click in the editor for undo/redo, clipboard actions, find/replace and Markdown formatting. A selection remains selected when you right-click inside it. Shift+F10 or the context-menu key opens the menu for the focused editor or file tree.
+
+Right-click a file/folder in Workspace Files for relevant actions: open, new file/folder, rename, move, duplicate a Markdown file, recycle, copy path, reveal in File Explorer and refresh. Empty folders are visible and can receive moves. Duplicate copies saved text as UTF-8 with a new document identity when applicable; save dirty source documents explicitly first.
+
+Drag a file or folder onto another folder, then review and confirm Move. Drop onto empty tree space to move to the workspace root; hover near an edge to scroll. Folder targets highlight and expand. Escape cancels a drag. The Move context action provides a keyboard/picker alternative.
+
+Save affected documents and resolve conflicts before moving them. Existing destinations, moves outside the workspace, linked paths, self/descendant moves and version-control metadata are rejected. Moving a folder includes its contents; open clean tabs follow the new paths. Relative Markdown and image links are **not automatically rewritten** and may need adjustment after a move. Cancel leaves the operation unapplied.
+
+Recycle requires explicit confirmation and sends items to the Windows Recycle Bin; restore them there. Dirty/conflicted open documents block recycling. Caption icons are now centered; normal native window actions and unsaved-close protection still apply.

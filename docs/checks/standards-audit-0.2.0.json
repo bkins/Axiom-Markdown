@@ -1,0 +1,7 @@
+{
+  "FilesChecked": 191,
+  "Findings": [],
+  "Passed": true,
+  "Scope": "Maintained C# source, tests and tools; generated/vendor assets are excluded.",
+  "ManualReviewRequired": "Clean Code/SOLID, naming intent, responsibilities and justified protocol/interop exceptions require a separate code review."
+}

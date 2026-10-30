@@ -65,6 +65,11 @@ internal static class ReviewProbe
                 checks.Add(check.Key, check.Value);
             }
 
+            foreach (var check in await window.VerifyInteractionsForReviewAsync(root))
+            {
+                checks.Add(check.Key, check.Value);
+            }
+
             await window.ProtectForReviewAsync();
             checks["EditingDoesNotSilentlySave"] = await File.ReadAllTextAsync(sample) == source && window.ActiveForReview.Session.IsDirty;
             var state = new EditorStateStore(new AppDataPaths(Path.Combine(root, "state")));

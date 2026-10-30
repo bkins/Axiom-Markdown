@@ -1,5 +1,3 @@
-# 0.2.0
+# 0.2.1
 
-Restore original Axiom presentation for the Markdown scope: compact command/title bar, vector toolbar controls, quiet/rounded menus, tab treatment, folder hierarchy/filter, outline rail and status layout, with persistent appearance options. Sanitation notices and optional feature-policy controls remain accessible. No full-Axiom management/CP/AI features are added.
-
-Exact original 0.1.0 and standards-aligned 0.1.1 candidates remain retained separately. Human visual/security/installer acceptance remains pending.
+Group commands under the original-style hamburger. Restore editor and file/folder context actions, guarded file/folder drag moves, empty destination folders and centered vector caption buttons. Moves require clean affected documents and confirmation, reject overwrites/linked paths, and retain relative references. Duplicate uses a separate identity while preserving source/body spacing. Prior review candidates remain retained; human/security approval remains pending.

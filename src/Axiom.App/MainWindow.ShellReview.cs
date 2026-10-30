@@ -22,7 +22,7 @@ public sealed partial class MainWindow
                                                     , "window-placement.json")
                                        , System.Text.Json.JsonSerializer.Serialize(new { Width, Height, Bounds = Bounds.ToString(), Position = Position.ToString(), ScreenScale = screen.Scaling, RenderScaling, WorkingArea = screen.WorkingArea.ToString() }));
             checks["InitialWindowFitsWorkingArea"] = Position.X >= screen.WorkingArea.X && Position.Y >= screen.WorkingArea.Y && Position.X + Width * screen.Scaling <= screen.WorkingArea.Right && Position.Y + Height * screen.Scaling <= screen.WorkingArea.Bottom;
-            checks["CompactCommandBarAndMenus"]    = _menuButtons.Count == 6 && _commandBar.IsVisible && (!OperatingSystem.IsWindows() || _captionButtons.IsVisible);
+            checks["CompactCommandBarAndMenus"]    = _menuButtons.Count == 1 && _commandGroups.Count == 6 && _commandBar.IsVisible && (!OperatingSystem.IsWindows() || _captionButtons.IsVisible);
             _preferences                           = _preferences with
 
             {

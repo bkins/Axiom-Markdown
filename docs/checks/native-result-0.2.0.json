@@ -1,0 +1,31 @@
+{
+  "Version": "0.2.0\u002B17be08c5f01c",
+  "Checks": {
+    "NativePreviewHeading": true,
+    "SourceUntouchedBySanitization": true,
+    "SanitizationNoticeVisible": true,
+    "SourceEditorAutoLinksDisabled": true,
+    "NoDocumentScriptOrHandler": true,
+    "RemoteImageBlocked": true,
+    "BundledMermaidRendered": true,
+    "InitialWindowFitsWorkingArea": true,
+    "CompactCommandBarAndMenus": true,
+    "RoundedMenuAndOutline": true,
+    "OutlineSelectsSourceHeading": true,
+    "ReadingModeRetainsSource": true,
+    "NavigatorAndNativeTitleBarOptions": true,
+    "FilteredFolderTreeRetainsHierarchy": true,
+    "AppearanceChangesRetainDirtyBuffer": true,
+    "ShellPreferencesPersist": true,
+    "EditingDoesNotSilentlySave": true,
+    "RecoveryDraftPersisted": true,
+    "SecondaryFileForwardedToSameBuild": true,
+    "ForwardingRetainsUnsavedFirstTab": true,
+    "ExplicitSaveMatchesBuffer": true,
+    "ImportReportsSanitization": true,
+    "HtmlExport": true,
+    "NativePdfExport": true
+  },
+  "Passed": true,
+  "HumanReview": "Visual comfort, real-document quality, accessibility/DPI and organizational security approval remain pending."
+}

@@ -85,7 +85,15 @@ public sealed partial class MainWindow
                                                  , new Binding(nameof(WorkspaceTreeNode.IsExpanded)) { Mode = BindingMode.TwoWay })
                                     }
                                 });
-        _folderFiles.DoubleTapped += async (_, _) => await OpenSelectedFolderDocumentAsync();
+        _folderFiles.DoubleTapped += async (_, _) =>
+        {
+            if (!_suppressExplorerOpen)
+            {
+                await OpenSelectedFolderDocumentAsync();
+            }
+        };
+        _folderFiles.ContextRequested += ShowExplorerContextMenu;
+        InitializeExplorerDrag();
         _folderFiles.KeyDown += async (_, eventArgs) =>
         {
             if (eventArgs.Key != Key.Enter)
