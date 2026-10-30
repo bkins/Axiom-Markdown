@@ -54,7 +54,7 @@ internal sealed class LineDiffWindow : Window
                        RowDefinitions = new RowDefinitions("Auto,*,Auto")
                      , RowSpacing     = 12
                      , Margin         = new Thickness(20)
-                     , Children       = 
+                     , Children       =
                        {
                            summary
                          , output

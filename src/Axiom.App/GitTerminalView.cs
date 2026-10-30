@@ -344,7 +344,7 @@ internal sealed class GitTerminalView : UserControl, IAsyncDisposable
         var footer = new StackPanel
                      {
                          Spacing  = 4
-                       , Children = 
+                       , Children =
                          {
                              commands
                            , _status
@@ -355,7 +355,7 @@ internal sealed class GitTerminalView : UserControl, IAsyncDisposable
                    {
                        RowDefinitions = new RowDefinitions("Auto,*,Auto")
                      , RowSpacing     = 6
-                     , Children       = 
+                     , Children       =
                        {
                            header
                          , _view

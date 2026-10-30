@@ -359,7 +359,7 @@ internal sealed class WorkspaceGitView : UserControl
         var buttons = new WrapPanel
                       {
                           Orientation = Orientation.Horizontal
-                        , Children    = 
+                        , Children    =
                           {
                               refresh
                             , terminal
@@ -404,7 +404,7 @@ internal sealed class WorkspaceGitView : UserControl
                        Margin         = new Thickness(8)
                      , RowDefinitions = new RowDefinitions("Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto")
                      , RowSpacing     = 8
-                     , Children       = 
+                     , Children       =
                        {
                            header
                          , details

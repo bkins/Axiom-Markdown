@@ -39,7 +39,7 @@ internal sealed class ChoiceDialog : Window
                   {
                       RowDefinitions = new RowDefinitions("*,Auto")
                     , Margin         = new Avalonia.Thickness(22)
-                    , Children       = 
+                    , Children       =
                       {
                           new ScrollViewer
                           {

@@ -122,7 +122,7 @@ public sealed class MarkdownStructureService
             nodes.Add(new(Guid.NewGuid()
                         , DocumentStructureNodeKind.Section
                         , heading.Text
-                        , heading.Source with 
+                        , heading.Source with
 
                         {
                             Length = end - heading.Source.Offset

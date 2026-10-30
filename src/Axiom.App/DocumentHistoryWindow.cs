@@ -174,7 +174,7 @@ internal sealed class DocumentHistoryWindow : Window
         var actions = new WrapPanel
                       {
                           Orientation = Orientation.Horizontal
-                        , Children    = 
+                        , Children    =
                           {
                               target
                             , compare
@@ -194,7 +194,7 @@ internal sealed class DocumentHistoryWindow : Window
                         {
                             ColumnDefinitions = new ColumnDefinitions("320,*")
                           , ColumnSpacing     = 12
-                          , Children          = 
+                          , Children          =
                             {
                                 list
                               , preview
@@ -211,7 +211,7 @@ internal sealed class DocumentHistoryWindow : Window
                        RowDefinitions = new RowDefinitions("Auto,*,Auto,Auto,Auto")
                      , RowSpacing     = 12
                      , Margin         = new Thickness(20)
-                     , Children       = 
+                     , Children       =
                        {
                            guidance
                          , documents
