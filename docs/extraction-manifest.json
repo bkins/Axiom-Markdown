@@ -1031,6 +1031,14 @@
       "sha256": "5a8a97b8b2fbd58b3c7a0f8b513421ff600e37c0b5e05761e0a5d7af284c3b54"
     },
     {
+      "path": "src/Axiom.App/ChoiceDialog.cs.cleanup.tmp",
+      "sha256": "dd302437385b7be8d798648645f51a8f6f36947fcfb49b1eaf93fed37ff559c6"
+    },
+    {
+      "path": "src/Axiom.App/DocumentHistoryWindow.cs.cleanup.tmp",
+      "sha256": "7ee3ea9a92f1b780e1efb181d21b381b1e6716792c26181bbd728ee9684f7ac7"
+    },
+    {
       "path": "src/Axiom.App/DocumentImportPreviewWindow.cs",
       "sha256": "371395212538251327228873a213c1b5aded378fdb5a8c5356421cd514795a5b"
     },
@@ -1043,8 +1051,16 @@
       "sha256": "c97d4a827baf614fcccce3a06ac7b8c56277dce15e40290674159e07d9c3ed85"
     },
     {
+      "path": "src/Axiom.App/GitTerminalView.cs.cleanup.tmp",
+      "sha256": "d5c7a9ab060deff85638621d786ad2ec5af0a16edf7d67d7d73ca685f0ad5df2"
+    },
+    {
       "path": "src/Axiom.App/IAutomaticUpdateClient.cs",
       "sha256": "4285106181050d5231fda2355080baef92791ee4f6f8c5af72181e4a37365ff3"
+    },
+    {
+      "path": "src/Axiom.App/LineDiffWindow.cs.cleanup.tmp",
+      "sha256": "6a7fe9f35e5647c3b4805cac68af34d55fbdd7e363a6947f0ebf27e7d41d654c"
     },
     {
       "path": "src/Axiom.App/MainWindow.Editor.cs",
@@ -1109,6 +1125,10 @@
     {
       "path": "src/Axiom.App/VelopackUpdateClient.cs",
       "sha256": "30bf69c7e6b2b977208d8f1bd8332f73056ad7230777e6279a75951b6d8f6bb2"
+    },
+    {
+      "path": "src/Axiom.App/WorkspaceGitView.cs.cleanup.tmp",
+      "sha256": "784ed70e7f720feec28341ba3010ae6268961bcc45333a61991bbc7a9179bd8a"
     },
     {
       "path": "src/Axiom.Core/AppearancePreference.cs",
@@ -1201,6 +1221,10 @@
     {
       "path": "src/Axiom.Core/MarkdownListEditService.cs",
       "sha256": "50a0c7e9cc631a560a38d4fc4acb7c596b2c9c24449ac6a2101ef98190bae8aa"
+    },
+    {
+      "path": "src/Axiom.Core/MarkdownStructureService.cs.cleanup.tmp",
+      "sha256": "41eb27a7f18da6f75e107ec341a7622cd6bca080b6f67e19cb0655f67808f423"
     },
     {
       "path": "src/Axiom.Core/NullAxiomLog.cs",
