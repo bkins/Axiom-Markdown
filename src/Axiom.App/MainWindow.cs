@@ -224,6 +224,8 @@ public sealed class MainWindow : Window
     private EditorTab AddTab(DocumentSession session)
     {
         var editor = new TextEditor { Text = session.Text, ShowLineNumbers = true, WordWrap = _preferences.WordWrap, FontFamily = new FontFamily("Cascadia Mono,Consolas,monospace"), FontSize = _preferences.FontSize, Padding = new Thickness(12) };
+        editor.Options.EnableHyperlinks = false;
+        editor.Options.EnableEmailHyperlinks = false;
         ApplyEditorColors(editor);
         AutomationProperties.SetName(editor, "Markdown source editor");
         var tab = new EditorTab(session, editor);

@@ -1048,7 +1048,7 @@
     },
     {
       "path": "src/Axiom.App/MainWindow.cs",
-      "sha256": "3771f08ea6b569710a36d296ccfc699b501a67811071d766ea155ada7a278b55"
+      "sha256": "8223399a53377dd37e65d549d8be5a857f5df8c60e5c01d0e0d2839ab98484f4"
     },
     {
       "path": "src/Axiom.App/MarkdownHighlighting.cs",
@@ -1056,7 +1056,7 @@
     },
     {
       "path": "src/Axiom.App/ReviewProbe.cs",
-      "sha256": "58227569071167cea426d14d5f9010163546720f75df6962be4e82139ea74dc2"
+      "sha256": "a04b46975a8b73d2c4eaaa022223b727168cdcac4b35cff3b3ef98dc8c6408b8"
     },
     {
       "path": "src/Axiom.Core/FeatureAccess.cs",

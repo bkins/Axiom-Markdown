@@ -32,6 +32,7 @@ internal static class ReviewProbe
             checks["NativePreviewHeading"] = await Script("document.querySelector('h1')?.textContent") == "Axiom Markdown review";
             checks["SourceUntouchedBySanitization"] = window.ActiveForReview.Session.Text == source && !window.ActiveForReview.Session.IsDirty && await File.ReadAllTextAsync(sample) == source;
             checks["SanitizationNoticeVisible"] = window.NoticeForReview.Contains("Preview sanitized");
+            checks["SourceEditorAutoLinksDisabled"] = !window.ActiveForReview.Editor.Options.EnableHyperlinks && !window.ActiveForReview.Editor.Options.EnableEmailHyperlinks;
             checks["NoDocumentScriptOrHandler"] = await Script("String(!window.compromised && !document.querySelector('[onclick]') && !document.querySelector('script'))") == "true";
             checks["RemoteImageBlocked"] = await Script("String([...document.images].every(image => !image.src.startsWith('https://')))") == "true";
             for (var attempt = 0; attempt < 80; attempt++)
