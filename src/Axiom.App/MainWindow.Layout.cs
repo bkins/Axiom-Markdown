@@ -74,7 +74,6 @@ public sealed partial class MainWindow
         AutomationProperties.SetName(_folderFiles, "Markdown files in open folder");
         AutomationProperties.SetName(_tabs, "Open Markdown documents");
         AutomationProperties.SetName(_preview, "Rendered Markdown preview");
-        ActualThemeVariantChanged += (_, _) => ApplyPreferences(false);
     }
 
     private void BuildNoticeBar()

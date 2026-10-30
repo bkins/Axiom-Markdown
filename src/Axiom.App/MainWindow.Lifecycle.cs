@@ -21,7 +21,6 @@ public sealed partial class MainWindow
 {
     private async Task InitializeAsync()
     {
-        FitInitialWindowToScreen();
         await _state.InitializeAsync();
         _sessionId = await _state.BeginSessionAsync();
         try
@@ -34,6 +33,7 @@ public sealed partial class MainWindow
         }
 
         ApplyPreferences(save: false);
+        await Dispatcher.UIThread.InvokeAsync(FitInitialWindowToScreen, DispatcherPriority.Loaded);
         ActualThemeVariantChanged += (_, _) => ApplyPreferences(save: false);
         foreach (var draft in await _state.GetRecoverableDraftsAsync())
         {

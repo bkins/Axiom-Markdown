@@ -1087,11 +1087,11 @@
     },
     {
       "path": "src/Axiom.App/MainWindow.Layout.cs",
-      "sha256": "da0e0991c69a34daeb44970dbf4a6809386a82d7d3bbdd61dbb4b1fbc5b6d37d"
+      "sha256": "ad4d9b8301fabde40bf238bf557db1691920aa60611423eefed8c00b6a2a2a1a"
     },
     {
       "path": "src/Axiom.App/MainWindow.Lifecycle.cs",
-      "sha256": "2c979d39193124a3be17de3e1d2134fa5f05d7cec688f027c24cc29e99362bf2"
+      "sha256": "c3a4c80c88edd36c28d5107f063cb2929f8ca4a458540269818ff9c55be576bc"
     },
     {
       "path": "src/Axiom.App/MainWindow.Navigation.cs",
@@ -1111,7 +1111,7 @@
     },
     {
       "path": "src/Axiom.App/MainWindow.ShellReview.cs",
-      "sha256": "06d128bb8eda0b266c8b087dee7cc4ba6ff1d4977f758eae42fc08e7ff964219"
+      "sha256": "cf0384d13565a0f5cefa405454392610db3cd42195d9d90a2ada3147639129ec"
     },
     {
       "path": "src/Axiom.App/MainWindow.Updates.cs",
