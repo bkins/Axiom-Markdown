@@ -35,4 +35,4 @@ Installer deployment, signing policy, real installed update/feed acceptance, acc
 AFD7AD28C2E77670AA9DBEE170D99A9718520B7A01E6C705BEA587824A7B0F6A  releases\releases.win-x64-stable.json
 
 
-[Machine-readable release asset checksums](checks/SHA256SUMS.txt).
+[Machine-readable release asset checksums](checks/SHA256SUMS-0.1.0.txt).
