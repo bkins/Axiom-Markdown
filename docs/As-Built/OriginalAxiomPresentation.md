@@ -20,3 +20,5 @@ ShellStyles.axaml contains the adapted visual treatment. MainWindow.Shell owns c
 The exact package receives native probes for both themes, menu treatments, title/navigation options, heading selection, reading mode, filter hierarchy, source/dirty-state retention and persistence, alongside the existing rendering/security/save/recovery checks. Native screenshots and independent keyboard testing supplement these checks. Ben's judgment of the visual match, representative workflows, accessibility/DPI and Security's approval remain separate human gates.
 
 Original Axiom toolbar customization/placement, command palette, metadata/relationship tools, management workflows and other unported features are not implied by this presentation mapping. The full Axiom checkout, stable file opener and existing review candidates remain independent.
+
+Native keyboard inspection found the first window could extend below the current monitor. Startup now bounds its size and position to the monitor working area at the current scale, before document initialization; an exact native check verifies that boundary. No existing user window is moved.

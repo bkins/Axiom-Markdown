@@ -21,6 +21,7 @@ public sealed partial class MainWindow
 {
     private async Task InitializeAsync()
     {
+        FitInitialWindowToScreen();
         await _state.InitializeAsync();
         _sessionId = await _state.BeginSessionAsync();
         try

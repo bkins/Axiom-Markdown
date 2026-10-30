@@ -12,7 +12,7 @@ Status: **0.2.0** is being packaged for original-Axiom presentation review under
 - [x] Portable/installer payload hashes, isolated product/state/feed, dependency inventory/SBOM and NuGet advisory report.
 - [x] Independently observed native keyboard editing and Ctrl+S saved-file verification.
 
-- [x] Source audit passes across 190 maintained C# files; responsibility/design review recorded separately in As-Built. Source trailing whitespace check passes.
+- [x] Source audit passes across 191 maintained C# files; responsibility/design review recorded separately in As-Built. Source trailing whitespace check passes.
 
 ## Human needs to test
 

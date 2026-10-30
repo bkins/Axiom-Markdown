@@ -17,8 +17,10 @@ public sealed partial class MainWindow
         var original = _preferences;
         try
         {
-            checks["CompactCommandBarAndMenus"] = _menuButtons.Count == 6 && _commandBar.IsVisible && (!OperatingSystem.IsWindows() || _captionButtons.IsVisible);
-            _preferences                        = _preferences with
+            var screen = Screens.ScreenFromWindow(this)!;
+            checks["InitialWindowFitsWorkingArea"] = Position.X >= screen.WorkingArea.X && Position.Y >= screen.WorkingArea.Y && Position.X + Width * screen.Scaling <= screen.WorkingArea.Right && Position.Y + Height * screen.Scaling <= screen.WorkingArea.Bottom;
+            checks["CompactCommandBarAndMenus"]    = _menuButtons.Count == 6 && _commandBar.IsVisible && (!OperatingSystem.IsWindows() || _captionButtons.IsVisible);
+            _preferences                           = _preferences with
 
             {
                 ShowOutline = true
