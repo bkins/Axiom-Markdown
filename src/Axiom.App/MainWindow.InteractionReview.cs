@@ -59,6 +59,23 @@ public sealed partial class MainWindow
                                                         .RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
         await Task.Delay(100);
         checks["EditorContextUndoRestoresDirtyBuffer"] = originalTab.Session.Text == text && originalTab.Session.IsDirty;
+        originalTab.Editor.Focus();
+        originalTab.Editor.RaiseEvent(new KeyEventArgs
+                                      {
+                                          RoutedEvent  = KeyDownEvent
+                                        , Key          = Key.F10
+                                        , KeyModifiers = KeyModifiers.Shift
+                                      });
+        checks["KeyboardContextWaitsForKeyRelease"] = ReferenceEquals(_keyboardContextTarget, originalTab.Editor) && _keyboardContextMenu is null;
+        originalTab.Editor.RaiseEvent(new KeyEventArgs
+                                      {
+                                          RoutedEvent  = KeyUpEvent
+                                        , Key          = Key.F10
+                                        , KeyModifiers = KeyModifiers.Shift
+                                      });
+        await Task.Delay(100);
+        checks["KeyboardContextRemainsOpenAfterKeyRelease"] = _keyboardContextMenu?.IsOpen == true;
+        _keyboardContextMenu?.Close();
         var workspace = Path.Combine(root, "interaction-workspace");
         Directory.CreateDirectory(Path.Combine(workspace, "Target"));
         Directory.CreateDirectory(Path.Combine(workspace, "Bundle"));

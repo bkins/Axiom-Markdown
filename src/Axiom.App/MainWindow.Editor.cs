@@ -144,15 +144,15 @@ public sealed partial class MainWindow
         {
             if (_folderFiles.IsKeyboardFocusWithin)
             {
-                BuildExplorerContextMenu(_folderFiles.SelectedItem as WorkspaceTreeNode).Open(_folderFiles);
-                eventArgs.Handled = true;
+                _keyboardContextTarget = _folderFiles;
+                eventArgs.Handled      = true;
                 return;
             }
 
             if (Current?.Editor is { IsKeyboardFocusWithin: true } editor)
             {
-                BuildEditorContextMenu(editor).Open(editor);
-                eventArgs.Handled = true;
+                _keyboardContextTarget = editor;
+                eventArgs.Handled      = true;
                 return;
             }
         }

@@ -240,6 +240,8 @@ public sealed partial class MainWindow
             }
         };
         AddHandler(KeyDownEvent, OnKeyDown, Avalonia.Interactivity.RoutingStrategies.Tunnel);
+        AddHandler(KeyUpEvent, OnContextMenuKeyUp, Avalonia.Interactivity.RoutingStrategies.Tunnel);
+        Deactivated += (_, _) => _keyboardContextTarget = null;
         Closing += OnClosing;
         Closed += async (_, _) =>
         {

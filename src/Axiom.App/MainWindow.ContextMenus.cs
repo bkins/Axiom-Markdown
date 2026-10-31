@@ -9,6 +9,37 @@ namespace Axiom.App;
 
 public sealed partial class MainWindow
 {
+    private Control? _keyboardContextTarget;
+    private ContextMenu? _keyboardContextMenu;
+    private void OnContextMenuKeyUp(object?      sender
+                                  , KeyEventArgs eventArgs)
+    {
+        if (eventArgs.Key is not Key.F10 and not Key.Apps || _keyboardContextTarget is not { } target)
+        {
+            return;
+        }
+
+        _keyboardContextTarget = null;
+        eventArgs.Handled      = true;
+        var menu = ReferenceEquals(target, _folderFiles) ? BuildExplorerContextMenu(_folderFiles.SelectedItem as WorkspaceTreeNode) : ReferenceEquals(target
+                                                                                                                                                    , Current?.Editor) ? BuildEditorContextMenu(Current!.Editor) : null;
+        if (menu is null)
+        {
+            return;
+        }
+
+        _keyboardContextMenu?.Close();
+        _keyboardContextMenu = menu;
+        menu.Closed += (_, _) =>
+        {
+            if (ReferenceEquals(_keyboardContextMenu, menu))
+            {
+                _keyboardContextMenu = null;
+            }
+        };
+        menu.Open(target);
+    }
+
     private MenuItem ContextAction(string     label
                                  , Func<Task> action
                                  , bool       enabled = true)
