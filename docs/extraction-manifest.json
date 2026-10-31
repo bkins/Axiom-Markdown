@@ -1105,7 +1105,7 @@
     },
     {
       "path": "src/Axiom.App/MainWindow.InteractionReview.cs",
-      "sha256": "4823790a9aafef933f8ea4239c6acb4ed92c99e6afd732353d83aff3bca9b375"
+      "sha256": "d0cbff1b5e79a28ec649ef80d7a885a5f74866e80ec0a64b7671af2e7960f435"
     },
     {
       "path": "src/Axiom.App/MainWindow.Layout.cs",

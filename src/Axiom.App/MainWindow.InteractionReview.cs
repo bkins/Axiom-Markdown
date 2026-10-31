@@ -59,7 +59,13 @@ public sealed partial class MainWindow
                                                         .RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
         await Task.Delay(100);
         checks["EditorContextUndoRestoresDirtyBuffer"] = originalTab.Session.Text == text && originalTab.Session.IsDirty;
-        originalTab.Editor.Focus();
+        Activate();
+        for (var attempt = 0; attempt < 20 && !originalTab.Editor.IsKeyboardFocusWithin; attempt++)
+        {
+            originalTab.Editor.TextArea.Focus();
+            await Task.Delay(100);
+        }
+
         originalTab.Editor.RaiseEvent(new KeyEventArgs
                                       {
                                           RoutedEvent  = KeyDownEvent
