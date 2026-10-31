@@ -1,0 +1,17 @@
+{
+  "Version": "0.2.1+9432d162414b",
+  "HamburgerSixSectionsObserved": true,
+  "MainMenuKeyboardObserved": true,
+  "EditorRightClickMenuObserved": true,
+  "EditorKeyboardContextMenuObserved": true,
+  "FileContextMenuObserved": true,
+  "FolderContextMenuObserved": true,
+  "PhysicalFileDragObserved": true,
+  "PhysicalFileMoveIndependentlyVerified": true,
+  "PhysicalFolderDragObserved": true,
+  "PhysicalFolderDocumentsAndAssetsVerified": true,
+  "NativeTypingAfterMoveObserved": true,
+  "SaveUsedMovedPath": true,
+  "Passed": true,
+  "Method": "Computer-use native pointer/keyboard actions on the exact packaged executable, with independent disk reads. Only generated disposable fixtures were changed."
+}

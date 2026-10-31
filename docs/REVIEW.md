@@ -1,11 +1,11 @@
 # Axiom Markdown 0.2.1 review
 
-Status: **0.2.1** is being verified for ENH-274's four interaction fixes. Exact post-package evidence will be recorded in [the delivery record](DELIVERY.md). ENH-270 retains human/security acceptance; previous candidates remain retained.
+Status: **0.2.1+9432d162414b** is ready for ENH-274's four interaction fixes. Exact post-package evidence is recorded in [the delivery record](DELIVERY.md). ENH-270 retains human/security acceptance; previous candidates remain retained.
 
 ## Automation can test
 
 - [x] Exact-commit Release build and automated tests; no excluded-feature source/dependency contamination.
-- [x] Packaged native WebView2 (24 checks, including shell/options/navigation/window fit): retained Markdown/HTML/Mermaid, visible sanitation details, blocked remote images, no document scripts/event handlers and unchanged source bytes.
+- [x] Packaged native WebView2 (38 checks, including menus, moves, caption centering and keyboard-popup lifecycle): retained Markdown/HTML/Mermaid, visible sanitation details, blocked remote images, no document scripts/event handlers and unchanged source bytes.
 - [x] Recovery persistence, explicit Save, save-in-flight typing, external conflicts and selected Git operations.
 - [x] Import warning/source protection and HTML/DOCX/TXT/EPUB/ODT export; native PDF smoke check.
 - [x] Each feature rejects direct service calls when disabled; policy precedence and malformed settings fail closed.

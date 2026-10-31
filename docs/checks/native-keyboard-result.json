@@ -1,12 +1,10 @@
 {
-  "Version": "0.2.0+17be08c5f01c",
+  "Version": "0.2.1+9432d162414b",
   "NativeTypingObserved": true,
   "TypingDidNotSave": true,
   "ControlSSavedExpectedText": true,
-  "SavedText": "# Axiom-style Markdown review verified",
-  "Verification": "Independent filesystem reads before and after native keyboard save",
-  "Passed": true,
-  "ReadingShortcutObserved": true,
-  "F10MenuObserved": true,
-  "InitialInputRetriedAfterFocusReobservation": true
+  "SavedToMovedPath": true,
+  "OriginalPathRemainsAbsent": true,
+  "KeyboardContextMenuObserved": true,
+  "Passed": true
 }
